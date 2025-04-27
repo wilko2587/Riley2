@@ -1,0 +1,32 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Environment variables and secrets
+.env
+user_memory.json
+secrets/
+
+# VS Code project settings
+.vscode/
+
+# Logs
+*.log
+logs/
+
+# Virtual environments
+.riley2/
+venv/
+env/
+.venv/
+
+# Package and distribution artifacts
+*.zip
+packages/
+versions/
+
+# Misc
+.DS_Store
+Thumbs.db

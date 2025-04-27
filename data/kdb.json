@@ -1,0 +1,47 @@
+{
+  "people": {
+    "mum": {
+      "full_name": "Tanya Wilkinson",
+      "email": "tshjwilkinson@mac.com",
+      "relationships": [
+        "mother"
+      ],
+      "notes": [
+        "She\u2019s helping with the Italy trip."
+      ],
+      "calendar_tags": [
+        "mum",
+        "family"
+      ],
+      "preferred_contact_method": "email"
+    },
+    "jess": {
+      "email": "jess@example.com",
+      "notes": [
+        "Ask about holiday flights"
+      ]
+    }
+  },
+  "places": {
+    "home": {
+      "address": "123 Home Street, London",
+      "wifi_name": "WilkoNet"
+    }
+  },
+  "facts": {
+    "florence_trip_date": "2025-06-21",
+    "favourite_drink": "chai latte"
+  },
+  "notes": [
+    {
+      "text": "Jess mentioned a 10am flight to Florence",
+      "tags": [
+        "florence",
+        "jess",
+        "holiday"
+      ],
+      "source": "email",
+      "date": "2025-04-01"
+    }
+  ]
+}
