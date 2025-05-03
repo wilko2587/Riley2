@@ -218,6 +218,16 @@ Copilot can:
 - Merge task branches into main/master upon task completion
 - Perform branch cleanup after successful merges
 
+### Branch Cleanup Protocol
+
+After successfully merging a task branch into main/master:
+- Delete the local branch with `git branch -d task/TASK-###`
+- Delete the remote branch with `git push origin --delete task/TASK-###`
+- Verify branch deletion with `git branch -a` to ensure clean repository state
+- Document the branch cleanup in GPTLOG.md as part of the task completion
+
+This branch cleanup should be considered a required part of the task completion workflow to maintain a clean repository structure and minimize branch clutter.
+
 For larger feature development:
 - Feature branches are recommended but not required
 - Task branches should be merged to main/master when the task is complete
