@@ -1,10 +1,6 @@
 # Riley2 specific ignores
 /secrets/
 /secrets/**
-*.log
-logs/*.log
-logs/*.log.backup
-src/riley2/logs/*.jsonl
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
