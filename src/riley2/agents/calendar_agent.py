@@ -10,8 +10,18 @@ def calendar_scan(start_date, end_date, query=None):
         {"title": "Doctor Appointment", "date": "2025/05/04"},
     ]
 
-    start = datetime.strptime(start_date, "%Y/%m/%d")
-    end = datetime.strptime(end_date, "%Y/%m/%d")
+    # Handle both date formats (YYYY/MM/DD and YYYY-MM-DD)
+    try:
+        start = datetime.strptime(start_date, "%Y/%m/%d")
+    except ValueError:
+        # Try alternate format with hyphens
+        start = datetime.strptime(start_date, "%Y-%m-%d")
+        
+    try:
+        end = datetime.strptime(end_date, "%Y/%m/%d")
+    except ValueError:
+        # Try alternate format with hyphens
+        end = datetime.strptime(end_date, "%Y-%m-%d")
 
     matched = []
     for event in events:
