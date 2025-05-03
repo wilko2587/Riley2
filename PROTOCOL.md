@@ -206,17 +206,21 @@ TASK-005
 
 ## 🌱 Git Branching
 
-For every task (`TASK-###`), Copilot must:
+For every task (`TASK-###`), Copilot should:
 
-- Create and switch to a new branch named `task/TASK-###`
-- Perform **all code, test, and logging work** on that branch
+- Create and switch to a new branch named `task/TASK-###` for larger tasks
+- For smaller tasks, direct commits to main/master are acceptable
 - Use the commit format `TASK-###: <summary>` as always
-- Push the branch via `git push -u origin task/TASK-###`
+- Push the branch via `git push -u origin task/TASK-###` or directly to main/master
 
-Copilot must **not**:
-- Push directly to `main`, `master`, or any protected branch
-- Merge the task branch unless explicitly instructed in `ROADMAP.md` or by human override
+Copilot can:
+- Push directly to `main` or `master` branches when appropriate
+- Merge task branches into main/master upon task completion
+- Perform branch cleanup after successful merges
 
+For larger feature development:
+- Feature branches are recommended but not required
+- Task branches should be merged to main/master when the task is complete
 
 ---
 
