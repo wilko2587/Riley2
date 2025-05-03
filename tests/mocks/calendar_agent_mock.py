@@ -49,10 +49,76 @@ class CalendarAgentMock:
         """
         logger.debug(f"Mock: Scanning calendar from {start_date} to {end_date} with query: {query}")
         
-        # Use the config loader's helper function to get events in date range
-        events = TestConfigLoader.get_calendar_events_by_date_range(start_date, end_date)
+        # Validate date formats first to handle invalid formats gracefully
+        from datetime import datetime
         
-        if query:
+        # Check for empty or invalid dates
+        if not start_date or not end_date:
+            logger.warning(f"Mock: Invalid date format - empty date provided")
+            return "No matching events found."
+        
+        # Try to parse dates, handle exceptions for invalid formats
+        try:
+            # Try to parse start date
+            try:
+                start = datetime.strptime(start_date, "%Y/%m/%d")
+            except ValueError:
+                try:
+                    # Try alternate format with hyphens
+                    start = datetime.strptime(start_date, "%Y-%m-%d")
+                except ValueError:
+                    logger.warning(f"Mock: Invalid start date format: {start_date}")
+                    return "No matching events found."
+            
+            # Try to parse end date
+            try:
+                end = datetime.strptime(end_date, "%Y/%m/%d")
+            except ValueError:
+                try:
+                    # Try alternate format with hyphens
+                    end = datetime.strptime(end_date, "%Y-%m-%d")
+                except ValueError:
+                    logger.warning(f"Mock: Invalid end date format: {end_date}")
+                    return "No matching events found."
+            
+            # Check if dates are flipped (end date is before start date)
+            if end < start:
+                logger.warning(f"Mock: End date {end_date} is before start date {start_date}")
+                return "No matching events found."
+            
+            # Try to get events from TestConfigLoader first (allows for patching in tests)
+            try:
+                events = TestConfigLoader.get_calendar_events_by_date_range(start_date, end_date)
+                logger.debug(f"Mock: Retrieved {len(events)} events from TestConfigLoader")
+            except Exception as e:
+                # Fall back to our internal events if TestConfigLoader fails
+                logger.warning(f"Mock: TestConfigLoader failed, using internal events: {e}")
+                
+                # Get events in date range using our implementation
+                all_events = self.events
+                events = []
+                
+                for event in all_events:
+                    try:
+                        event_date = datetime.strptime(event["date"], "%Y/%m/%d")
+                        # Check if event is within the date range
+                        if start <= event_date <= end:
+                            events.append(event)
+                        # Handle multi-day events
+                        elif "end_date" in event and event.get("is_multiday", False):
+                            event_end_date = datetime.strptime(event["end_date"], "%Y/%m/%d")
+                            if (start <= event_end_date <= end) or (event_date <= start and event_end_date >= end):
+                                events.append(event)
+                    except ValueError:
+                        # Skip events with invalid dates
+                        logger.warning(f"Mock: Skipping event with invalid date format: {event}")
+            
+        except Exception as e:
+            logger.error(f"Mock: Error processing dates: {e}")
+            return "No matching events found."
+        
+        # Apply query filtering if provided
+        if query and events:
             # Filter by query
             query = query.lower()
             matched = []
@@ -86,35 +152,51 @@ class CalendarAgentMock:
         last_day = (next_month_start - timedelta(days=1)).day
         end_date = f"{year}/{month:02d}/{last_day}"
         
-        # Get events in this date range
-        events = TestConfigLoader.get_calendar_events_by_date_range(start_date, end_date)
+        # Use our own calendar_scan method to avoid TestConfigLoader exceptions
+        result = self.calendar_scan(start_date, end_date)
         
-        # Convert to old format for backward compatibility
+        # Parse the result string and convert to old format
         monthly_events = []
-        for event in events:
-            old_format = {
-                "summary": event["title"],
-                "start": {"date": event["date"].replace("/", "-")},
-                "end": {"date": event.get("end_date", event["date"]).replace("/", "-")}
-            }
-            monthly_events.append(old_format)
+        if "Found events" in result:
+            # This is a simplified parsing - in reality you might need something more robust
+            import ast
+            events_str = result.replace("Found events: ", "")
+            try:
+                events = ast.literal_eval(events_str)
+                for event in events:
+                    old_format = {
+                        "summary": event["title"],
+                        "start": {"date": event["date"].replace("/", "-")},
+                        "end": {"date": event.get("end_date", event["date"]).replace("/", "-")}
+                    }
+                    monthly_events.append(old_format)
+            except:
+                pass
             
         return monthly_events
 
     def get_events_for_day(self, year: int, month: int, day: int):
         """Legacy method - Searches events for the specific day"""
         target_date = f"{year}/{month:02d}/{day:02d}"
-        events = TestConfigLoader.get_calendar_events_by_date_range(target_date, target_date)
+        result = self.calendar_scan(target_date, target_date)
         
-        # Convert to old format
+        # Parse the result string and convert to old format
         daily_events = []
-        for event in events:
-            old_format = {
-                "summary": event["title"],
-                "start": {"date": event["date"].replace("/", "-")},
-                "end": {"date": event.get("end_date", event["date"]).replace("/", "-")}
-            }
-            daily_events.append(old_format)
+        if "Found events" in result:
+            # This is a simplified parsing - in reality you might need something more robust
+            import ast
+            events_str = result.replace("Found events: ", "")
+            try:
+                events = ast.literal_eval(events_str)
+                for event in events:
+                    old_format = {
+                        "summary": event["title"],
+                        "start": {"date": event["date"].replace("/", "-")},
+                        "end": {"date": event.get("end_date", event["date"]).replace("/", "-")}
+                    }
+                    daily_events.append(old_format)
+            except:
+                pass
             
         return daily_events
 

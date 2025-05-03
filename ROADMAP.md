@@ -17,6 +17,6 @@
     └── 🟩 lowlevel.compare_calendar_mock_vs_real status: complete
         note: Ensured consistent behavior between implementations.
 
-    └── <span style="color:#FFA500">🟥 lowlevel.test_calendar_edge_cases status: open</span>
+    └── 🟩 lowlevel.test_calendar_edge_cases status: complete
         note: Test multiday events and conflict handling.
 

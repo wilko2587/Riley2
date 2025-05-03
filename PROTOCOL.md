@@ -30,6 +30,9 @@ When beginning work on a task, checkpoint, or low-level item:
 - This amber highlighting must be applied to the entire line of the task being worked on
 
 ### 3. On Completion (`✅ PASS`)
+
+⚠️ **IMPORTANT: A task is NOT considered complete until changes have been committed and pushed to Git!**
+
 - **Important:** Remove any amber highlighting from ROADMAP.md before committing
 - Mark `[x]` in `ROADMAP.md` next to the task
 - Append a `GPTLOG.md` entry
@@ -109,6 +112,32 @@ When completing a low-level task (`lowlevel.*`) within a larger checkpoint or hi
    - Ensure no credentials, tokens, or API keys are committed to the repository
    - Double-check generated code to ensure it doesn't contain hardcoded secrets
    - Verify that all secret files are appropriately excluded from Git staging before commits
+
+---
+
+## 📋 Task Completion Checklist
+
+For every task, ensure all of the following steps are completed:
+
+1. ☑️ Code implementation 
+2. ☑️ Tests passing in VS Code Testing Explorer
+3. ☑️ ROADMAP.md updated with appropriate status
+4. ☑️ GPTLOG.md updated with completion entry
+5. ☑️ Release note created in releases/TASK-###.md
+6. ☑️ Git commit with format "TASK-###: <summary>"
+7. ☑️ Git push to remote repository
+
+**Task completion definition:** A task is only considered complete when all steps 1-7 above have been completed. Git operations (steps 6-7) are an integral part of the task completion workflow, not separate steps.
+
+## 🔄 Completion Self-Check
+
+Before ending a session, always verify:
+- [ ] Are all code changes implemented?
+- [ ] Are all tests passing?
+- [ ] Is documentation updated (ROADMAP.md, GPTLOG.md, copilot_status.md)?
+- [ ] Is a release note created in releases/?
+- [ ] Are changes committed to Git?
+- [ ] Are changes pushed to remote?
 
 ---
 
