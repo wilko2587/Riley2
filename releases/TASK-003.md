@@ -1,2 +1,2 @@
-# TASK-003: TASK-003: Implemented calendar edge case tests and improved protocol documentation
+# TASK-003: Update TASK-003 release notes
 

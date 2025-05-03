@@ -65,9 +65,6 @@ def log(level, message):
     color = LOG_COLORS.get(level, Fore.WHITE)
     print(f"{timestamp} | {color}{level:<5}{Style.RESET_ALL} | {message}")
 
-# Setup Python's logging system alongside our custom logging
-# Required for backward compatibility with conftest.py
-
 # Custom formatter for logging that uses colorama
 class ColoredFormatter(logging.Formatter):
     def format(self, record):
@@ -76,6 +73,17 @@ class ColoredFormatter(logging.Formatter):
         if level_name in LOG_COLORS:
             message = message.replace(f"{level_name}", f"{LOG_COLORS[level_name]}{level_name}{Style.RESET_ALL}")
         return message
+
+# Plain formatter for file logging (no color codes)
+class PlainFormatter(logging.Formatter):
+    def __init__(self, fmt=None, datefmt=None):
+        super().__init__(fmt, datefmt)
+    
+    def format(self, record):
+        # Ensure message is a string to avoid encoding issues
+        if not isinstance(record.msg, str):
+            record.msg = str(record.msg)
+        return super().format(record)
 
 # Filter to exclude httpcore debug logs during testing
 class HttpcoreFilter(logging.Filter):
@@ -103,8 +111,25 @@ console_handler = logging.StreamHandler(sys.stdout)
 console_handler.setLevel(logging.INFO)
 console_handler.setFormatter(ColoredFormatter("%(asctime)s - %(levelname)s - %(message)s"))
 
+# Create log directory if it doesn't exist
+log_dir = os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), 'logs'))
+os.makedirs(log_dir, exist_ok=True)
+
+# Add file handler with plain formatter to avoid encoding issues
+file_handler = logging.FileHandler(os.path.join(log_dir, "riley2.log"), mode='a', encoding='utf-8')
+file_handler.setLevel(logging.DEBUG)
+file_handler.setFormatter(PlainFormatter("%(asctime)s - %(levelname)s - %(message)s"))
+
+# Add handlers to loggers
 logger.addHandler(console_handler)
+logger.addHandler(file_handler)
 test_logger.addHandler(console_handler)
+
+# Create test log file handler
+test_file_handler = logging.FileHandler(os.path.join(log_dir, "riley2_test.log"), mode='a', encoding='utf-8')
+test_file_handler.setLevel(logging.DEBUG)
+test_file_handler.setFormatter(PlainFormatter("%(asctime)s - %(levelname)s - %(message)s"))
+test_logger.addHandler(test_file_handler)
 
 def log_system_event(event_type: str, description: str):
     """Log system-level events like startup, shutdown, or configuration changes"""

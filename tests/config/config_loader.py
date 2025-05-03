@@ -123,8 +123,8 @@ class TestConfigLoader:
         Get calendar events within a date range
         
         Args:
-            start_date: Start date in format "YYYY/MM/DD"
-            end_date: End date in format "YYYY/MM/DD"
+            start_date: Start date in format "YYYY/MM/DD" or "YYYY-MM-DD"
+            end_date: End date in format "YYYY/MM/DD" or "YYYY-MM-DD"
             
         Returns:
             List of calendar events in the specified range
@@ -132,8 +132,19 @@ class TestConfigLoader:
         from datetime import datetime
         
         all_events = cls.get_calendar_events()
-        start = datetime.strptime(start_date, "%Y/%m/%d")
-        end = datetime.strptime(end_date, "%Y/%m/%d")
+        
+        # Handle both date formats (YYYY/MM/DD and YYYY-MM-DD)
+        try:
+            start = datetime.strptime(start_date, "%Y/%m/%d")
+        except ValueError:
+            # Try alternate format with hyphens
+            start = datetime.strptime(start_date, "%Y-%m-%d")
+        
+        try:
+            end = datetime.strptime(end_date, "%Y/%m/%d")
+        except ValueError:
+            # Try alternate format with hyphens
+            end = datetime.strptime(end_date, "%Y-%m-%d")
         
         results = []
         for event in all_events:
