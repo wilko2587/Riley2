@@ -1,0 +1,69 @@
+[35m2025-05-03 10:47:55[0m - [36mDEBUG[0m - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+[35m2025-05-03 10:47:55[0m - [36mDEBUG[0m - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+[35m2025-05-03 10:47:55[0m - [36mDEBUG[0m - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+[35m2025-05-03 10:47:55[0m - [36mDEBUG[0m - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+[35m2025-05-03 10:47:55[0m - [36mDEBUG[0m - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\knowledge_base.json
+[35m2025-05-03 10:47:55[0m - [36mDEBUG[0m - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\knowledge_base.json
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - Test configurations loaded and validated successfully
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - Test configurations loaded and validated successfully
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [[36m[1mSYSTEM - TEST_SESSION[0m] Starting test session at 2025-05-03 10:47:55 with enhanced colorful logging (MAXIMUM VERBOSITY)
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [[36m[1mSYSTEM - TEST_SESSION[0m] Starting test session at 2025-05-03 10:47:55 with enhanced colorful logging (MAXIMUM VERBOSITY)
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - 
+[33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - 
+[33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [[44m[37mTEST STEP - test_reasoning_queries[0m] Testing reasoning with query: 'When am I going to Italy?'
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [[44m[37mTEST STEP - test_reasoning_queries[0m] Testing reasoning with query: 'When am I going to Italy?'
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 10:47:55[0m - [36mDEBUG[0m - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+[35m2025-05-03 10:47:55[0m - [36mDEBUG[0m - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+[35m2025-05-03 10:47:55[0m - [36mDEBUG[0m - Initialized CalendarAgentMock with 6 events from config
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [Test - InputQuery] -> When am I going to Italy?
+[35m2025-05-03 10:47:55[0m - [36mDEBUG[0m - Initialized CalendarAgentMock with 6 events from config
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [Test - InputQuery] -> When am I going to Italy?
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [BackendManager - Reasoner] -> Processing question: 'When am I going to Italy?'
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [BackendManager - Reasoner] -> Processing question: 'When am I going to Italy?'
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [BackendManager - CalendarSearch] -> Searching April 2025 for Italy events
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [BackendManager - CalendarSearch] -> Searching April 2025 for Italy events
+[35m2025-05-03 10:47:55[0m - [36mDEBUG[0m - Mock: Scanning calendar from 2025/04/01 to 2025/04/30 with query: italy
+[35m2025-05-03 10:47:55[0m - [36mDEBUG[0m - Mock: Scanning calendar from 2025/04/01 to 2025/04/30 with query: italy
+[35m2025-05-03 10:47:55[0m - [36mDEBUG[0m - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+[35m2025-05-03 10:47:55[0m - [36mDEBUG[0m - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - Mock: Found 0 calendar events matching criteria
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - Mock: Found 0 calendar events matching criteria
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [CalendarAgent - EventResult] -> No matching events found.
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [CalendarAgent - EventResult] -> No matching events found.
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [BackendManager - CalendarSearch] -> No Italy events in April. Searching May 2025
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [BackendManager - CalendarSearch] -> No Italy events in April. Searching May 2025
+[35m2025-05-03 10:47:55[0m - [36mDEBUG[0m - Mock: Scanning calendar from 2025/05/01 to 2025/05/31 with query: italy
+[35m2025-05-03 10:47:55[0m - [36mDEBUG[0m - Mock: Scanning calendar from 2025/05/01 to 2025/05/31 with query: italy
+[35m2025-05-03 10:47:55[0m - [36mDEBUG[0m - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - Mock: Found 1 calendar events matching criteria
+[35m2025-05-03 10:47:55[0m - [36mDEBUG[0m - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [CalendarAgent - EventResult] -> Found events: [{'title': 'Holiday Italy', 'date': '2025/05/15', 'all_day': True, 'end_date': '2025/05/25', 'location': 'Rome, Italy', 'description': 'Annual vacation - booked flights and hotel'}]
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - Mock: Found 1 calendar events matching criteria
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [BackendManager - DecisionMade] -> Found Italy event in May
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [CalendarAgent - EventResult] -> Found events: [{'title': 'Holiday Italy', 'date': '2025/05/15', 'all_day': True, 'end_date': '2025/05/25', 'location': 'Rome, Italy', 'description': 'Annual vacation - booked flights and hotel'}]
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [Test - OutputResponse] -> 15052025
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - 
+[32m[1m================================================================================[0m
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [BackendManager - DecisionMade] -> Found Italy event in May
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [Test - OutputResponse] -> 15052025
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [[42m[30m[1mTEST PASSED[0m] test_reasoning_queries[When am I going to Italy?]
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - 
+[32m[1m================================================================================[0m
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [32m[1m================================================================================[0m
+
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [[42m[30m[1mTEST PASSED[0m] test_reasoning_queries[When am I going to Italy?]
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [32m[1m================================================================================[0m
+
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [[36m[1mSYSTEM - TEST_SESSION[0m] Test session complete at 2025-05-03 10:47:55
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [[36m[1mSYSTEM - TEST_SESSION[0m] Test session complete at 2025-05-03 10:47:55
+[35m2025-05-03 10:47:55[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m

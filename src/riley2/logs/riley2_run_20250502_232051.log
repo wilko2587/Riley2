@@ -1,0 +1,77 @@
+2025-05-02 23:20:51 - INFO - riley2 - log_test_step - [TEST: test_reasoning_queries] Testing reasoning with query: 'When am I going to Italy?'
+2025-05-02 23:20:51 - INFO - riley2 - log_agent_interaction - [Test - InputQuery] >>> When am I going to Italy?
+2025-05-02 23:20:51 - INFO - riley2 - log_agent_interaction - [BackendManager - Reasoner] >>> Processing question: 'When am I going to Italy?'
+2025-05-02 23:20:51 - INFO - riley2 - log_agent_interaction - [BackendManager - CalendarSearch] >>> Searching April 2025 for Italy events
+2025-05-02 23:20:51 - INFO - riley2 - log_agent_interaction - [CalendarAgent - EventFound] >>> April event: Dinner with Friends
+2025-05-02 23:20:51 - INFO - riley2 - log_agent_interaction - [BackendManager - CalendarSearch] >>> No Italy events in April. Searching May 2025
+2025-05-02 23:20:51 - INFO - riley2 - log_agent_interaction - [CalendarAgent - EventFound] >>> May event: Work Conference
+2025-05-02 23:20:51 - INFO - riley2 - log_agent_interaction - [CalendarAgent - EventFound] >>> May event: Board Game Night
+2025-05-02 23:20:51 - INFO - riley2 - log_agent_interaction - [CalendarAgent - EventFound] >>> May event: Holiday Italy
+2025-05-02 23:20:51 - INFO - riley2 - log_agent_interaction - [BackendManager - DecisionMade] >>> Found Italy event in May
+2025-05-02 23:20:51 - INFO - riley2 - log_agent_interaction - [Test - OutputResponse] >>> 15052025
+2025-05-02 23:20:51 - INFO - riley2 - log_test_success - [TEST PASSED] test_reasoning_queries[When am I going to Italy?]
+2025-05-02 23:20:51 - INFO - riley2 - log_test_step - [TEST: test_backend_planner_llm] Testing backend_planner_llm decision-making.
+2025-05-02 23:20:51 - INFO - riley2 - log_agent_interaction - [BackendPlanner - Planner] >>> Planning with prompt: What events are coming up next week?
+2025-05-02 23:20:51 - DEBUG - riley2 - backend_planner_llm - Backend planner LLM called with prompt: What events are coming up next week?
+2025-05-02 23:20:53 - DEBUG - riley2 - backend_planner_llm - Planner LLM result: 1. February 23: International Polar Bear Day
+
+2. February 24: United Nations International Day for the Right to the Truth concerning Gross Human Rights Violations and for the Dignity of Victims
+
+3. February 25: International Day of Solidarity with Detained and Missing Staff Members
+
+4. February 26: International Legume Day (unofficial)
+
+5. February 27: International Polar Bear Day (observed in some countries on this date instead of Feb 23)
+
+6. February 28: International Moment of Laughter Day
+
+7. February 29 (Leap Year): Rare Disease Day (usually observed annually on the last day of February)
+2025-05-02 23:20:53 - INFO - riley2 - log_agent_interaction - [BackendPlanner - Planner] >>> Planner decided: 1. February 23: International Polar Bear Day
+
+2. February 24: United Nations International Day for the Right to the Truth concerning Gross Human Rights Violations and for the Dignity of Victims
+
+3. February 25: International Day of Solidarity with Detained and Missing Staff Members
+
+4. February 26: International Legume Day (unofficial)
+
+5. February 27: International Polar Bear Day (observed in some countries on this date instead of Feb 23)
+
+6. February 28: International Moment of Laughter Day
+
+7. February 29 (Leap Year): Rare Disease Day (usually observed annually on the last day of February)
+2025-05-02 23:20:53 - INFO - riley2 - log_test_success - [TEST PASSED] test_backend_planner_llm
+2025-05-02 23:20:53 - INFO - riley2 - log_test_step - [TEST: test_interpret_tool_command_basic] Testing interpret_tool_command basic functionality.
+2025-05-02 23:20:53 - INFO - riley2 - log_agent_interaction - [BackendManager - ToolInterpreter] >>> Tool: calendar_search, Args: {'date': '2025-05-15'}, Output: Meeting scheduled for 9 AM with Sales.
+2025-05-02 23:20:53 - DEBUG - riley2 - interpret_tool_command - Interpreting tool command: calendar_search with args: {'date': '2025-05-15'} and result: Meeting scheduled for 9 AM with Sales.
+2025-05-02 23:20:53 - DEBUG - riley2 - interpret_tool_command - [interpret_tool_command] tool_name: calendar_search, args: {'date': '2025-05-15'}, result: Meeting scheduled for 9 AM with Sales.
+2025-05-02 23:20:54 - DEBUG - riley2 - interpret_tool_command - Interpretation complete for tool: calendar_search
+2025-05-02 23:20:54 - DEBUG - riley2 - interpret_tool_command - [interpret_tool_command] Final Response:  Great news! I have checked the calendar for May 15th, 2025, and found that you have a meeting scheduled with the Sales team at 9 AM. Please make sure to prepare accordingly.
+2025-05-02 23:20:54 - INFO - riley2 - log_agent_interaction - [BackendManager - ToolInterpreter] >>> Human-readable output:  Great news! I have checked the calendar for May 15th, 2025, and found that you have a meeting scheduled with the Sales team at 9 AM. Please make sure to prepare accordingly.
+2025-05-02 23:20:54 - INFO - riley2 - log_test_success - [TEST PASSED] test_interpret_tool_command_basic
+2025-05-02 23:20:54 - INFO - riley2 - log_test_step - [TEST: test_summarize_text_basic] Testing summarize_text basic functionality.
+2025-05-02 23:20:54 - INFO - riley2 - log_agent_interaction - [BackendManager - Summarizer] >>> Input to summarize: Meeting tomorrow at 9 AM with sales team.
+2025-05-02 23:20:54 - DEBUG - riley2 - summarize_text - Summarize text called with: Meeting tomorrow at 9 AM with sales team.
+2025-05-02 23:20:54 - INFO - riley2 - summarize_text - [LLM Prompt Input] Meeting tomorrow at 9 AM with sales team.
+2025-05-02 23:20:55 - DEBUG - riley2 - summarize_text - Summarization result: content=" Great news! It looks like we have a meeting scheduled with the sales team tomorrow at 9 AM. I've marked it in our calendar for you so you won't forget. Let's make sure to prepare and discuss any important topics beforehand. If there's anything specific you want to focus on during the meeting, feel free to let me know!" additional_kwargs={} response_metadata={'model': 'mistral', 'created_at': '2025-05-02T22:20:55.0359214Z', 'done': True, 'done_reason': 'stop', 'total_duration': 632841600, 'load_duration': 10587900, 'prompt_eval_count': 92, 'prompt_eval_duration': 11590200, 'eval_count': 76, 'eval_duration': 610152900, 'model_name': 'mistral'} id='run-756f3ab8-baa6-41c8-b9ae-9c4c16794de5-0' usage_metadata={'input_tokens': 92, 'output_tokens': 76, 'total_tokens': 168}
+2025-05-02 23:20:55 - INFO - riley2 - summarize_text - [LLM Raw Output] content=" Great news! It looks like we have a meeting scheduled with the sales team tomorrow at 9 AM. I've marked it in our calendar for you so you won't forget. Let's make sure to prepare and discuss any important topics beforehand. If there's anything specific you want to focus on during the meeting, feel free to let me know!" additional_kwargs={} response_metadata={'model': 'mistral', 'created_at': '2025-05-02T22:20:55.0359214Z', 'done': True, 'done_reason': 'stop', 'total_duration': 632841600, 'load_duration': 10587900, 'prompt_eval_count': 92, 'prompt_eval_duration': 11590200, 'eval_count': 76, 'eval_duration': 610152900, 'model_name': 'mistral'} id='run-756f3ab8-baa6-41c8-b9ae-9c4c16794de5-0' usage_metadata={'input_tokens': 92, 'output_tokens': 76, 'total_tokens': 168}
+2025-05-02 23:20:55 - INFO - riley2 - summarize_text - [LLM Final Output]:  Great news! It looks like we have a meeting scheduled with the sales team tomorrow at 9 AM. I've marked it in our calendar for you so you won't forget. Let's make sure to prepare and discuss any important topics beforehand. If there's anything specific you want to focus on during the meeting, feel free to let me know!
+2025-05-02 23:20:55 - INFO - riley2 - log_agent_interaction - [BackendManager - Summarizer] >>> Summarized result:  Great news! It looks like we have a meeting scheduled with the sales team tomorrow at 9 AM. I've marked it in our calendar for you so you won't forget. Let's make sure to prepare and discuss any important topics beforehand. If there's anything specific you want to focus on during the meeting, feel free to let me know!
+2025-05-02 23:20:55 - INFO - riley2 - log_test_success - [TEST PASSED] test_summarize_text_basic
+2025-05-02 23:20:55 - INFO - riley2 - log_test_step - [TEST: test_choose_next_action_email] Testing choose_next_action with 'email from boss'.
+2025-05-02 23:20:55 - INFO - riley2 - log_agent_interaction - [BackendManager - Planner] >>> Received query: Check latest email from boss
+2025-05-02 23:20:55 - DEBUG - riley2 - choose_next_action - Choosing next action for query: Check latest email from boss with context: {}
+2025-05-02 23:20:55 - DEBUG - riley2 - choose_next_action - Next action chosen: email_search
+2025-05-02 23:20:55 - INFO - riley2 - log_agent_interaction - [BackendManager - Planner] >>> Chosen action: email_search
+2025-05-02 23:20:55 - INFO - riley2 - log_test_success - [TEST PASSED] test_choose_next_action_email
+2025-05-02 23:20:55 - INFO - riley2 - log_test_step - [TEST: test_choose_next_action_trip] Testing choose_next_action with 'trip to Italy'.
+2025-05-02 23:20:55 - INFO - riley2 - log_agent_interaction - [BackendManager - Planner] >>> Received query: Planning a trip to Italy
+2025-05-02 23:20:55 - DEBUG - riley2 - choose_next_action - Choosing next action for query: Planning a trip to Italy with context: {}
+2025-05-02 23:20:55 - DEBUG - riley2 - choose_next_action - Next action chosen: calendar_search
+2025-05-02 23:20:55 - INFO - riley2 - log_agent_interaction - [BackendManager - Planner] >>> Chosen action: calendar_search
+2025-05-02 23:20:55 - INFO - riley2 - log_test_success - [TEST PASSED] test_choose_next_action_trip
+2025-05-02 23:20:55 - INFO - riley2 - log_test_step - [TEST: test_get_decision] Testing get_decision end-turn logic.
+2025-05-02 23:20:55 - INFO - riley2 - log_agent_interaction - [BackendManager - DecisionLogic] >>> Received prompt: I have enough information now, thanks.
+2025-05-02 23:20:55 - DEBUG - riley2 - get_decision - Getting decision for prompt: I have enough information now, thanks.
+2025-05-02 23:20:55 - DEBUG - riley2 - get_decision - Decision made: yes
+2025-05-02 23:20:55 - INFO - riley2 - log_agent_interaction - [BackendManager - DecisionLogic] >>> Decision made: yes
+2025-05-02 23:20:55 - INFO - riley2 - log_test_success - [TEST PASSED] test_get_decision

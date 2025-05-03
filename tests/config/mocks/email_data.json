@@ -1,0 +1,59 @@
+{
+  "emails": {
+    "2025/05/01": [
+      {
+        "sender": "boss@company.com",
+        "recipient": "user@example.com",
+        "subject": "Quarterly Review",
+        "snippet": "We need to discuss the quarterly performance next week. Can we schedule a meeting?",
+        "body": "Hi,\n\nI'd like to schedule some time to discuss the quarterly performance numbers. Our team has been doing great work, and I want to review our progress and set goals for the next quarter.\n\nCould we meet sometime next week?\n\nRegards,\nYour Boss",
+        "read": true,
+        "labels": ["work", "important"]
+      },
+      {
+        "sender": "colleague@company.com",
+        "recipient": "user@example.com",
+        "subject": "Project Update",
+        "snippet": "Here are the latest changes to the project...",
+        "body": "Hi,\n\nI've pushed some changes to the project repository. The main features are now complete, and I've addressed the issues we discussed in our last meeting.\n\nPlease take a look when you have time and let me know if you have any questions or feedback.\n\nBest,\nYour Colleague",
+        "read": false,
+        "labels": ["work", "project-x"]
+      }
+    ],
+    "2025/05/02": [
+      {
+        "sender": "boss@company.com",
+        "recipient": "user@example.com",
+        "subject": "Team Meeting Tomorrow",
+        "snippet": "Don't forget we have a team meeting at 9am...",
+        "body": "Just a reminder that we have a team meeting scheduled for tomorrow at 9am in Conference Room B. Please bring your project status updates.\n\nThanks,\nYour Boss",
+        "read": true,
+        "labels": ["work", "meeting"]
+      },
+      {
+        "sender": "newsletter@tech.com",
+        "recipient": "user@example.com",
+        "subject": "This Week in Tech",
+        "snippet": "The latest technology news and updates...",
+        "body": "# This Week in Tech\n\n## Top Stories\n1. New AI breakthrough in natural language processing\n2. Latest smartphone releases compared\n3. Tech industry hiring trends in 2025\n\n## Upcoming Events\n- TechExpo 2025 - June 10-12\n- Developer Conference - July 15\n\nThank you for subscribing to our newsletter!",
+        "read": false,
+        "labels": ["newsletters", "technology"]
+      }
+    ],
+    "2025/04/30": [
+      {
+        "sender": "travel@agency.com",
+        "recipient": "user@example.com",
+        "subject": "Italy Trip Confirmation",
+        "snippet": "Your trip to Italy on May 15 has been confirmed...",
+        "body": "Dear Valued Customer,\n\nWe're pleased to confirm your trip to Italy from May 15 to May 25, 2025.\n\nYour itinerary includes:\n- Flight departure: May 15, 10:30am\n- Hotel check-in: Grand Hotel Rome, May 15\n- Hotel check-out: May 25\n- Return flight: May 25, 6:15pm\n\nThank you for booking with us!\n\nBest regards,\nYour Travel Agency",
+        "read": true,
+        "labels": ["travel", "important", "personal"]
+      }
+    ]
+  },
+  "test_metadata": {
+    "last_updated": "2025-05-03",
+    "description": "Mock email data for unit testing"
+  }
+}

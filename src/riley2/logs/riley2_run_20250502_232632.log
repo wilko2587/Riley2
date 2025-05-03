@@ -1,0 +1,81 @@
+2025-05-02 23:26:32; - INFO - riley2 - log_test_step - [TEST: test_reasoning_queries] Testing reasoning with query: 'When am I going to Italy?'
+2025-05-02 23:26:32; - INFO - riley2 - log_agent_interaction - [Test - InputQuery] >>> When am I going to Italy?
+2025-05-02 23:26:32; - INFO - riley2 - log_agent_interaction - [BackendManager - Reasoner] >>> Processing question: 'When am I going to Italy?'
+2025-05-02 23:26:32; - INFO - riley2 - log_agent_interaction - [BackendManager - CalendarSearch] >>> Searching April 2025 for Italy events
+2025-05-02 23:26:32; - INFO - riley2 - log_agent_interaction - [CalendarAgent - EventFound] >>> April event: Dinner with Friends
+2025-05-02 23:26:32; - INFO - riley2 - log_agent_interaction - [BackendManager - CalendarSearch] >>> No Italy events in April. Searching May 2025
+2025-05-02 23:26:32; - INFO - riley2 - log_agent_interaction - [CalendarAgent - EventFound] >>> May event: Work Conference
+2025-05-02 23:26:32; - INFO - riley2 - log_agent_interaction - [CalendarAgent - EventFound] >>> May event: Board Game Night
+2025-05-02 23:26:32; - INFO - riley2 - log_agent_interaction - [CalendarAgent - EventFound] >>> May event: Holiday Italy
+2025-05-02 23:26:32; - INFO - riley2 - log_agent_interaction - [BackendManager - DecisionMade] >>> Found Italy event in May
+2025-05-02 23:26:32; - INFO - riley2 - log_agent_interaction - [Test - OutputResponse] >>> 15052025
+2025-05-02 23:26:32; - INFO - riley2 - log_test_success - [TEST PASSED] test_reasoning_queries[When am I going to Italy?]
+2025-05-02 23:26:32; - INFO - riley2 - log_test_step - [TEST: test_backend_planner_llm] Testing backend_planner_llm decision-making.
+2025-05-02 23:26:32; - INFO - riley2 - log_agent_interaction - [BackendPlanner - Planner] >>> Planning with prompt: What events are coming up next week?
+2025-05-02 23:26:32; - DEBUG - riley2 - backend_planner_llm - Backend planner LLM called with prompt: What events are coming up next week?
+2025-05-02 23:26:35; - DEBUG - riley2 - backend_planner_llm - Planner LLM result: 1. February 8, 2023 (Tuesday): Super Bowl LVI - The National Football League's championship game will take place at SoFi Stadium in Inglewood, California.
+
+2. February 9, 2023 (Wednesday): Grammy Awards - The 64th Annual Grammy Awards ceremony will be held at the MGM Grand Garden Arena in Las Vegas, Nevada.
+
+3. February 10, 2023 (Thursday): State of the Union Address - U.S. President Joe Biden is expected to deliver his annual State of the Union address to a joint session of Congress. The exact date has not been officially announced yet but it usually takes place in late January or early February.
+
+4. February 10, 2023 (Thursday): NBA All-Star Game - The 71st NBA All-Star Game will be held at Vivint Arena in Salt Lake City, Utah.
+
+5. February 11, 2023 (Friday): Chinese New Year - The Year of the Ox begins on this day according to the traditional Chinese lunisolar calendar.
+
+6. February 14, 2023 (Tuesday): Valentine's Day - A global celebration of love and affection.
+
+7. February 15, 2023 (Wednesday): Presidents' Day - This federal holiday in the United States honors both George Washington and Abraham Lincoln, two of the country's most important presidents. It is observed on the third Monday in February.
+2025-05-02 23:26:35; - INFO - riley2 - log_agent_interaction - [BackendPlanner - Planner] >>> Planner decided: 1. February 8, 2023 (Tuesday): Super Bowl LVI - The National Football League's championship game will take place at SoFi Stadium in Inglewood, California.
+
+2. February 9, 2023 (Wednesday): Grammy Awards - The 64th Annual Grammy Awards ceremony will be held at the MGM Grand Garden Arena in Las Vegas, Nevada.
+
+3. February 10, 2023 (Thursday): State of the Union Address - U.S. President Joe Biden is expected to deliver his annual State of the Union address to a joint session of Congress. The exact date has not been officially announced yet but it usually takes place in late January or early February.
+
+4. February 10, 2023 (Thursday): NBA All-Star Game - The 71st NBA All-Star Game will be held at Vivint Arena in Salt Lake City, Utah.
+
+5. February 11, 2023 (Friday): Chinese New Year - The Year of the Ox begins on this day according to the traditional Chinese lunisolar calendar.
+
+6. February 14, 2023 (Tuesday): Valentine's Day - A global celebration of love and affection.
+
+7. February 15, 2023 (Wednesday): Presidents' Day - This federal holiday in the United States honors both George Washington and Abraham Lincoln, two of the country's most important presidents. It is observed on the third Monday in February.
+2025-05-02 23:26:35; - INFO - riley2 - log_test_success - [TEST PASSED] test_backend_planner_llm
+2025-05-02 23:26:35; - INFO - riley2 - log_test_step - [TEST: test_interpret_tool_command_basic] Testing interpret_tool_command basic functionality.
+2025-05-02 23:26:35; - INFO - riley2 - log_agent_interaction - [BackendManager - ToolInterpreter] >>> Tool: calendar_search, Args: {'date': '2025-05-15'}, Output: Meeting scheduled for 9 AM with Sales.
+2025-05-02 23:26:35; - DEBUG - riley2 - interpret_tool_command - Interpreting tool command: calendar_search with args: {'date': '2025-05-15'} and result: Meeting scheduled for 9 AM with Sales.
+2025-05-02 23:26:35; - DEBUG - riley2 - interpret_tool_command - [interpret_tool_command] tool_name: calendar_search, args: {'date': '2025-05-15'}, result: Meeting scheduled for 9 AM with Sales.
+2025-05-02 23:26:35; - DEBUG - riley2 - interpret_tool_command - Interpretation complete for tool: calendar_search
+2025-05-02 23:26:35; - DEBUG - riley2 - interpret_tool_command - [interpret_tool_command] Final Response:  Based on your request to search the calendar for May 15, 2025, I found a meeting scheduled at 9 AM titled "Sales Meeting". It appears that you have something planned with the Sales team on that day.
+2025-05-02 23:26:35; - INFO - riley2 - log_agent_interaction - [BackendManager - ToolInterpreter] >>> Human-readable output:  Based on your request to search the calendar for May 15, 2025, I found a meeting scheduled at 9 AM titled "Sales Meeting". It appears that you have something planned with the Sales team on that day.
+2025-05-02 23:26:35; - INFO - riley2 - log_test_success - [TEST PASSED] test_interpret_tool_command_basic
+2025-05-02 23:26:35; - INFO - riley2 - log_test_step - [TEST: test_summarize_text_basic] Testing summarize_text basic functionality.
+2025-05-02 23:26:35; - INFO - riley2 - log_agent_interaction - [BackendManager - Summarizer] >>> Input to summarize: Meeting tomorrow at 9 AM with sales team.
+2025-05-02 23:26:35; - DEBUG - riley2 - summarize_text - Summarize text called with: Meeting tomorrow at 9 AM with sales team.
+2025-05-02 23:26:35; - INFO - riley2 - summarize_text - [LLM Prompt Input] Meeting tomorrow at 9 AM with sales team.
+2025-05-02 23:26:36; - DEBUG - riley2 - summarize_text - Summarization result: content=' Sure thing! Here\'s a friendly interpretation of the information provided by the summarize_email tool:\n\n"Great news! It looks like we have a meeting scheduled for tomorrow morning at 9 AM with our sales team. Let\'s make sure to prepare any necessary materials ahead of time so we can hit the ground running!"' additional_kwargs={} response_metadata={'model': 'mistral', 'created_at': '2025-05-02T22:26:36.2820928Z', 'done': True, 'done_reason': 'stop', 'total_duration': 568803800, 'load_duration': 10479400, 'prompt_eval_count': 92, 'prompt_eval_duration': 10978500, 'eval_count': 69, 'eval_duration': 546836000, 'model_name': 'mistral'} id='run-1c972722-fb85-4f0f-88c9-b8f7d57a6ef4-0' usage_metadata={'input_tokens': 92, 'output_tokens': 69, 'total_tokens': 161}
+2025-05-02 23:26:36; - INFO - riley2 - summarize_text - [LLM Raw Output] content=' Sure thing! Here\'s a friendly interpretation of the information provided by the summarize_email tool:\n\n"Great news! It looks like we have a meeting scheduled for tomorrow morning at 9 AM with our sales team. Let\'s make sure to prepare any necessary materials ahead of time so we can hit the ground running!"' additional_kwargs={} response_metadata={'model': 'mistral', 'created_at': '2025-05-02T22:26:36.2820928Z', 'done': True, 'done_reason': 'stop', 'total_duration': 568803800, 'load_duration': 10479400, 'prompt_eval_count': 92, 'prompt_eval_duration': 10978500, 'eval_count': 69, 'eval_duration': 546836000, 'model_name': 'mistral'} id='run-1c972722-fb85-4f0f-88c9-b8f7d57a6ef4-0' usage_metadata={'input_tokens': 92, 'output_tokens': 69, 'total_tokens': 161}
+2025-05-02 23:26:36; - INFO - riley2 - summarize_text - [LLM Final Output]:  Sure thing! Here's a friendly interpretation of the information provided by the summarize_email tool:
+
+"Great news! It looks like we have a meeting scheduled for tomorrow morning at 9 AM with our sales team. Let's make sure to prepare any necessary materials ahead of time so we can hit the ground running!"
+2025-05-02 23:26:36; - INFO - riley2 - log_agent_interaction - [BackendManager - Summarizer] >>> Summarized result:  Sure thing! Here's a friendly interpretation of the information provided by the summarize_email tool:
+
+"Great news! It looks like we have a meeting scheduled for tomorrow morning at 9 AM with our sales team. Let's make sure to prepare any necessary materials ahead of time so we can hit the ground running!"
+2025-05-02 23:26:36; - INFO - riley2 - log_test_success - [TEST PASSED] test_summarize_text_basic
+2025-05-02 23:26:36; - INFO - riley2 - log_test_step - [TEST: test_choose_next_action_email] Testing choose_next_action with 'email from boss'.
+2025-05-02 23:26:36; - INFO - riley2 - log_agent_interaction - [BackendManager - Planner] >>> Received query: Check latest email from boss
+2025-05-02 23:26:36; - DEBUG - riley2 - choose_next_action - Choosing next action for query: Check latest email from boss with context: {}
+2025-05-02 23:26:36; - DEBUG - riley2 - choose_next_action - Next action chosen: email_search
+2025-05-02 23:26:36; - INFO - riley2 - log_agent_interaction - [BackendManager - Planner] >>> Chosen action: email_search
+2025-05-02 23:26:36; - INFO - riley2 - log_test_success - [TEST PASSED] test_choose_next_action_email
+2025-05-02 23:26:36; - INFO - riley2 - log_test_step - [TEST: test_choose_next_action_trip] Testing choose_next_action with 'trip to Italy'.
+2025-05-02 23:26:36; - INFO - riley2 - log_agent_interaction - [BackendManager - Planner] >>> Received query: Planning a trip to Italy
+2025-05-02 23:26:36; - DEBUG - riley2 - choose_next_action - Choosing next action for query: Planning a trip to Italy with context: {}
+2025-05-02 23:26:36; - DEBUG - riley2 - choose_next_action - Next action chosen: calendar_search
+2025-05-02 23:26:36; - INFO - riley2 - log_agent_interaction - [BackendManager - Planner] >>> Chosen action: calendar_search
+2025-05-02 23:26:36; - INFO - riley2 - log_test_success - [TEST PASSED] test_choose_next_action_trip
+2025-05-02 23:26:36; - INFO - riley2 - log_test_step - [TEST: test_get_decision] Testing get_decision end-turn logic.
+2025-05-02 23:26:36; - INFO - riley2 - log_agent_interaction - [BackendManager - DecisionLogic] >>> Received prompt: I have enough information now, thanks.
+2025-05-02 23:26:36; - DEBUG - riley2 - get_decision - Getting decision for prompt: I have enough information now, thanks.
+2025-05-02 23:26:36; - DEBUG - riley2 - get_decision - Decision made: yes
+2025-05-02 23:26:36; - INFO - riley2 - log_agent_interaction - [BackendManager - DecisionLogic] >>> Decision made: yes
+2025-05-02 23:26:36; - INFO - riley2 - log_test_success - [TEST PASSED] test_get_decision

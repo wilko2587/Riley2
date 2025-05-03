@@ -1,9 +1,16 @@
+
+import pytest
+
+@pytest.fixture(scope="session")
+def verbose_flag(request):
+    return request.config.getoption("verbose") >= 3
+import pytest
 # PATCH for tests/test_backend.py
 # Purpose: Inject proper colorful, agent-tagged logging during tests
 
 import unittest
-from core.llm_backend import summarize_text, interpret_tool_command, backend_planner_llm
-from core.logger_utils import log_agent_interaction, log_test_step, log_test_success
+from riley2.core.llm_backend import summarize_text, interpret_tool_command, backend_planner_llm
+from riley2.core.logger_utils import log_agent_interaction, log_test_step, log_test_success
 
 class TestBackend(unittest.TestCase):
 
@@ -11,7 +18,7 @@ class TestBackend(unittest.TestCase):
         log_test_step("Testing summarize_text basic functionality.")
         input_text = "Meeting tomorrow at 9 AM with sales team."
         log_agent_interaction("BackendManager", "Summarizer", f"Input to summarize: {input_text}")
-        result = summarize_text(input_text)
+        result = summarize_text(input_text, verbose=verbose_flag)
         log_agent_interaction("BackendManager", "Summarizer", f"Summarized result: {result}")
         self.assertIn("meeting", result.lower())
         log_test_success("test_summarize_text_basic")

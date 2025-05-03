@@ -1,0 +1,9 @@
+2025-05-02 23:54:19 - INFO - riley2 - log_test_step - [TEST: test_email_reasoning] Testing email reasoning with query: 'What emails did I get from my boss?'
+2025-05-02 23:54:19 - INFO - riley2 - log_agent_interaction - [Test - InputQuery] >>> What emails did I get from my boss?
+2025-05-02 23:54:19 - INFO - riley2 - log_agent_interaction - [EmailReasoner - Processing] >>> Query: 'What emails did I get from my boss?'
+2025-05-02 23:54:19 - INFO - riley2 - log_test_step - [TEST: test_email_reasoning] Testing email reasoning with query: 'Tell me about any recent emails'
+2025-05-02 23:54:19 - INFO - riley2 - log_agent_interaction - [Test - InputQuery] >>> Tell me about any recent emails
+2025-05-02 23:54:19 - INFO - riley2 - log_agent_interaction - [EmailReasoner - Processing] >>> Query: 'Tell me about any recent emails'
+2025-05-02 23:54:19 - INFO - riley2 - log_test_step - [TEST: test_email_reasoning] Testing email reasoning with query: 'Any updates on my Italy trip?'
+2025-05-02 23:54:19 - INFO - riley2 - log_agent_interaction - [Test - InputQuery] >>> Any updates on my Italy trip?
+2025-05-02 23:54:19 - INFO - riley2 - log_agent_interaction - [EmailReasoner - Processing] >>> Query: 'Any updates on my Italy trip?'

@@ -1,0 +1,50 @@
+{
+  "events": [
+    {
+      "title": "Dinner with Friends",
+      "date": "2025/04/26",
+      "all_day": false,
+      "start_time": "18:00",
+      "end_time": "20:00"
+    },
+    {
+      "title": "Work Conference",
+      "date": "2025/05/05",
+      "all_day": true,
+      "end_date": "2025/05/08"
+    },
+    {
+      "title": "Board Game Night",
+      "date": "2025/05/12",
+      "all_day": false,
+      "start_time": "18:00",
+      "end_time": "22:00"
+    },
+    {
+      "title": "Holiday Italy",
+      "date": "2025/05/15",
+      "all_day": true,
+      "end_date": "2025/05/25",
+      "location": "Rome, Italy",
+      "description": "Annual vacation - booked flights and hotel"
+    },
+    {
+      "title": "Doctor Appointment",
+      "date": "2025/05/04",
+      "all_day": false,
+      "start_time": "14:30",
+      "end_time": "15:30"
+    },
+    {
+      "title": "William Lunch",
+      "date": "2025/04/27",
+      "all_day": false,
+      "start_time": "12:00",
+      "end_time": "13:30"
+    }
+  ],
+  "test_metadata": {
+    "last_updated": "2025-05-03",
+    "description": "Mock calendar events for unit testing"
+  }
+}

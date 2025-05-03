@@ -1,0 +1,141 @@
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\knowledge_base.json
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - Test configurations loaded and validated successfully
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [[36m[1mSYSTEM - TEST_SESSION[0m] Starting test session with enhanced colorful logging
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\knowledge_base.json
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - Test configurations loaded and validated successfully
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - 
+[33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [[44m[37mTEST STEP - test_frontend_dummy[0m] Testing frontend response to meeting query
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [[36mUSER[0m] [33m[1m>>>[0m [[35m[1mFRONTEND[0m]: What meetings do I have today?
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [[34m[1mLLM Call - Frontend LLM[0m] -> [33m[1mINPUT:[0m User is asking about meetings today. Generate a helpful response.
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [[34m[1mLLM Call - Frontend LLM[0m] -> [36m[1mOUTPUT:[0m You have a meeting at 3 PM today with the marketing team.
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [[36m[1mSYSTEM - TEST_SESSION[0m] Starting test session with enhanced colorful logging
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [[35m[1mFRONTEND[0m] [32m[1m<<<[0m [[36mUSER[0m]: You have a meeting at 3 PM today with the marketing team.
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - 
+[33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [36m[1mEvent Sequence: Frontend Query Flow[0m
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - 1. [Input] User -> Frontend: Asked about meetings
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - 2. [Process] Frontend -> LLM: Generated query response
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - 
+[33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [[36m[1mSYSTEM - TEST_SESSION[0m] Starting test session with enhanced colorful logging
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - 3. [Output] Frontend -> User: Provided meeting information
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [[44m[37mTEST STEP - test_email_reasoning[0m] Testing email reasoning with query: 'What emails did I get from my boss?'
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - 
+[32m[1m================================================================================[0m
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [[42m[30m[1mTEST PASSED[0m] test_frontend_dummy
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [32m[1m================================================================================[0m
+
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - 
+[33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Initialized EmailAgentMock with emails from config for 3 dates
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [[44m[37mTEST STEP - test_reasoning_queries[0m] Testing reasoning with query: 'When am I going to Italy?'
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [Test - InputQuery] -> What emails did I get from my boss?
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [EmailReasoner - Processing] -> Query: 'What emails did I get from my boss?'
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [EmailReasoner - EmailSearch] -> Searching for emails from boss
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Mock: Downloading emails from 2025/05/02 to 2025/05/03.
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Initialized CalendarAgentMock with 6 events from config
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [Test - InputQuery] -> When am I going to Italy?
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [BackendManager - Reasoner] -> Processing question: 'When am I going to Italy?'
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [BackendManager - CalendarSearch] -> Searching April 2025 for Italy events
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Mock: Scanning calendar from 2025/04/01 to 2025/04/30 with query: italy
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - Mock: Retrieved 2 emails.
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [EmailAgent - DownloadResult] -> Downloaded 2 emails
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Mock: Filtering emails by sender: boss@company.com
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - Mock: Found 1 emails from boss@company.com.
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [EmailAgent - FilterResult] -> Filtered 1 emails
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - Mock: Found 0 calendar events matching criteria
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Mock: Summarizing email batch of size: 101 characters.
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [CalendarAgent - EventResult] -> No matching events found.
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Mock: Email summary: Several emails from your boss, including a message about a team meeting tomorrow at 9am.
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [BackendManager - CalendarSearch] -> No Italy events in April. Searching May 2025
+about a team meeting tomorrow at 9am.
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [Test - OutputResponse] -> Several emails from your boss, including a message about a team meeting tomorrow at 9am.
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Mock: Scanning calendar from 2025/05/01 to 2025/05/31 with query: italy
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - 
+[32m[1m================================================================================[0m
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [[42m[30m[1mTEST PASSED[0m] test_email_reasoning[What emails did I get from my boss?]
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - Mock: Found 1 calendar events matching criteria
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [32m[1m================================================================================[0m
+
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [CalendarAgent - EventResult] -> Found events: [{'title': 'Holiday Italy', 'date': '2025/05/15', 'all_day': True, 'end_date': '2025/05/25', 'location': 'Rome, Italy', 'description': 'Annual vacation - booked flights and hotel'}]
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [BackendManager - DecisionMade] -> Found Italy event in May
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [Test - OutputResponse] -> 15052025
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - 
+[32m[1m================================================================================[0m
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [[42m[30m[1mTEST PASSED[0m] test_reasoning_queries[When am I going to Italy?]
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [32m[1m================================================================================[0m
+
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [[36m[1mSYSTEM - TEST_SESSION[0m] Test session complete
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [[36m[1mSYSTEM - TEST_SESSION[0m] Test session complete
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - 
+[33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [[44m[37mTEST STEP - test_email_reasoning[0m] Testing email reasoning with query: 'Tell me about any recent emails'
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Initialized EmailAgentMock with emails from config for 3 dates
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [Test - InputQuery] -> Tell me about any recent emails
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [EmailReasoner - Processing] -> Query: 'Tell me about any recent emails'
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [EmailReasoner - EmailSearch] -> Searching for recent emails
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Mock: Downloading emails from 2025/05/03 to 2025/05/03.
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - Mock: Retrieved 0 emails.
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Mock: Summarizing email batch of size: 16 characters.
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Mock: Email summary: Various recent emails including an update about a team meeting tomorrow and some newsletters.
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [EmailAgent - SummaryResult] -> Various recent emails including an update about a team meeting tomorrow and some newsletters.
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [Test - OutputResponse] -> Various recent emails including an update about a team meeting tomorrow and some newsletters.
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - 
+[32m[1m================================================================================[0m
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [[42m[30m[1mTEST PASSED[0m] test_email_reasoning[Tell me about any recent emails]
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [32m[1m================================================================================[0m
+
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - 
+[33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [[44m[37mTEST STEP - test_email_reasoning[0m] Testing email reasoning with query: 'Any updates on my Italy trip?'
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Initialized EmailAgentMock with emails from config for 3 dates
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [Test - InputQuery] -> Any updates on my Italy trip?
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [EmailReasoner - Processing] -> Query: 'Any updates on my Italy trip?'
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [EmailReasoner - EmailSearch] -> Searching for Italy trip emails
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Mock: Downloading emails from 2025/04/30 to 2025/05/03.
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - Mock: Retrieved 5 emails.
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Mock: Summarizing email batch of size: 109 characters.
+[35m2025-05-03 00:54:18[0m - [36mDEBUG[0m - Mock: Email summary: Your trip to Italy on May 15 has been confirmed.
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [EmailAgent - SummaryResult] -> Your trip to Italy on May 15 has been confirmed.
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [Test - OutputResponse] -> Your trip to Italy on May 15 has been confirmed.
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - 
+[32m[1m================================================================================[0m
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [[42m[30m[1mTEST PASSED[0m] test_email_reasoning[Any updates on my Italy trip?]
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [32m[1m================================================================================[0m
+
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [[36m[1mSYSTEM - TEST_SESSION[0m] Test session complete
+[35m2025-05-03 00:54:18[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m

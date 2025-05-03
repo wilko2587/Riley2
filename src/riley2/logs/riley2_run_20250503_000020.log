@@ -1,0 +1,125 @@
+2025-05-03 00:00:20 - INFO - riley2 - log_test_step - [TEST: test_email_reasoning] Testing email reasoning with query: 'What emails did I get from my boss?'
+2025-05-03 00:00:20 - INFO - riley2 - log_agent_interaction - [Test - InputQuery] >>> What emails did I get from my boss?
+2025-05-03 00:00:20 - INFO - riley2 - log_agent_interaction - [EmailReasoner - Processing] >>> Query: 'What emails did I get from my boss?'
+2025-05-03 00:00:20 - INFO - riley2 - log_agent_interaction - [EmailReasoner - EmailSearch] >>> Searching for emails from boss
+2025-05-03 00:00:20 - DEBUG - riley2 - email_download_chunk - Mock: Downloading emails from 2025/05/02 to 2025/05/03.
+2025-05-03 00:00:20 - INFO - riley2 - email_download_chunk - Mock: Retrieved 2 emails.
+2025-05-03 00:00:20 - INFO - riley2 - log_agent_interaction - [EmailAgent - DownloadResult] >>> Downloaded 2 emails
+2025-05-03 00:00:20 - DEBUG - riley2 - email_filter_by_sender - Mock: Filtering emails by sender: boss@company.com
+2025-05-03 00:00:20 - INFO - riley2 - email_filter_by_sender - Mock: Found 1 emails from boss@company.com.
+2025-05-03 00:00:20 - INFO - riley2 - log_test_step - [TEST: test_email_reasoning] Testing email reasoning with query: 'Tell me about any recent emails'
+2025-05-03 00:00:20 - INFO - riley2 - log_agent_interaction - [Test - InputQuery] >>> Tell me about any recent emails
+2025-05-03 00:00:20 - INFO - riley2 - log_agent_interaction - [EmailReasoner - Processing] >>> Query: 'Tell me about any recent emails'
+2025-05-03 00:00:20 - INFO - riley2 - log_agent_interaction - [EmailReasoner - EmailSearch] >>> Searching for recent emails
+2025-05-03 00:00:20 - DEBUG - riley2 - email_download_chunk - Mock: Downloading emails from 2025/05/03 to 2025/05/03.
+2025-05-03 00:00:20 - INFO - riley2 - email_download_chunk - Mock: Retrieved 0 emails.
+2025-05-03 00:00:20 - DEBUG - riley2 - email_summarize_batch - Mock: Summarizing email batch of size: 16 characters.
+2025-05-03 00:00:20 - DEBUG - riley2 - email_summarize_batch - Mock: Email summary: Various emails including project updates and newsletters.
+2025-05-03 00:00:20 - INFO - riley2 - log_agent_interaction - [EmailAgent - SummaryResult] >>> Various emails including project updates and newsletters.
+2025-05-03 00:00:20 - INFO - riley2 - log_agent_interaction - [Test - OutputResponse] >>> Various emails including project updates and newsletters.
+2025-05-03 00:00:20 - INFO - riley2 - log_test_step - [TEST: test_email_reasoning] Testing email reasoning with query: 'Any updates on my Italy trip?'
+2025-05-03 00:00:20 - INFO - riley2 - log_agent_interaction - [Test - InputQuery] >>> Any updates on my Italy trip?
+2025-05-03 00:00:20 - INFO - riley2 - log_agent_interaction - [EmailReasoner - Processing] >>> Query: 'Any updates on my Italy trip?'
+2025-05-03 00:00:20 - INFO - riley2 - log_agent_interaction - [EmailReasoner - EmailSearch] >>> Searching for Italy trip emails
+2025-05-03 00:00:20 - DEBUG - riley2 - email_download_chunk - Mock: Downloading emails from 2025/04/30 to 2025/05/03.
+2025-05-03 00:00:20 - INFO - riley2 - email_download_chunk - Mock: Retrieved 5 emails.
+2025-05-03 00:00:20 - DEBUG - riley2 - email_summarize_batch - Mock: Summarizing email batch of size: 109 characters.
+2025-05-03 00:00:20 - DEBUG - riley2 - email_summarize_batch - Mock: Email summary: Your trip to Italy on May 15 has been confirmed.
+2025-05-03 00:00:20 - INFO - riley2 - log_agent_interaction - [EmailAgent - SummaryResult] >>> Your trip to Italy on May 15 has been confirmed.
+2025-05-03 00:00:20 - INFO - riley2 - log_agent_interaction - [Test - OutputResponse] >>> Your trip to Italy on May 15 has been confirmed.
+2025-05-03 00:00:20 - INFO - riley2 - log_test_success - [TEST PASSED] test_email_reasoning[Any updates on my Italy trip?]
+2025-05-03 00:00:20 - INFO - riley2 - log_test_step - [TEST: test_reasoning_queries] Testing reasoning with query: 'When am I going to Italy?'
+2025-05-03 00:00:20 - INFO - riley2 - log_agent_interaction - [Test - InputQuery] >>> When am I going to Italy?
+2025-05-03 00:00:20 - INFO - riley2 - log_agent_interaction - [BackendManager - Reasoner] >>> Processing question: 'When am I going to Italy?'
+2025-05-03 00:00:20 - INFO - riley2 - log_agent_interaction - [BackendManager - CalendarSearch] >>> Searching April 2025 for Italy events
+2025-05-03 00:00:20 - INFO - riley2 - log_agent_interaction - [CalendarAgent - EventResult] >>> No matching events found.
+2025-05-03 00:00:20 - INFO - riley2 - log_agent_interaction - [BackendManager - CalendarSearch] >>> No Italy events in April. Searching May 2025
+2025-05-03 00:00:20 - INFO - riley2 - log_agent_interaction - [CalendarAgent - EventResult] >>> Found events: [{'title': 'Holiday Italy', 'date': '2025/05/15'}]
+2025-05-03 00:00:20 - INFO - riley2 - log_agent_interaction - [BackendManager - DecisionMade] >>> Found Italy event in May
+2025-05-03 00:00:20 - INFO - riley2 - log_agent_interaction - [Test - OutputResponse] >>> 15052025
+2025-05-03 00:00:20 - INFO - riley2 - log_test_success - [TEST PASSED] test_reasoning_queries[When am I going to Italy?]
+2025-05-03 00:00:20 - INFO - riley2 - log_test_step - [TEST: test_backend_planner_llm] Testing backend_planner_llm decision-making.
+2025-05-03 00:00:20 - INFO - riley2 - log_agent_interaction - [BackendPlanner - Planner] >>> Planning with prompt: What events are coming up next week?
+2025-05-03 00:00:20 - DEBUG - riley2 - backend_planner_llm - Backend planner LLM called with prompt: What events are coming up next week?
+2025-05-03 00:00:24 - DEBUG - riley2 - backend_planner_llm - Planner LLM result: 1. February 23, 2023 (Tuesday):
+
+- World Radio Day: An annual event organized by UNESCO to celebrate radio as a medium and to draw attention to the important role it plays in society.
+
+2. February 24, 2023 (Wednesday):
+
+- International Day of Human Space Flight: Commemorates Yuri Gagarin's first manned space flight on April 12, 1961.
+
+3. February 25, 2023 (Thursday):
+
+- International Conscience Day: A day to reflect upon the importance of individual conscience and its role in promoting peace, justice, and human rights.
+
+4. February 26, 2023 (Friday):
+
+- International Legume Day: A day to celebrate the importance of legumes in our diet and their positive impact on health and the environment.
+
+5. February 27, 2023 (Saturday):
+
+- International Polar Bear Day: A day dedicated to raising awareness about polar bears and the threats they face due to climate change.
+
+6. February 28, 2023 (Monday):
+
+- International Moment of Laughter Day: A day to celebrate laughter and its positive effects on our mental and physical health.
+2025-05-03 00:00:24 - INFO - riley2 - log_agent_interaction - [BackendPlanner - Planner] >>> Planner decided: 1. February 23, 2023 (Tuesday):
+
+- World Radio Day: An annual event organized by UNESCO to celebrate radio as a medium and to draw attention to the important role it plays in society.
+
+2. February 24, 2023 (Wednesday):
+
+- International Day of Human Space Flight: Commemorates Yuri Gagarin's first manned space flight on April 12, 1961.
+
+3. February 25, 2023 (Thursday):
+
+- International Conscience Day: A day to reflect upon the importance of individual conscience and its role in promoting peace, justice, and human rights.
+
+4. February 26, 2023 (Friday):
+
+- International Legume Day: A day to celebrate the importance of legumes in our diet and their positive impact on health and the environment.
+
+5. February 27, 2023 (Saturday):
+
+- International Polar Bear Day: A day dedicated to raising awareness about polar bears and the threats they face due to climate change.
+
+6. February 28, 2023 (Monday):
+
+- International Moment of Laughter Day: A day to celebrate laughter and its positive effects on our mental and physical health.
+2025-05-03 00:00:24 - INFO - riley2 - log_test_success - [TEST PASSED] test_backend_planner_llm
+2025-05-03 00:00:24 - INFO - riley2 - log_test_step - [TEST: test_interpret_tool_command_basic] Testing interpret_tool_command basic functionality.
+2025-05-03 00:00:24 - INFO - riley2 - log_agent_interaction - [BackendManager - ToolInterpreter] >>> Tool: calendar_search, Args: {'date': '2025-05-15'}, Output: Meeting scheduled for 9 AM with Sales.
+2025-05-03 00:00:24 - DEBUG - riley2 - interpret_tool_command - Interpreting tool command: calendar_search with args: {'date': '2025-05-15'} and result: Meeting scheduled for 9 AM with Sales.
+2025-05-03 00:00:24 - DEBUG - riley2 - interpret_tool_command - [interpret_tool_command] tool_name: calendar_search, args: {'date': '2025-05-15'}, result: Meeting scheduled for 9 AM with Sales.
+2025-05-03 00:00:24 - DEBUG - riley2 - interpret_tool_command - Interpretation complete for tool: calendar_search
+2025-05-03 00:00:24 - DEBUG - riley2 - interpret_tool_command - [interpret_tool_command] Final Response:  Great news! I've checked the calendar for May 15th, 2025, and it appears there's a meeting scheduled at 9 AM with the Sales team. Make sure to prepare accordingly for this important event.
+2025-05-03 00:00:24 - INFO - riley2 - log_agent_interaction - [BackendManager - ToolInterpreter] >>> Human-readable output:  Great news! I've checked the calendar for May 15th, 2025, and it appears there's a meeting scheduled at 9 AM with the Sales team. Make sure to prepare accordingly for this important event.
+2025-05-03 00:00:24 - INFO - riley2 - log_test_success - [TEST PASSED] test_interpret_tool_command_basic
+2025-05-03 00:00:24 - INFO - riley2 - log_test_step - [TEST: test_summarize_text_basic] Testing summarize_text basic functionality.
+2025-05-03 00:00:24 - INFO - riley2 - log_agent_interaction - [BackendManager - Summarizer] >>> Input to summarize: Meeting tomorrow at 9 AM with sales team.
+2025-05-03 00:00:24 - DEBUG - riley2 - summarize_text - Summarize text called with: Meeting tomorrow at 9 AM with sales team.
+2025-05-03 00:00:24 - INFO - riley2 - summarize_text - [LLM Prompt Input] Meeting tomorrow at 9 AM with sales team.
+2025-05-03 00:00:25 - DEBUG - riley2 - summarize_text - Summarization result: content=" Sure thing! So it looks like there's a meeting scheduled for tomorrow at 9 AM with the sales team. It seems like you'll be catching up with your colleagues from the sales department then. If you have any specific items to discuss or prepare beforehand, now might be a good time to start thinking about them!" additional_kwargs={} response_metadata={'model': 'mistral', 'created_at': '2025-05-02T23:00:25.3940254Z', 'done': True, 'done_reason': 'stop', 'total_duration': 562072400, 'load_duration': 12107900, 'prompt_eval_count': 92, 'prompt_eval_duration': 8825300, 'eval_count': 68, 'eval_duration': 540616900, 'model_name': 'mistral'} id='run-3ae76838-7031-40fd-9dca-f7a8df6b0364-0' usage_metadata={'input_tokens': 92, 'output_tokens': 68, 'total_tokens': 160}
+2025-05-03 00:00:25 - INFO - riley2 - summarize_text - [LLM Raw Output] content=" Sure thing! So it looks like there's a meeting scheduled for tomorrow at 9 AM with the sales team. It seems like you'll be catching up with your colleagues from the sales department then. If you have any specific items to discuss or prepare beforehand, now might be a good time to start thinking about them!" additional_kwargs={} response_metadata={'model': 'mistral', 'created_at': '2025-05-02T23:00:25.3940254Z', 'done': True, 'done_reason': 'stop', 'total_duration': 562072400, 'load_duration': 12107900, 'prompt_eval_count': 92, 'prompt_eval_duration': 8825300, 'eval_count': 68, 'eval_duration': 540616900, 'model_name': 'mistral'} id='run-3ae76838-7031-40fd-9dca-f7a8df6b0364-0' usage_metadata={'input_tokens': 92, 'output_tokens': 68, 'total_tokens': 160}
+2025-05-03 00:00:25 - INFO - riley2 - summarize_text - [LLM Final Output]:  Sure thing! So it looks like there's a meeting scheduled for tomorrow at 9 AM with the sales team. It seems like you'll be catching up with your colleagues from the sales department then. If you have any specific items to discuss or prepare beforehand, now might be a good time to start thinking about them!
+2025-05-03 00:00:25 - INFO - riley2 - log_agent_interaction - [BackendManager - Summarizer] >>> Summarized result:  Sure thing! So it looks like there's a meeting scheduled for tomorrow at 9 AM with the sales team. It seems like you'll be catching up with your colleagues from the sales department then. If you have any specific items to discuss or prepare beforehand, now might be a good time to start thinking about them!
+2025-05-03 00:00:25 - INFO - riley2 - log_test_success - [TEST PASSED] test_summarize_text_basic
+2025-05-03 00:00:25 - INFO - riley2 - log_test_step - [TEST: test_choose_next_action_email] Testing choose_next_action with 'email from boss'.
+2025-05-03 00:00:25 - INFO - riley2 - log_agent_interaction - [BackendManager - Planner] >>> Received query: Check latest email from boss
+2025-05-03 00:00:25 - DEBUG - riley2 - choose_next_action - Choosing next action for query: Check latest email from boss with context: {}
+2025-05-03 00:00:25 - DEBUG - riley2 - choose_next_action - Next action chosen: email_search
+2025-05-03 00:00:25 - INFO - riley2 - log_agent_interaction - [BackendManager - Planner] >>> Chosen action: email_search
+2025-05-03 00:00:25 - INFO - riley2 - log_test_success - [TEST PASSED] test_choose_next_action_email
+2025-05-03 00:00:25 - INFO - riley2 - log_test_step - [TEST: test_choose_next_action_trip] Testing choose_next_action with 'trip to Italy'.
+2025-05-03 00:00:25 - INFO - riley2 - log_agent_interaction - [BackendManager - Planner] >>> Received query: Planning a trip to Italy
+2025-05-03 00:00:25 - DEBUG - riley2 - choose_next_action - Choosing next action for query: Planning a trip to Italy with context: {}
+2025-05-03 00:00:25 - DEBUG - riley2 - choose_next_action - Next action chosen: calendar_search
+2025-05-03 00:00:25 - INFO - riley2 - log_agent_interaction - [BackendManager - Planner] >>> Chosen action: calendar_search
+2025-05-03 00:00:25 - INFO - riley2 - log_test_success - [TEST PASSED] test_choose_next_action_trip
+2025-05-03 00:00:25 - INFO - riley2 - log_test_step - [TEST: test_get_decision] Testing get_decision end-turn logic.
+2025-05-03 00:00:25 - INFO - riley2 - log_agent_interaction - [BackendManager - DecisionLogic] >>> Received prompt: I have enough information now, thanks.
+2025-05-03 00:00:25 - DEBUG - riley2 - get_decision - Getting decision for prompt: I have enough information now, thanks.
+2025-05-03 00:00:25 - DEBUG - riley2 - get_decision - Decision made: yes
+2025-05-03 00:00:25 - INFO - riley2 - log_agent_interaction - [BackendManager - DecisionLogic] >>> Decision made: yes
+2025-05-03 00:00:25 - INFO - riley2 - log_test_success - [TEST PASSED] test_get_decision

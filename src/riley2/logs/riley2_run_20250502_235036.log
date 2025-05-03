@@ -1,0 +1,10 @@
+2025-05-02 23:50:36 - INFO - riley2 - log_test_step - [TEST: test_reasoning_queries] Testing reasoning with query: 'When am I going to Italy?'
+2025-05-02 23:50:36 - INFO - riley2 - log_agent_interaction - [Test - InputQuery] >>> When am I going to Italy?
+2025-05-02 23:50:36 - INFO - riley2 - log_agent_interaction - [BackendManager - Reasoner] >>> Processing question: 'When am I going to Italy?'
+2025-05-02 23:50:36 - INFO - riley2 - log_agent_interaction - [BackendManager - CalendarSearch] >>> Searching April 2025 for Italy events
+2025-05-02 23:50:36 - INFO - riley2 - log_agent_interaction - [CalendarAgent - EventResult] >>> No matching events found.
+2025-05-02 23:50:36 - INFO - riley2 - log_agent_interaction - [BackendManager - CalendarSearch] >>> No Italy events in April. Searching May 2025
+2025-05-02 23:50:36 - INFO - riley2 - log_agent_interaction - [CalendarAgent - EventResult] >>> Found events: [{'title': 'Holiday Italy', 'date': '2025/05/15'}]
+2025-05-02 23:50:36 - INFO - riley2 - log_agent_interaction - [BackendManager - DecisionMade] >>> Found Italy event in May
+2025-05-02 23:50:36 - INFO - riley2 - log_agent_interaction - [Test - OutputResponse] >>> 15052025
+2025-05-02 23:50:36 - INFO - riley2 - log_test_success - [TEST PASSED] test_reasoning_queries[When am I going to Italy?]

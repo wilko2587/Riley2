@@ -1,0 +1,171 @@
+[35m2025-05-03 00:21:32[0m - [36mDEBUG[0m - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+[35m2025-05-03 00:21:32[0m - [36mDEBUG[0m - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+[35m2025-05-03 00:21:32[0m - [36mDEBUG[0m - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\knowledge_base.json
+[35m2025-05-03 00:21:32[0m - [32mINFO[0m - Test configurations loaded and validated successfully
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [[36m[1mTEST: test_email_reasoning[0m] Testing email reasoning with query: 'What emails did I get from my boss?'
+[35m2025-05-03 00:21:33[0m - [36mDEBUG[0m - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+[35m2025-05-03 00:21:33[0m - [36mDEBUG[0m - Initialized EmailAgentMock with emails from config for 3 dates
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [Test - InputQuery] [33m>>>[0m What emails did I get from my boss?
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [EmailReasoner - Processing] [33m>>>[0m Query: 'What emails did I get from my boss?'
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [EmailReasoner - EmailSearch] [33m>>>[0m Searching for emails from boss
+[35m2025-05-03 00:21:33[0m - [36mDEBUG[0m - Mock: Downloading emails from 2025/05/02 to 2025/05/03.
+[35m2025-05-03 00:21:33[0m - [36mDEBUG[0m - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - Mock: Retrieved 2 emails.
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [EmailAgent - DownloadResult] [33m>>>[0m Downloaded 2 emails
+[35m2025-05-03 00:21:33[0m - [36mDEBUG[0m - Mock: Filtering emails by sender: boss@company.com
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - Mock: Found 1 emails from boss@company.com.
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [EmailAgent - FilterResult] [33m>>>[0m Filtered 1 emails
+[35m2025-05-03 00:21:33[0m - [36mDEBUG[0m - Mock: Summarizing email batch of size: 101 characters.
+[35m2025-05-03 00:21:33[0m - [36mDEBUG[0m - Mock: Email summary: Several emails from your boss, including a message about a team meeting tomorrow at 9am.
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [EmailAgent - SummaryResult] [33m>>>[0m Several emails from your boss, including a message about a team meeting tomorrow at 9am.
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [Test - OutputResponse] [33m>>>[0m Several emails from your boss, including a message about a team meeting tomorrow at 9am.
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [[36m[1mTEST PASSED[0m] test_email_reasoning[What emails did I get from my boss?]
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [[36m[1mTEST: test_email_reasoning[0m] Testing email reasoning with query: 'Tell me about any recent emails'
+[35m2025-05-03 00:21:33[0m - [36mDEBUG[0m - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+[35m2025-05-03 00:21:33[0m - [36mDEBUG[0m - Initialized EmailAgentMock with emails from config for 3 dates
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [Test - InputQuery] [33m>>>[0m Tell me about any recent emails
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [EmailReasoner - Processing] [33m>>>[0m Query: 'Tell me about any recent emails'
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [EmailReasoner - EmailSearch] [33m>>>[0m Searching for recent emails
+[35m2025-05-03 00:21:33[0m - [36mDEBUG[0m - Mock: Downloading emails from 2025/05/03 to 2025/05/03.
+[35m2025-05-03 00:21:33[0m - [36mDEBUG[0m - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - Mock: Retrieved 0 emails.
+[35m2025-05-03 00:21:33[0m - [36mDEBUG[0m - Mock: Summarizing email batch of size: 16 characters.
+[35m2025-05-03 00:21:33[0m - [36mDEBUG[0m - Mock: Email summary: Various recent emails including an update about a team meeting tomorrow and some newsletters.
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [EmailAgent - SummaryResult] [33m>>>[0m Various recent emails including an update about a team meeting tomorrow and some newsletters.
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [Test - OutputResponse] [33m>>>[0m Various recent emails including an update about a team meeting tomorrow and some newsletters.
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [[36m[1mTEST PASSED[0m] test_email_reasoning[Tell me about any recent emails]
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [[36m[1mTEST: test_email_reasoning[0m] Testing email reasoning with query: 'Any updates on my Italy trip?'
+[35m2025-05-03 00:21:33[0m - [36mDEBUG[0m - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+[35m2025-05-03 00:21:33[0m - [36mDEBUG[0m - Initialized EmailAgentMock with emails from config for 3 dates
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [Test - InputQuery] [33m>>>[0m Any updates on my Italy trip?
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [EmailReasoner - Processing] [33m>>>[0m Query: 'Any updates on my Italy trip?'
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [EmailReasoner - EmailSearch] [33m>>>[0m Searching for Italy trip emails
+[35m2025-05-03 00:21:33[0m - [36mDEBUG[0m - Mock: Downloading emails from 2025/04/30 to 2025/05/03.
+[35m2025-05-03 00:21:33[0m - [36mDEBUG[0m - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - Mock: Retrieved 5 emails.
+[35m2025-05-03 00:21:33[0m - [36mDEBUG[0m - Mock: Summarizing email batch of size: 109 characters.
+[35m2025-05-03 00:21:33[0m - [36mDEBUG[0m - Mock: Email summary: Your trip to Italy on May 15 has been confirmed.
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [EmailAgent - SummaryResult] [33m>>>[0m Your trip to Italy on May 15 has been confirmed.
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [Test - OutputResponse] [33m>>>[0m Your trip to Italy on May 15 has been confirmed.
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [[36m[1mTEST PASSED[0m] test_email_reasoning[Any updates on my Italy trip?]
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [[36m[1mTEST: test_reasoning_queries[0m] Testing reasoning with query: 'When am I going to Italy?'
+[35m2025-05-03 00:21:33[0m - [36mDEBUG[0m - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+[35m2025-05-03 00:21:33[0m - [36mDEBUG[0m - Initialized CalendarAgentMock with 6 events from config
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [Test - InputQuery] [33m>>>[0m When am I going to Italy?
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [BackendManager - Reasoner] [33m>>>[0m Processing question: 'When am I going to Italy?'
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [BackendManager - CalendarSearch] [33m>>>[0m Searching April 2025 for Italy events
+[35m2025-05-03 00:21:33[0m - [36mDEBUG[0m - Mock: Scanning calendar from 2025/04/01 to 2025/04/30 with query: italy
+[35m2025-05-03 00:21:33[0m - [36mDEBUG[0m - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - Mock: Found 0 calendar events matching criteria
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [CalendarAgent - EventResult] [33m>>>[0m No matching events found.
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [BackendManager - CalendarSearch] [33m>>>[0m No Italy events in April. Searching May 2025
+[35m2025-05-03 00:21:33[0m - [36mDEBUG[0m - Mock: Scanning calendar from 2025/05/01 to 2025/05/31 with query: italy
+[35m2025-05-03 00:21:33[0m - [36mDEBUG[0m - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - Mock: Found 1 calendar events matching criteria
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [CalendarAgent - EventResult] [33m>>>[0m Found events: [{'title': 'Holiday Italy', 'date': '2025/05/15', 'all_day': True, 'end_date': '2025/05/25', 'location': 'Rome, Italy', 'description': 'Annual vacation - booked flights and hotel'}]
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [BackendManager - DecisionMade] [33m>>>[0m Found Italy event in May
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [Test - OutputResponse] [33m>>>[0m 15052025
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [[36m[1mTEST PASSED[0m] test_reasoning_queries[When am I going to Italy?]
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [[36m[1mTEST: test_backend_planner_llm[0m] Testing backend_planner_llm decision-making.
+[35m2025-05-03 00:21:33[0m - [32mINFO[0m - [BackendPlanner - Planner] [33m>>>[0m Planning with prompt: What events are coming up next week?
+[35m2025-05-03 00:21:33[0m - [36mDEBUG[0m - Backend planner LLM called with prompt: What events are coming up next week?
+[35m2025-05-03 00:21:37[0m - [36mDEBUG[0m - Planner LLM result: 1. February 22 (Monday):
+
+- World Thinking Day: A day celebrated by Girl Guiding and Girl Scouting organizations worldwide to promote international friendship and understanding.
+- National Margarita Day: A popular holiday in the United States where people celebrate by drinking margaritas, a cocktail made with tequila, lime juice, and salt.
+
+2. February 23 (Tuesday):
+
+- International Dog Biscuit Appreciation Day: A day to show appreciation for our canine friends and their favorite treats.
+- World Radio Day: A UNESCO event that celebrates radio as a medium to foster inclusive, sustainable, and peaceful societies.
+
+3. February 24 (Wednesday):
+
+- Human Rights Day: Commemorates the Universal Declaration of Human Rights adopted by the United Nations General Assembly on this day in 1948.
+
+4. February 25 (Thursday):
+
+- International Conscience Day: A day to reflect on our moral compass and make a commitment to act ethically and responsibly.
+
+5. February 26 (Friday):
+
+- Tell a Fairy Tale Day: A day to share, read, or write fairy tales with friends, family, or students.
+- National Pistachio Day: A day to enjoy pistachios, a type of nut known for its green color and rich flavor.
+
+6. February 27 (Saturday):
+
+- International Polar Bear Day: A day dedicated to raising awareness about the threats facing polar bears in the wild and supporting conservation efforts.
+
+7. February 28 (Sunday):
+
+- International Science Day: A UNESCO event that highlights the role of science in society and its contributions to sustainable development and peace.
+[35m2025-05-03 00:21:37[0m - [32mINFO[0m - [BackendPlanner - Planner] [33m>>>[0m Planner decided: 1. February 22 (Monday):
+
+- World Thinking Day: A day celebrated by Girl Guiding and Girl Scouting organizations worldwide to promote international friendship and understanding.
+- National Margarita Day: A popular holiday in the United States where people celebrate by drinking margaritas, a cocktail made with tequila, lime juice, and salt.
+
+2. February 23 (Tuesday):
+
+- International Dog Biscuit Appreciation Day: A day to show appreciation for our canine friends and their favorite treats.
+- World Radio Day: A UNESCO event that celebrates radio as a medium to foster inclusive, sustainable, and peaceful societies.
+
+3. February 24 (Wednesday):
+
+- Human Rights Day: Commemorates the Universal Declaration of Human Rights adopted by the United Nations General Assembly on this day in 1948.
+
+4. February 25 (Thursday):
+
+- International Conscience Day: A day to reflect on our moral compass and make a commitment to act ethically and responsibly.
+
+5. February 26 (Friday):
+
+- Tell a Fairy Tale Day: A day to share, read, or write fairy tales with friends, family, or students.
+- National Pistachio Day: A day to enjoy pistachios, a type of nut known for its green color and rich flavor.
+
+6. February 27 (Saturday):
+
+- International Polar Bear Day: A day dedicated to raising awareness about the threats facing polar bears in the wild and supporting conservation efforts.
+
+7. February 28 (Sunday):
+
+- International Science Day: A UNESCO event that highlights the role of science in society and its contributions to sustainable development and peace.
+[35m2025-05-03 00:21:37[0m - [32mINFO[0m - [[36m[1mTEST PASSED[0m] test_backend_planner_llm
+[35m2025-05-03 00:21:37[0m - [32mINFO[0m - [[36m[1mTEST: test_interpret_tool_command_basic[0m] Testing interpret_tool_command basic functionality.
+[35m2025-05-03 00:21:37[0m - [32mINFO[0m - [BackendManager - ToolInterpreter] [33m>>>[0m Tool: calendar_search, Args: {'date': '2025-05-15'}, Output: Meeting scheduled for 9 AM with Sales.
+[35m2025-05-03 00:21:37[0m - [36mDEBUG[0m - Interpreting tool command: calendar_search with args: {'date': '2025-05-15'} and result: Meeting scheduled for 9 AM with Sales.
+[35m2025-05-03 00:21:37[0m - [36mDEBUG[0m - [interpret_tool_command] tool_name: calendar_search, args: {'date': '2025-05-15'}, result: Meeting scheduled for 9 AM with Sales.
+[35m2025-05-03 00:21:38[0m - [36mDEBUG[0m - Interpretation complete for tool: calendar_search
+[35m2025-05-03 00:21:38[0m - [36mDEBUG[0m - [interpret_tool_command] Final Response:  Sure thing! Here's a friendly and informative response:
+
+"Great news! According to the calendar search, it appears there is a meeting scheduled for May 15th, 2025 at 9 AM with the Sales team. Please mark your calendars accordingly!"
+[35m2025-05-03 00:21:38[0m - [32mINFO[0m - [BackendManager - ToolInterpreter] [33m>>>[0m Human-readable output:  Sure thing! Here's a friendly and informative response:
+
+"Great news! According to the calendar search, it appears there is a meeting scheduled for May 15th, 2025 at 9 AM with the Sales team. Please mark your calendars accordingly!"
+[35m2025-05-03 00:21:38[0m - [32mINFO[0m - [[36m[1mTEST PASSED[0m] test_interpret_tool_command_basic
+[35m2025-05-03 00:21:38[0m - [32mINFO[0m - [[36m[1mTEST: test_summarize_text_basic[0m] Testing summarize_text basic functionality.
+[35m2025-05-03 00:21:38[0m - [32mINFO[0m - [BackendManager - Summarizer] [33m>>>[0m Input to summarize: Meeting tomorrow at 9 AM with sales team.
+[35m2025-05-03 00:21:38[0m - [36mDEBUG[0m - Summarize text called with: Meeting tomorrow at 9 AM with sales team.
+[35m2025-05-03 00:21:38[0m - [32mINFO[0m - [[34m[1mLLM Prompt Input[0m] Meeting tomorrow at 9 AM with sales team.
+[35m2025-05-03 00:21:38[0m - [36mDEBUG[0m - Summarization result: content=" Great news! It looks like we have a scheduled meeting with the sales team tomorrow at 9 AM! Let's make sure to prepare any necessary materials and be on time for our discussion. If you need any assistance or have questions before then, feel free to ask!" additional_kwargs={} response_metadata={'model': 'mistral', 'created_at': '2025-05-02T23:21:38.7203189Z', 'done': True, 'done_reason': 'stop', 'total_duration': 463283900, 'load_duration': 8532400, 'prompt_eval_count': 92, 'prompt_eval_duration': 8837000, 'eval_count': 56, 'eval_duration': 445400300, 'model_name': 'mistral'} id='run-09700dcb-0219-4a31-b10e-6b9c7e9b951f-0' usage_metadata={'input_tokens': 92, 'output_tokens': 56, 'total_tokens': 148}
+[35m2025-05-03 00:21:38[0m - [32mINFO[0m - [[34m[1mLLM Raw Output[0m] content=" Great news! It looks like we have a scheduled meeting with the sales team tomorrow at 9 AM! Let's make sure to prepare any necessary materials and be on time for our discussion. If you need any assistance or have questions before then, feel free to ask!" additional_kwargs={} response_metadata={'model': 'mistral', 'created_at': '2025-05-02T23:21:38.7203189Z', 'done': True, 'done_reason': 'stop', 'total_duration': 463283900, 'load_duration': 8532400, 'prompt_eval_count': 92, 'prompt_eval_duration': 8837000, 'eval_count': 56, 'eval_duration': 445400300, 'model_name': 'mistral'} id='run-09700dcb-0219-4a31-b10e-6b9c7e9b951f-0' usage_metadata={'input_tokens': 92, 'output_tokens': 56, 'total_tokens': 148}
+[35m2025-05-03 00:21:38[0m - [32mINFO[0m - [[34m[1mLLM Final Output[0m]:  Great news! It looks like we have a scheduled meeting with the sales team tomorrow at 9 AM! Let's make sure to prepare any necessary materials and be on time for our discussion. If you need any assistance or have questions before then, feel free to ask!
+[35m2025-05-03 00:21:38[0m - [32mINFO[0m - [BackendManager - Summarizer] [33m>>>[0m Summarized result:  Great news! It looks like we have a scheduled meeting with the sales team tomorrow at 9 AM! Let's make sure to prepare any necessary materials and be on time for our discussion. If you need any assistance or have questions before then, feel free to ask!
+[35m2025-05-03 00:21:38[0m - [32mINFO[0m - [[36m[1mTEST PASSED[0m] test_summarize_text_basic
+[35m2025-05-03 00:21:38[0m - [32mINFO[0m - [[36m[1mTEST: test_choose_next_action_email[0m] Testing choose_next_action with 'email from boss'.
+[35m2025-05-03 00:21:38[0m - [32mINFO[0m - [BackendManager - Planner] [33m>>>[0m Received query: Check latest email from boss
+[35m2025-05-03 00:21:38[0m - [36mDEBUG[0m - Choosing next action for query: Check latest email from boss with context: {}
+[35m2025-05-03 00:21:38[0m - [36mDEBUG[0m - Next action chosen: email_search
+[35m2025-05-03 00:21:38[0m - [32mINFO[0m - [BackendManager - Planner] [33m>>>[0m Chosen action: email_search
+[35m2025-05-03 00:21:38[0m - [32mINFO[0m - [[36m[1mTEST PASSED[0m] test_choose_next_action_email
+[35m2025-05-03 00:21:38[0m - [32mINFO[0m - [[36m[1mTEST: test_choose_next_action_trip[0m] Testing choose_next_action with 'trip to Italy'.
+[35m2025-05-03 00:21:38[0m - [32mINFO[0m - [BackendManager - Planner] [33m>>>[0m Received query: Planning a trip to Italy
+[35m2025-05-03 00:21:38[0m - [36mDEBUG[0m - Choosing next action for query: Planning a trip to Italy with context: {}
+[35m2025-05-03 00:21:38[0m - [36mDEBUG[0m - Next action chosen: calendar_search
+[35m2025-05-03 00:21:38[0m - [32mINFO[0m - [BackendManager - Planner] [33m>>>[0m Chosen action: calendar_search
+[35m2025-05-03 00:21:38[0m - [32mINFO[0m - [[36m[1mTEST PASSED[0m] test_choose_next_action_trip
+[35m2025-05-03 00:21:38[0m - [32mINFO[0m - [[36m[1mTEST: test_get_decision[0m] Testing get_decision end-turn logic.
+[35m2025-05-03 00:21:38[0m - [32mINFO[0m - [BackendManager - DecisionLogic] [33m>>>[0m Received prompt: I have enough information now, thanks.
+[35m2025-05-03 00:21:38[0m - [36mDEBUG[0m - Getting decision for prompt: I have enough information now, thanks.
+[35m2025-05-03 00:21:38[0m - [36mDEBUG[0m - Decision made: yes
+[35m2025-05-03 00:21:38[0m - [32mINFO[0m - [BackendManager - DecisionLogic] [33m>>>[0m Decision made: yes
+[35m2025-05-03 00:21:38[0m - [32mINFO[0m - [[36m[1mTEST PASSED[0m] test_get_decision

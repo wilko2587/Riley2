@@ -1,0 +1,347 @@
+[35m2025-05-03 01:00:14[0m - [36mDEBUG[0m - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+[35m2025-05-03 01:00:14[0m - [36mDEBUG[0m - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+[35m2025-05-03 01:00:14[0m - [36mDEBUG[0m - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\knowledge_base.json
+[35m2025-05-03 01:00:14[0m - [32mINFO[0m - Test configurations loaded and validated successfully
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [[36m[1mSYSTEM - TEST_SESSION[0m] Starting test session at 2025-05-03 01:00:15 with enhanced colorful logging (VERBOSE MODE)
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - 
+[33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [[44m[37mTEST STEP - test_email_reasoning[0m] Testing email reasoning with query: 'What emails did I get from my boss?'
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:15[0m - [36mDEBUG[0m - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+[35m2025-05-03 01:00:15[0m - [36mDEBUG[0m - Initialized EmailAgentMock with emails from config for 3 dates
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [Test - InputQuery] -> What emails did I get from my boss?
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [EmailReasoner - Processing] -> Query: 'What emails did I get from my boss?'
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [EmailReasoner - EmailSearch] -> Searching for emails from boss
+[35m2025-05-03 01:00:15[0m - [36mDEBUG[0m - Mock: Downloading emails from 2025/05/02 to 2025/05/03.
+[35m2025-05-03 01:00:15[0m - [36mDEBUG[0m - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - Mock: Retrieved 2 emails.
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [EmailAgent - DownloadResult] -> Downloaded 2 emails
+[35m2025-05-03 01:00:15[0m - [36mDEBUG[0m - Mock: Filtering emails by sender: boss@company.com
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - Mock: Found 1 emails from boss@company.com.
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [EmailAgent - FilterResult] -> Filtered 1 emails
+[35m2025-05-03 01:00:15[0m - [36mDEBUG[0m - Mock: Summarizing email batch of size: 101 characters.
+[35m2025-05-03 01:00:15[0m - [36mDEBUG[0m - Mock: Email summary: Several emails from your boss, including a message about a team meeting tomorrow at 9am.
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [EmailAgent - SummaryResult] -> Several emails from your boss, including a message about a team meeting tomorrow at 9am.
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [Test - OutputResponse] -> Several emails from your boss, including a message about a team meeting tomorrow at 9am.
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - 
+[32m[1m================================================================================[0m
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [[42m[30m[1mTEST PASSED[0m] test_email_reasoning[What emails did I get from my boss?]
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [32m[1m================================================================================[0m
+
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - 
+[33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [[44m[37mTEST STEP - test_email_reasoning[0m] Testing email reasoning with query: 'Tell me about any recent emails'
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:15[0m - [36mDEBUG[0m - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+[35m2025-05-03 01:00:15[0m - [36mDEBUG[0m - Initialized EmailAgentMock with emails from config for 3 dates
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [Test - InputQuery] -> Tell me about any recent emails
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [EmailReasoner - Processing] -> Query: 'Tell me about any recent emails'
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [EmailReasoner - EmailSearch] -> Searching for recent emails
+[35m2025-05-03 01:00:15[0m - [36mDEBUG[0m - Mock: Downloading emails from 2025/05/03 to 2025/05/03.
+[35m2025-05-03 01:00:15[0m - [36mDEBUG[0m - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - Mock: Retrieved 0 emails.
+[35m2025-05-03 01:00:15[0m - [36mDEBUG[0m - Mock: Summarizing email batch of size: 16 characters.
+[35m2025-05-03 01:00:15[0m - [36mDEBUG[0m - Mock: Email summary: Various recent emails including an update about a team meeting tomorrow and some newsletters.
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [EmailAgent - SummaryResult] -> Various recent emails including an update about a team meeting tomorrow and some newsletters.
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [Test - OutputResponse] -> Various recent emails including an update about a team meeting tomorrow and some newsletters.
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - 
+[32m[1m================================================================================[0m
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [[42m[30m[1mTEST PASSED[0m] test_email_reasoning[Tell me about any recent emails]
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [32m[1m================================================================================[0m
+
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - 
+[33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [[44m[37mTEST STEP - test_email_reasoning[0m] Testing email reasoning with query: 'Any updates on my Italy trip?'
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:15[0m - [36mDEBUG[0m - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+[35m2025-05-03 01:00:15[0m - [36mDEBUG[0m - Initialized EmailAgentMock with emails from config for 3 dates
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [Test - InputQuery] -> Any updates on my Italy trip?
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [EmailReasoner - Processing] -> Query: 'Any updates on my Italy trip?'
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [EmailReasoner - EmailSearch] -> Searching for Italy trip emails
+[35m2025-05-03 01:00:15[0m - [36mDEBUG[0m - Mock: Downloading emails from 2025/04/30 to 2025/05/03.
+[35m2025-05-03 01:00:15[0m - [36mDEBUG[0m - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - Mock: Retrieved 5 emails.
+[35m2025-05-03 01:00:15[0m - [36mDEBUG[0m - Mock: Summarizing email batch of size: 109 characters.
+[35m2025-05-03 01:00:15[0m - [36mDEBUG[0m - Mock: Email summary: Your trip to Italy on May 15 has been confirmed.
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [EmailAgent - SummaryResult] -> Your trip to Italy on May 15 has been confirmed.
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [Test - OutputResponse] -> Your trip to Italy on May 15 has been confirmed.
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - 
+[32m[1m================================================================================[0m
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [[42m[30m[1mTEST PASSED[0m] test_email_reasoning[Any updates on my Italy trip?]
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [32m[1m================================================================================[0m
+
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - 
+[33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [[44m[37mTEST STEP - test_reasoning_queries[0m] Testing reasoning with query: 'When am I going to Italy?'
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:15[0m - [36mDEBUG[0m - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+[35m2025-05-03 01:00:15[0m - [36mDEBUG[0m - Initialized CalendarAgentMock with 6 events from config
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [Test - InputQuery] -> When am I going to Italy?
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [BackendManager - Reasoner] -> Processing question: 'When am I going to Italy?'
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [BackendManager - CalendarSearch] -> Searching April 2025 for Italy events
+[35m2025-05-03 01:00:15[0m - [36mDEBUG[0m - Mock: Scanning calendar from 2025/04/01 to 2025/04/30 with query: italy
+[35m2025-05-03 01:00:15[0m - [36mDEBUG[0m - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - Mock: Found 0 calendar events matching criteria
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [CalendarAgent - EventResult] -> No matching events found.
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [BackendManager - CalendarSearch] -> No Italy events in April. Searching May 2025
+[35m2025-05-03 01:00:15[0m - [36mDEBUG[0m - Mock: Scanning calendar from 2025/05/01 to 2025/05/31 with query: italy
+[35m2025-05-03 01:00:15[0m - [36mDEBUG[0m - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - Mock: Found 1 calendar events matching criteria
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [CalendarAgent - EventResult] -> Found events: [{'title': 'Holiday Italy', 'date': '2025/05/15', 'all_day': True, 'end_date': '2025/05/25', 'location': 'Rome, Italy', 'description': 'Annual vacation - booked flights and hotel'}]
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [BackendManager - DecisionMade] -> Found Italy event in May
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [Test - OutputResponse] -> 15052025
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - 
+[32m[1m================================================================================[0m
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [[42m[30m[1mTEST PASSED[0m] test_reasoning_queries[When am I going to Italy?]
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [32m[1m================================================================================[0m
+
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - 
+[33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [[44m[37mTEST STEP - test_backend_planner_llm[0m] Testing backend_planner_llm decision-making.
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:15[0m - [32mINFO[0m - [BackendPlanner - Planner] -> Planning with prompt: What events are coming up next week?
+[35m2025-05-03 01:00:15[0m - [36mDEBUG[0m - Backend planner LLM called with prompt: What events are coming up next week?
+[35m2025-05-03 01:00:19[0m - [36mDEBUG[0m - Planner LLM result: 1. February 28, 2023 (Monday):
+
+- World Rare Disease Day: An annual observance to raise awareness for rare diseases and improve access to treatment and medical representation for individuals affected by rare diseases.
+- International Polar Bear Day: A day dedicated to raising awareness about the threats facing polar bears in the wild, such as climate change and habitat loss.
+
+2. March 1, 2023 (Tuesday):
+
+- World Compliment Day: A day set aside for people to express genuine compliments to others, with the goal of spreading positivity and kindness.
+- National Pig Day: A celebration of pigs and their contributions to agriculture, food production, and human society.
+
+3. March 2, 2023 (Wednesday):
+
+- World Wetlands Day: An annual observance to raise awareness about the importance of wetlands for biodiversity conservation and sustainable development.
+- National Peanut Butter Lovers Day: A day dedicated to celebrating the delicious spread made from ground peanuts, sugar, and salt.
+
+4. March 3, 2023 (Thursday):
+
+- World Wildlife Day: An annual observance to celebrate and raise awareness about the importance of wildlife and its role in ecosystems, as well as the threats facing many species worldwide.
+- National Anthem Day: A day set aside to honor national anthems around the world and the history, culture, and values they represent.
+
+5. March 4, 2023 (Friday):
+
+- World Dance Day: An annual celebration of dance as a universal language that brings people together across cultures and borders.
+- National Grammar Day: A day dedicated to promoting proper grammar usage, punctuation, and spelling in written communication.
+
+6. March 5, 2023 (Saturday):
+
+- World Book Day: An annual celebration of books, reading, and literacy, with events taking place around the world to encourage people to read and appreciate the power of books.
+- National Caregivers Day: A day set aside to honor and recognize the important work of caregivers who provide support and assistance to family members, friends, or loved ones in need.
+[35m2025-05-03 01:00:19[0m - [32mINFO[0m - [BackendPlanner - Planner] -> Planner decided: 1. February 28, 2023 (Monday):
+
+- World Rare Disease Day: An annual observance to raise awareness for rare diseases and improve access to treatment and medical representation for individuals affected by rare diseases.
+- International Polar Bear Day: A day dedicated to raising awareness about the threats facing polar bears in the wild, such as climate change and habitat loss.
+
+2. March 1, 2023 (Tuesday):
+
+- World Compliment Day: A day set aside for people to express genuine compliments to others, with the goal of spreading positivity and kindness.
+- National Pig Day: A celebration of pigs and their contributions to agriculture, food production, and human society.
+
+3. March 2, 2023 (Wednesday):
+
+- World Wetlands Day: An annual observance to raise awareness about the importance of wetlands for biodiversity conservation and sustainable development.
+- National Peanut Butter Lovers Day: A day dedicated to celebrating the delicious spread made from ground peanuts, sugar, and salt.
+
+4. March 3, 2023 (Thursday):
+
+- World Wildlife Day: An annual observance to celebrate and raise awareness about the importance of wildlife and its role in ecosystems, as well as the threats facing many species worldwide.
+- National Anthem Day: A day set aside to honor national anthems around the world and the history, culture, and values they represent.
+
+5. March 4, 2023 (Friday):
+
+- World Dance Day: An annual celebration of dance as a universal language that brings people together across cultures and borders.
+- National Grammar Day: A day dedicated to promoting proper grammar usage, punctuation, and spelling in written communication.
+
+6. March 5, 2023 (Saturday):
+
+- World Book Day: An annual celebration of books, reading, and literacy, with events taking place around the world to encourage people to read and appreciate the power of books.
+- National Caregivers Day: A day set aside to honor and recognize the important work of caregivers who provide support and assistance to family members, friends, or loved ones in need.
+[35m2025-05-03 01:00:19[0m - [32mINFO[0m - 
+[32m[1m================================================================================[0m
+[35m2025-05-03 01:00:19[0m - [32mINFO[0m - [[42m[30m[1mTEST PASSED[0m] test_backend_planner_llm
+[35m2025-05-03 01:00:19[0m - [32mINFO[0m - [32m[1m================================================================================[0m
+
+[35m2025-05-03 01:00:19[0m - [32mINFO[0m - 
+[33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:19[0m - [32mINFO[0m - [[44m[37mTEST STEP - test_interpret_tool_command_basic[0m] Testing interpret_tool_command basic functionality.
+[35m2025-05-03 01:00:19[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:19[0m - [32mINFO[0m - [BackendManager - ToolInterpreter] -> Tool: calendar_search, Args: {'date': '2025-05-15'}, Output: Meeting scheduled for 9 AM with Sales.
+[35m2025-05-03 01:00:19[0m - [36mDEBUG[0m - Interpreting tool command: calendar_search with args: {'date': '2025-05-15'} and result: Meeting scheduled for 9 AM with Sales.
+[35m2025-05-03 01:00:19[0m - [36mDEBUG[0m - [interpret_tool_command] tool_name: calendar_search, args: {'date': '2025-05-15'}, result: Meeting scheduled for 9 AM with Sales.
+[35m2025-05-03 01:00:19[0m - [36mDEBUG[0m - Interpretation complete for tool: calendar_search
+[35m2025-05-03 01:00:19[0m - [36mDEBUG[0m - [interpret_tool_command] Final Response:  I have looked up the calendar for May 15th, 2025, and it appears there is a meeting scheduled at 9 AM with the Sales team.
+[35m2025-05-03 01:00:19[0m - [32mINFO[0m - [BackendManager - ToolInterpreter] -> Human-readable output:  I have looked up the calendar for May 15th, 2025, and it appears there is a meeting scheduled at 9 AM with the Sales team.
+[35m2025-05-03 01:00:19[0m - [32mINFO[0m - 
+[32m[1m================================================================================[0m
+[35m2025-05-03 01:00:19[0m - [32mINFO[0m - [[42m[30m[1mTEST PASSED[0m] test_interpret_tool_command_basic
+[35m2025-05-03 01:00:19[0m - [32mINFO[0m - [32m[1m================================================================================[0m
+
+[35m2025-05-03 01:00:19[0m - [32mINFO[0m - 
+[33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:19[0m - [32mINFO[0m - [[44m[37mTEST STEP - test_summarize_text_basic[0m] Testing summarize_text basic functionality.
+[35m2025-05-03 01:00:19[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:19[0m - [32mINFO[0m - [BackendManager - Summarizer] -> Input to summarize: Meeting tomorrow at 9 AM with sales team.
+[35m2025-05-03 01:00:19[0m - [36mDEBUG[0m - Summarize text called with: Meeting tomorrow at 9 AM with sales team.
+[35m2025-05-03 01:00:19[0m - [32mINFO[0m - [[34m[1mLLM Prompt Input[0m] Meeting tomorrow at 9 AM with sales team.
+[35m2025-05-03 01:00:20[0m - [36mDEBUG[0m - Summarization result: content=" Great news! It looks like we have a meeting scheduled for tomorrow at 9 AM with the sales team. Let's make sure to prepare any necessary materials and be ready to discuss our current sales strategies and goals. If you need any assistance in preparing for this meeting, just let me know!" additional_kwargs={} response_metadata={'model': 'mistral', 'created_at': '2025-05-03T00:00:20.3084191Z', 'done': True, 'done_reason': 'stop', 'total_duration': 510833500, 'load_duration': 3569200, 'prompt_eval_count': 92, 'prompt_eval_duration': 1524800, 'eval_count': 61, 'eval_duration': 505739500, 'model_name': 'mistral'} id='run-48335295-8572-494a-bc1a-3e3e35f8662e-0' usage_metadata={'input_tokens': 92, 'output_tokens': 61, 'total_tokens': 153}
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[34m[1mLLM Raw Output[0m] content=" Great news! It looks like we have a meeting scheduled for tomorrow at 9 AM with the sales team. Let's make sure to prepare any necessary materials and be ready to discuss our current sales strategies and goals. If you need any assistance in preparing for this meeting, just let me know!" additional_kwargs={} response_metadata={'model': 'mistral', 'created_at': '2025-05-03T00:00:20.3084191Z', 'done': True, 'done_reason': 'stop', 'total_duration': 510833500, 'load_duration': 3569200, 'prompt_eval_count': 92, 'prompt_eval_duration': 1524800, 'eval_count': 61, 'eval_duration': 505739500, 'model_name': 'mistral'} id='run-48335295-8572-494a-bc1a-3e3e35f8662e-0' usage_metadata={'input_tokens': 92, 'output_tokens': 61, 'total_tokens': 153}
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[34m[1mLLM Final Output[0m]:  Great news! It looks like we have a meeting scheduled for tomorrow at 9 AM with the sales team. Let's make sure to prepare any necessary materials and be ready to discuss our current sales strategies and goals. If you need any assistance in preparing for this meeting, just let me know!
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [BackendManager - Summarizer] -> Summarized result:  Great news! It looks like we have a meeting scheduled for tomorrow at 9 AM with the sales team. Let's make sure to prepare any necessary materials and be ready to discuss our current sales strategies and goals. If you need any assistance in preparing for this meeting, just let me know!
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 
+[32m[1m================================================================================[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[42m[30m[1mTEST PASSED[0m] test_summarize_text_basic
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [32m[1m================================================================================[0m
+
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 
+[33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[44m[37mTEST STEP - test_choose_next_action_email[0m] Testing BackendManager's decision-making for email search query
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[36mUSER[0m] [33m[1m>>>[0m [[36mBACKEND_MANAGER[0m]: Check latest email from boss
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[34m[1mLLM Call - BackendLLM[0m] -> [33m[1mINPUT:[0m Based on the query 'Check latest email from boss', decide which action to take. Options: calendar_search, email_search, knowledge_lookup
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[34m[1mLLM Call - BackendLLM[0m] -> [36m[1mOUTPUT:[0m 
+        The query is explicitly asking about emails, specifically the latest email from the boss.
+        This is clearly related to email communication rather than scheduling or knowledge lookup.
+        The email_search tool is the most appropriate choice to find recent emails from a specific sender.
+        
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [36mDEBUG[0m - Choosing next action for query: Check latest email from boss with context: {}
+[35m2025-05-03 01:00:20[0m - [36mDEBUG[0m - Next action chosen: email_search
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[35mDecision - BackendManager[0m] -> [33m[1mOPTIONS:[0m ['calendar_search', 'email_search', 'knowledge_lookup']
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[35mDecision - BackendManager[0m] -> [32m[1mSELECTED:[0m email_search
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[35mDecision - BackendManager[0m] -> [32m[1mREASONING:[0m Query about email from boss requires email_search
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[33mTool Usage - email_search[0m] -> [33m[1mARGS:[0m [36m{
+  "sender": "boss@company.com",
+  "limit": 1
+}[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[33mTool Usage - email_search[0m] -> [32m[1mRESULT:[0m {"emails": [{"subject": "Project Update", "date": "2025-05-02", "snippet": "Please provide status on Riley2..."}]}
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[36mBACKEND_MANAGER[0m] [32m[1m<<<[0m [[36mUSER[0m]: The latest email from your boss is from today with the subject 'Project Update'. It starts with: 'Please provide status on Riley2...'
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 
+[33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [36m[1mEvent Sequence: Email Query Flow[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 1. [Input] User -> BackendManager: Asked about latest boss email
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 2. [[35mDecision[0m] BackendManager -> LLM: Determined email search needed
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 3. [Action] BackendManager -> EmailAgent: Executed email search
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 4. [Result] EmailAgent -> BackendManager: Found latest email about Project Update
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 5. [Output] BackendManager -> User: Provided email details
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 
+[32m[1m================================================================================[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[42m[30m[1mTEST PASSED[0m] test_choose_next_action_email
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [32m[1m================================================================================[0m
+
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 
+[33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[44m[37mTEST STEP - test_choose_next_action_trip[0m] Testing BackendManager's decision-making for a trip to Italy query
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[36mUSER[0m] [33m[1m>>>[0m [[36mBACKEND_MANAGER[0m]: Planning a trip to Italy
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[34m[1mLLM Call - BackendLLM[0m] -> [33m[1mINPUT:[0m Based on the query 'Planning a trip to Italy', decide which action to take. Options: calendar_search, email_search, knowledge_lookup
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[34m[1mLLM Call - BackendLLM[0m] -> [36m[1mOUTPUT:[0m 
+        The query is about planning a trip to Italy, which is a future event. 
+        This is most likely related to scheduling or checking existing plans.
+        The calendar_search tool would be most appropriate to find any existing
+        trip details or to help plan a new trip by checking availability.
+        
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [36mDEBUG[0m - Choosing next action for query: Planning a trip to Italy with context: {}
+[35m2025-05-03 01:00:20[0m - [36mDEBUG[0m - Next action chosen: calendar_search
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[35mDecision - BackendManager[0m] -> [33m[1mOPTIONS:[0m ['calendar_search', 'email_search', 'knowledge_lookup']
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[35mDecision - BackendManager[0m] -> [32m[1mSELECTED:[0m calendar_search
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[35mDecision - BackendManager[0m] -> [32m[1mREASONING:[0m Trip to Italy requires calendar search to check schedules
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[33mTool Usage - calendar_search[0m] -> [33m[1mARGS:[0m [36m{
+  "query": "trip to Italy",
+  "start_date": "2025-05-01",
+  "end_date": "2025-06-30"
+}[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[33mTool Usage - calendar_search[0m] -> [32m[1mRESULT:[0m {"events": [{"title": "Italy Trip", "date": "2025-05-15", "duration": "14 days"}]}
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[36mBACKEND_MANAGER[0m] [32m[1m<<<[0m [[36mUSER[0m]: I found your Italy Trip scheduled for May 15th, 2025 for a duration of 14 days.
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 
+[33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [36m[1mEvent Sequence: Italy Trip Query Flow[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 1. [Input] User -> BackendManager: Asked about trip to Italy
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 2. [[35mDecision[0m] BackendManager -> LLM: Determined calendar search needed
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 3. [Action] BackendManager -> CalendarAgent: Executed calendar search
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 4. [Result] CalendarAgent -> BackendManager: Found Italy trip on May 15th
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 5. [Output] BackendManager -> User: Provided trip details
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 
+[32m[1m================================================================================[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[42m[30m[1mTEST PASSED[0m] test_choose_next_action_trip
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [32m[1m================================================================================[0m
+
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 
+[33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[44m[37mTEST STEP - test_get_decision[0m] Testing BackendManager's end-turn decision logic
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[36mUSER[0m] [33m[1m>>>[0m [[36mBACKEND_MANAGER[0m]: I have enough information now, thanks.
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[34m[1mLLM Call - BackendLLM[0m] -> [33m[1mINPUT:[0m Based on user message 'I have enough information now, thanks.', should we end the conversation? (yes/no)
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[34m[1mLLM Call - BackendLLM[0m] -> [36m[1mOUTPUT:[0m 
+        The user has explicitly stated they have enough information.
+        They've used a clear ending phrase "thanks" which typically signals conversation closure.
+        There's no question or request for additional information.
+        Therefore, it's appropriate to end the conversation turn.
+        
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [36mDEBUG[0m - Getting decision for prompt: I have enough information now, thanks.
+[35m2025-05-03 01:00:20[0m - [36mDEBUG[0m - Decision made: yes
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[35mDecision - BackendManager[0m] -> [33m[1mOPTIONS:[0m ['continue', 'end conversation']
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[35mDecision - BackendManager[0m] -> [32m[1mSELECTED:[0m end conversation
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[35mDecision - BackendManager[0m] -> [32m[1mREASONING:[0m User indicated they have enough information
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 
+[33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [36m[1mEvent Sequence: End Turn Decision Flow[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 1. [Input] User -> BackendManager: Said they have enough information
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 2. [Analysis] BackendManager -> LLM: Analyzed if conversation should end
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 3. [[35mDecision[0m] BackendManager -> System: Decided to end the conversation turn
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 
+[32m[1m================================================================================[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[42m[30m[1mTEST PASSED[0m] test_get_decision
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [32m[1m================================================================================[0m
+
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 
+[33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[44m[37mTEST STEP - test_frontend_dummy[0m] Testing frontend response to meeting query
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[36mUSER[0m] [33m[1m>>>[0m [[35m[1mFRONTEND[0m]: What meetings do I have today?
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[34m[1mLLM Call - Frontend LLM[0m] -> [33m[1mINPUT:[0m User is asking about meetings today. Generate a helpful response.
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[34m[1mLLM Call - Frontend LLM[0m] -> [36m[1mOUTPUT:[0m You have a meeting at 3 PM today with the marketing team.
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[35m[1mFRONTEND[0m] [32m[1m<<<[0m [[36mUSER[0m]: You have a meeting at 3 PM today with the marketing team.
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 
+[33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [36m[1mEvent Sequence: Frontend Query Flow[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 1. [Input] User -> Frontend: Asked about meetings
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 2. [Process] Frontend -> LLM: Generated query response
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 3. [Output] Frontend -> User: Provided meeting information
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - 
+[32m[1m================================================================================[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[42m[30m[1mTEST PASSED[0m] test_frontend_dummy
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [32m[1m================================================================================[0m
+
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [[36m[1mSYSTEM - TEST_SESSION[0m] Test session complete at 2025-05-03 01:00:20
+[35m2025-05-03 01:00:20[0m - [32mINFO[0m - [33m--------------------------------------------------------------------------------[0m

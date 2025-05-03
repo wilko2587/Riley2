@@ -1,0 +1,70 @@
+{
+  "entries": [
+    {
+      "id": "kb-001",
+      "topic": "personal_preferences",
+      "data": {
+        "favorite_color": "blue",
+        "preferred_name": "Alex",
+        "dietary_restrictions": "vegetarian",
+        "important_dates": [
+          {
+            "event": "Mom's Birthday",
+            "date": "2025/08/15"
+          },
+          {
+            "event": "Wedding Anniversary",
+            "date": "2025/09/22"
+          }
+        ]
+      }
+    },
+    {
+      "id": "kb-002",
+      "topic": "work_information",
+      "data": {
+        "company": "TechInnovate Inc.",
+        "position": "Senior Developer",
+        "manager": "Taylor Smith",
+        "team_members": ["Jamie", "Robin", "Casey"],
+        "projects": [
+          {
+            "name": "Project Alpha",
+            "deadline": "2025/06/30",
+            "priority": "high"
+          },
+          {
+            "name": "Project Beta",
+            "deadline": "2025/08/15",
+            "priority": "medium"
+          }
+        ]
+      }
+    },
+    {
+      "id": "kb-003",
+      "topic": "italy_trip",
+      "data": {
+        "destination": "Rome, Italy",
+        "start_date": "2025/05/15",
+        "end_date": "2025/05/25",
+        "hotel": "Grand Hotel Rome",
+        "flight_details": {
+          "outbound": "Flight AC123, 10:30am",
+          "return": "Flight AC124, 6:15pm"
+        },
+        "planned_activities": [
+          "Visit the Colosseum",
+          "Vatican Museum tour",
+          "Day trip to Florence",
+          "Cooking class"
+        ],
+        "budget": "5000 EUR"
+      }
+    }
+  ],
+  "test_metadata": {
+    "last_updated": "2025-05-03",
+    "description": "Mock knowledge base for unit testing"
+  }
+}

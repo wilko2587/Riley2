@@ -1,0 +1,36 @@
+2025-05-02 23:56:35 - INFO - riley2 - log_test_step - [TEST: test_email_reasoning] Testing email reasoning with query: 'What emails did I get from my boss?'
+2025-05-02 23:56:35 - INFO - riley2 - log_agent_interaction - [Test - InputQuery] >>> What emails did I get from my boss?
+2025-05-02 23:56:35 - INFO - riley2 - log_agent_interaction - [EmailReasoner - Processing] >>> Query: 'What emails did I get from my boss?'
+2025-05-02 23:56:35 - INFO - riley2 - log_agent_interaction - [EmailReasoner - EmailSearch] >>> Searching for emails from boss
+2025-05-02 23:56:35 - DEBUG - riley2 - email_download_chunk - Mock: Downloading emails from 2025/05/01 to 2025/05/02.
+2025-05-02 23:56:35 - INFO - riley2 - email_download_chunk - Mock: Retrieved 4 emails.
+2025-05-02 23:56:35 - INFO - riley2 - log_agent_interaction - [EmailAgent - DownloadResult] >>> Downloaded 4 emails
+2025-05-02 23:56:35 - DEBUG - riley2 - email_filter_by_sender - Mock: Filtering emails by sender: boss@company.com
+2025-05-02 23:56:35 - INFO - riley2 - email_filter_by_sender - Mock: Found 2 emails from boss@company.com.
+2025-05-02 23:56:35 - INFO - riley2 - log_agent_interaction - [EmailAgent - FilterResult] >>> Filtered 2 emails
+2025-05-02 23:56:35 - DEBUG - riley2 - email_summarize_batch - Mock: Summarizing email batch of size: 205 characters.
+2025-05-02 23:56:35 - DEBUG - riley2 - email_summarize_batch - Mock: Email summary: Several emails from your boss, including a message about a team meeting tomorrow at 9am.
+2025-05-02 23:56:35 - INFO - riley2 - log_agent_interaction - [EmailAgent - SummaryResult] >>> Several emails from your boss, including a message about a team meeting tomorrow at 9am.
+2025-05-02 23:56:35 - INFO - riley2 - log_agent_interaction - [Test - OutputResponse] >>> Several emails from your boss, including a message about a team meeting tomorrow at 9am.
+2025-05-02 23:56:35 - INFO - riley2 - log_test_success - [TEST PASSED] test_email_reasoning[What emails did I get from my boss?]
+2025-05-02 23:56:35 - INFO - riley2 - log_test_step - [TEST: test_email_reasoning] Testing email reasoning with query: 'Tell me about any recent emails'
+2025-05-02 23:56:35 - INFO - riley2 - log_agent_interaction - [Test - InputQuery] >>> Tell me about any recent emails
+2025-05-02 23:56:35 - INFO - riley2 - log_agent_interaction - [EmailReasoner - Processing] >>> Query: 'Tell me about any recent emails'
+2025-05-02 23:56:35 - INFO - riley2 - log_agent_interaction - [EmailReasoner - EmailSearch] >>> Searching for recent emails
+2025-05-02 23:56:35 - DEBUG - riley2 - email_download_chunk - Mock: Downloading emails from 2025/05/02 to 2025/05/02.
+2025-05-02 23:56:35 - INFO - riley2 - email_download_chunk - Mock: Retrieved 2 emails.
+2025-05-02 23:56:35 - DEBUG - riley2 - email_summarize_batch - Mock: Summarizing email batch of size: 200 characters.
+2025-05-02 23:56:35 - DEBUG - riley2 - email_summarize_batch - Mock: Email summary: Several emails from your boss, including a message about a team meeting tomorrow at 9am.
+2025-05-02 23:56:35 - INFO - riley2 - log_agent_interaction - [EmailAgent - SummaryResult] >>> Several emails from your boss, including a message about a team meeting tomorrow at 9am.
+2025-05-02 23:56:35 - INFO - riley2 - log_agent_interaction - [Test - OutputResponse] >>> Several emails from your boss, including a message about a team meeting tomorrow at 9am.
+2025-05-02 23:56:35 - INFO - riley2 - log_test_step - [TEST: test_email_reasoning] Testing email reasoning with query: 'Any updates on my Italy trip?'
+2025-05-02 23:56:35 - INFO - riley2 - log_agent_interaction - [Test - InputQuery] >>> Any updates on my Italy trip?
+2025-05-02 23:56:35 - INFO - riley2 - log_agent_interaction - [EmailReasoner - Processing] >>> Query: 'Any updates on my Italy trip?'
+2025-05-02 23:56:35 - INFO - riley2 - log_agent_interaction - [EmailReasoner - EmailSearch] >>> Searching for Italy trip emails
+2025-05-02 23:56:35 - DEBUG - riley2 - email_download_chunk - Mock: Downloading emails from 2025/04/29 to 2025/05/02.
+2025-05-02 23:56:35 - INFO - riley2 - email_download_chunk - Mock: Retrieved 5 emails.
+2025-05-02 23:56:35 - DEBUG - riley2 - email_summarize_batch - Mock: Summarizing email batch of size: 109 characters.
+2025-05-02 23:56:35 - DEBUG - riley2 - email_summarize_batch - Mock: Email summary: Your trip to Italy on May 15 has been confirmed.
+2025-05-02 23:56:35 - INFO - riley2 - log_agent_interaction - [EmailAgent - SummaryResult] >>> Your trip to Italy on May 15 has been confirmed.
+2025-05-02 23:56:35 - INFO - riley2 - log_agent_interaction - [Test - OutputResponse] >>> Your trip to Italy on May 15 has been confirmed.
+2025-05-02 23:56:35 - INFO - riley2 - log_test_success - [TEST PASSED] test_email_reasoning[Any updates on my Italy trip?]
