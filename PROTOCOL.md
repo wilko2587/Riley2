@@ -122,3 +122,20 @@ TASK-005
 - Log files must be Markdown-compatible
 - `TASK-###` must match across all files
 - `test_results/*.log` only created if tests fail
+
+
+
+---
+
+## 🌱 Git Branching
+
+For every task (`TASK-###`), Copilot must:
+
+- Create and switch to a new branch named `task/TASK-###`
+- Perform **all code, test, and logging work** on that branch
+- Use the commit format `TASK-###: <summary>` as always
+- Push the branch via `git push -u origin task/TASK-###`
+
+Copilot must **not**:
+- Push directly to `main`, `master`, or any protected branch
+- Merge the task branch unless explicitly instructed in `ROADMAP.md` or by human override
