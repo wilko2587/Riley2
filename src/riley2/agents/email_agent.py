@@ -35,29 +35,37 @@ def authenticate_gmail():
 
 def email_download_chunk(start_date: str, end_date: str):
     logger.debug(f"Downloading emails from {start_date} to {end_date}.")
-    service = authenticate_gmail()
-    query = f"after:{start_date} before:{end_date}"
+    
     try:
-        results = service.users().messages().list(userId='me', q=query, maxResults=20).execute()
-        messages = results.get('messages', [])
-        logger.info(f"Retrieved {len(messages)} emails.")
-    except Exception as e:
-        logger.error(f"Error retrieving emails: {e}")
-        return "Error retrieving emails."
-
-    output = []
-    for msg in messages:
+        service = authenticate_gmail()
+        query = f"after:{start_date} before:{end_date}"
+        
         try:
-            msg_data = service.users().messages().get(userId='me', id=msg['id'], format='full').execute()
-            headers = msg_data.get("payload", {}).get("headers", [])
-            subject = next((h['value'] for h in headers if h['name'] == 'Subject'), '(No Subject)')
-            sender = next((h['value'] for h in headers if h['name'] == 'From'), '(Unknown Sender)')
-            snippet = msg_data.get('snippet', "")
-            output.append(f"From: {sender}\nSubject: {subject}\n{snippet}\n")
+            results = service.users().messages().list(userId='me', q=query, maxResults=20).execute()
+            messages = results.get('messages', [])
+            logger.info(f"Retrieved {len(messages)} emails.")
         except Exception as e:
-            logger.error(f"Error processing email ID {msg['id']}: {e}")
-    logger.debug(f"Processed {len(output)} emails.")
-    return "\n---\n".join(output) or "No emails found."
+            logger.error(f"Error retrieving emails: {e}")
+            return f"Error retrieving emails: {str(e)}"
+
+        output = []
+        for msg in messages:
+            try:
+                msg_data = service.users().messages().get(userId='me', id=msg['id'], format='full').execute()
+                headers = msg_data.get("payload", {}).get("headers", [])
+                subject = next((h['value'] for h in headers if h['name'] == 'Subject'), '(No Subject)')
+                sender = next((h['value'] for h in headers if h['name'] == 'From'), '(Unknown Sender)')
+                snippet = msg_data.get('snippet', "")
+                output.append(f"From: {sender}\nSubject: {subject}\n{snippet}\n")
+            except Exception as e:
+                logger.error(f"Error processing email ID {msg['id']}: {e}")
+        logger.debug(f"Processed {len(output)} emails.")
+        return "\n---\n".join(output) or "No emails found."
+        
+    except Exception as e:
+        # Handle authentication errors gracefully
+        logger.error(f"Authentication error or other critical error: {e}")
+        return f"Error: Failed to authenticate or establish connection: {str(e)}"
 
 def email_filter_by_sender(raw_emails: str, sender_email: str):
     logger.debug(f"Filtering emails by sender: {sender_email}")

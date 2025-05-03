@@ -63,22 +63,38 @@ class EmailAgentMock:
         """
         logger.debug(f"Mock: Downloading emails from {start_date} to {end_date}.")
         
-        # Use TestConfigLoader's date range methods
-        date_range = [start_date, end_date]
-        all_emails = TestConfigLoader.get_email_by_query("", date_range)  # Empty query to get all emails
-        
-        logger.info(f"Mock: Retrieved {len(all_emails)} emails.")
-        
-        if not all_emails:
-            return "No emails found."
-        
-        # Format emails in the same way as the real implementation
-        output = []
-        for email in all_emails:
-            formatted = f"From: {email['sender']}\nSubject: {email['subject']}\n{email['snippet']}\n"
-            output.append(formatted)
-        
-        return "\n---\n".join(output)
+        # Add validation for date formats
+        try:
+            # Simple validation to check date formats
+            if not start_date or not end_date:
+                logger.warning(f"Mock: Invalid date format - empty date provided")
+                return "Error: Invalid date format. Please use YYYY/MM/DD format."
+            
+            # Ensure dates have correct format
+            date_range = [start_date, end_date]
+            
+            # Use TestConfigLoader's date range methods with error handling
+            try:
+                all_emails = TestConfigLoader.get_email_by_query("", date_range)  # Empty query to get all emails
+                logger.info(f"Mock: Retrieved {len(all_emails)} emails.")
+                
+                if not all_emails:
+                    return "No emails found."
+                
+                # Format emails in the same way as the real implementation
+                output = []
+                for email in all_emails:
+                    formatted = f"From: {email['sender']}\nSubject: {email['subject']}\n{email['snippet']}\n"
+                    output.append(formatted)
+                
+                return "\n---\n".join(output)
+            except (ValueError, TypeError) as e:
+                logger.warning(f"Mock: Error parsing dates: {e}")
+                return f"Error: Invalid date format. Please use YYYY/MM/DD format. Details: {str(e)}"
+            
+        except Exception as e:
+            logger.error(f"Mock: Unexpected error in email_download_chunk: {e}")
+            return f"Error: Failed to retrieve emails. {str(e)}"
 
     def email_filter_by_sender(self, raw_emails: str, sender_email: str):
         """

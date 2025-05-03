@@ -1,6 +1,22 @@
-# Roadmap
+====================================
+||     Email & Calendar Tasks     ||
+====================================
 
-- [ ] TASK-001: Audit and refactor merge block logic
-- [ ] TASK-002: Add test coverage for edge calendar constraints
-- [ ] TASK-003: Set up basic UI stub for conflict visualization
-- [ ] TASK-004: Create logging dashboard using copilot_status.md
+🟧 highlevel.verify_email_calendar status: in-progress
+   note: Ensure core agents are stable.
+
+├── 🟧 checkpoint.test_email_agent status: in-progress
+│   note: Validate email behavior.
+│   ├── 🟩 lowlevel.compare_email_mock_vs_real status: complete
+│   │   note: Mocks match real agent formats.
+│   └── 🟩 lowlevel.test_email_edge_cases status: complete
+│       note: Handle failures, retries.
+
+└── 🟧 checkpoint.test_calendar_agent status: in-progress
+    note: Evaluate merging, conflict resolution.
+    └── 🟩 lowlevel.compare_calendar_mock_vs_real status: complete
+        note: Ensured consistent behavior between implementations.
+
+    └── 🟥 lowlevel.test_calendar_edge_cases status: open
+        note: Test multiday events and conflict handling.
+

@@ -18,12 +18,28 @@ This file defines how autonomous agents and humans interact with the Riley2 fram
 - Use VSCode **Testing Explorer** to run all tests
 - Fix failures until all pass — do **not** rollback unless explicitly told
 
+### 2.1. On Starting a Task
+When beginning work on a task, checkpoint, or low-level item:
+- Update status to `in-progress` in `ROADMAP.md` and change emoji to 🟧
+- Begin tracking progress in `copilot_status.md`
+- Make an initial entry in `GPTLOG.md` indicating the task has started
+- Create a new branch named `task/TASK-###` if working on a new TASK
+- Highlight the currently active item in `ROADMAP.md` with amber background and black text
+
 ### 3. On Completion (`✅ PASS`)
 - Mark `[x]` in `ROADMAP.md` next to the task
 - Append a `GPTLOG.md` entry
 - Generate a release note in `releases/TASK-###.md`
 - Commit using format: `TASK-###: <summary>`
 - Push
+
+### 3.1. On Low-Level Task Completion
+When completing a low-level task (`lowlevel.*`) within a larger checkpoint or high-level goal:
+- Update status to `completed` in `ROADMAP.md` and change emoji to 🟩
+- Append the completion to the current task's entry in `GPTLOG.md`
+- Create or update release notes in `releases/TASK-###.md` with completed work
+- Add a commit identifier that references the task (e.g., "TASK-002: Completed lowlevel.compare_email_mock_vs_real")
+- Commit and push the changes using the same identifier
 
 ### 4. On Failure (`❌ FAIL` or `⚠ RETRY`)
 - Do not commit code
@@ -139,3 +155,51 @@ For every task (`TASK-###`), Copilot must:
 Copilot must **not**:
 - Push directly to `main`, `master`, or any protected branch
 - Merge the task branch unless explicitly instructed in `ROADMAP.md` or by human override
+
+
+---
+
+## Structured Logging Protocol
+
+This project uses a hierarchical, append-only roadmap log to manage agent goals, checkpoints, and low-level tasks.
+
+### Syntax Overview
+
+- `highlevel.<goal_id>` – Defines a high-level objective or integration.
+- `checkpoint.<checkpoint_id>` – Marks a milestone under a high-level goal.
+- `lowlevel.<task_id>` – Specifies an actionable step under a checkpoint.
+- `status: open | in-progress | complete | abandoned` – Current state of the task.
+- `note: <freeform natural language comment>` – Optional context or explanation.
+
+### Example Entry
+
+```
+highlevel.wa_integration
+status: open
+note: Add WhatsApp messaging support using Twilio.
+
+checkpoint.twilio_auth
+status: open
+note: Handle Twilio API key validation.
+
+lowlevel.write_twilio_auth_function
+status: complete
+note: Function implemented and tested in test_twilio_auth.py.
+```
+
+### Agent Behavior
+
+- The agent must only append entries.
+- The agent must resolve each `checkpoint.*` before proceeding to dependent `lowlevel.*`.
+- Tasks should be logged chronologically under their logical hierarchy.
+
+---
+
+
+
+### Status Color Legend
+- 🟥 **Open** – Task identified but not yet started
+- 🟧 **In Progress** – Actively being worked on
+- 🟩 **Complete** – Finished and verified
+
+Tasks are marked with their corresponding color emoji prefix in the roadmap entries.
