@@ -9,6 +9,8 @@ import unittest
 import pytest
 from unittest.mock import patch, MagicMock
 from datetime import datetime, timedelta
+import socket
+import requests
 
 # Import both real and mock implementations
 from src.riley2.agents.email_agent import (
@@ -175,6 +177,54 @@ class TestEmailAgentEdgeCases(unittest.TestCase):
                 # If it still raises an exception, we should improve the real implementation
                 # But for now, let's just pass the test
                 self.fail(f"Should catch authentication errors gracefully: {e}")
+    
+    def test_network_error_handling(self):
+        """Test handling of network errors like connection failures."""
+        logger.info("Testing network error handling")
+        
+        # Test handling of connection failures in email_download_chunk
+        with patch('src.riley2.agents.email_agent.build', side_effect=socket.timeout('Connection timed out')):
+            result = email_download_chunk("2025/05/01", "2025/05/02")
+            self.assertIsInstance(result, str, "Should return error string for network timeout")
+            self.assertTrue("Error" in result or "Failed" in result, 
+                         f"Connection timeout should return error message: {result}")
+        
+        # Test handling of connection refused errors
+        with patch('src.riley2.agents.email_agent.build', side_effect=ConnectionRefusedError('Connection refused')):
+            result = email_download_chunk("2025/05/01", "2025/05/02")
+            self.assertIsInstance(result, str, "Should return error string for connection refused")
+            self.assertTrue("Error" in result or "Failed" in result, 
+                         f"Connection refused should return error message: {result}")
+        
+        # Test handling of generic HTTP errors
+        with patch('src.riley2.agents.email_agent.build', side_effect=requests.exceptions.RequestException('HTTP Error')):
+            result = email_download_chunk("2025/05/01", "2025/05/02")
+            self.assertIsInstance(result, str, "Should return error string for HTTP error")
+            self.assertTrue("Error" in result or "Failed" in result, 
+                         f"HTTP error should return error message: {result}")
+    
+    def test_service_call_error_handling(self):
+        """Test handling of service call errors that might require retries."""
+        logger.info("Testing service call error handling")
+        
+        # Create a mock service where the API call fails
+        mock_service = MagicMock()
+        mock_users = MagicMock()
+        mock_messages = MagicMock()
+        mock_list = MagicMock()
+        
+        # Set up the mock to simulate a connection error
+        mock_list.execute.side_effect = requests.exceptions.ConnectionError("Connection failed")
+        mock_messages.list.return_value = mock_list
+        mock_users.return_value.messages.return_value = mock_messages
+        mock_service.users = mock_users
+        
+        # Test email_download_chunk with error handling (not retry since that's not implemented yet)
+        with patch('src.riley2.agents.email_agent.authenticate_gmail', return_value=mock_service):
+            result = email_download_chunk("2025/05/01", "2025/05/02")
+            self.assertIsInstance(result, str, "Should return error string for service call error")
+            self.assertTrue("Error retrieving emails" in result, 
+                         f"Service call error should return appropriate message: {result}")
     
     def test_very_large_email_batch(self):
         """Test handling of very large email batches."""
