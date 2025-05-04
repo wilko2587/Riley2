@@ -9641,3 +9641,11 @@ Respond STRICTLY in JSON:
 2025-05-05 00:30:06,413 - INFO - [AGENT - Test] OutputResponse: Since the client has not confirmed, keep the internal sync at the original time as instructed.
 2025-05-05 00:30:06,413 - INFO - [TEST] Success: test_conditional_instructions[condition_met=False] - 
 2025-05-05 00:30:06,414 - INFO - [SYSTEM - TEST_SESSION] Test session complete at 2025-05-05 00:30:06
+2025-05-05 00:43:46,393 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-05 00:43:46,400 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:43:46,407 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\knowledge_base.json
+2025-05-05 00:43:46,407 - INFO - Test configurations loaded and validated successfully
+2025-05-05 00:43:48,194 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-05 00:43:48,195 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:43:48,195 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\knowledge_base.json
+2025-05-05 00:43:48,195 - INFO - Test configurations loaded and validated successfully
