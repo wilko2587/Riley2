@@ -40,12 +40,9 @@ SECTION F1: CHECKPOINT TASK LOOP
 → Run relevant tests and inspect code directly  
 → Use VS Code Test Explorer if available  
 → If task is complete:  
-  • Add note: `[PENDING] checkpoint complete unless reviewed` to the checkpoint  
+  • Add note: `[AUTO-COMPLETE] checkpoint verified` to the checkpoint  
   • Commit and push  
-  • Notify user in chat:  
-   [COP]: The checkpoint `X` appears complete and has been marked [PENDING]. Should I proceed to merge?  
-  • WAIT for `[USER]: Yes`  
-  → On confirmation, proceed to [F3.1]  
+  • Proceed to [F3.1]  
 → If not complete:  
   • Add one or more `lowlevel.*` roadmap items  
   • proceed to [F2.1]
@@ -118,19 +115,16 @@ SECTION F2: LOW-LEVEL TASK EXECUTION
 
 [F2.11] Are there more `lowlevel.*` subtasks for this checkpoint?  
 → If YES → proceed to [F2.1]  
-→ If NO  → Add: `[PENDING] checkpoint complete unless reviewed` to the checkpoint  
+→ If NO  → Add: `[AUTO-COMPLETE] checkpoint verified` to the checkpoint  
   • Commit and push  
-  • Notify user in chat:  
-   [COP]: The checkpoint `X` appears complete and has been marked [PENDING]. Should I proceed to merge?  
-  • WAIT for `[USER]: Yes`  
-  → On confirmation, proceed to [F3.1]
+  • Proceed to [F3.1]
 
 ───────────────────────────────────────────────────────────────────────────────
 SECTION F3: CHECKPOINT FINALIZATION
 ───────────────────────────────────────────────────────────────────────────────
 
-[F3.1] Confirmed: checkpoint is marked `[PENDING]` and user has said yes  
-→ Add to roadmap: `[MERGE] confirmed by GPT`  
+[F3.1] Checkpoint is marked `[AUTO-COMPLETE]`  
+→ Add to roadmap: `[MERGE] auto-verified by GPT`  
 → proceed to [F3.2]
 
 [F3.2] Copilot merges the checkpoint branch into main  
@@ -161,9 +155,9 @@ ROADMAP VISUAL FORMATTING RULES
 AUTONOMY & LOGGING RULES
 ───────────────────────────────────────────────────────────────────────────────
 
-• Copilot may execute all steps up to `[PENDING]` without user approval  
-• After marking `[PENDING]`, Copilot must pause and ask for confirmation  
-• If `[USER]: yes`, continue to `[MERGE]` and post-merge steps  
+• Copilot may execute all steps including checkpoint completion without user approval  
+• Copilot should proceed to the next logical task after completing the current one  
+• After completing a high-level task, Copilot should select the next [OPEN] high-level task  
 • All logs must use:
   [USER]: ...  
   [COP]: ...  
@@ -184,5 +178,5 @@ TRIGGERS
 ───────────────────────────────────────────────────────────────────────────────
 
 • `go`         → Begin execution loop  
-• `[PENDING]`  → Copilot signals checkpoint complete  
-• `[MERGE]`    → GPT (or user) approves merge  
+• `[AUTO-COMPLETE]`  → Copilot signals checkpoint verified  
+• `[MERGE]`    → GPT auto-verifies merge
