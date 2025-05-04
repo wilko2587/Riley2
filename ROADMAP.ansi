@@ -1,111 +1,157 @@
-+==============================================================================+
+[36m+==============================================================================+
+| TASK SECTOR 01 > AGENT REASONING TESTS                                       |
++==============================================================================+[0m
+
+[33m> STATE: [IN_PROGRESS]  expand reasoning tests for calendar agent[0m
+  GOAL:  Ensure calendar agent handles non-obvious logic like overlapping multi-day merges or multi-agent conflicts.
+  SPEC:  Add multi-case reasoning tests similar in design to the Italy test for the email agent.
+[90m  [COP]  branch opened: t110-calendar-reasoning[0m
+
+    [32m> STATE: [DONE]         test calendar multi-block merge across boundary[0m
+      SPEC:  Ensure the calendar agent can reason over and merge non-contiguous but related blocks.
+[90m      [COP]  issue: #cal004[0m
+[90m      [COP]  committed [x], pushed [x][0m
+[90m      [GPT]  Implemented comprehensive tests for multi-day events and boundary merges[0m
+
+    [31m> STATE: [OPEN]         test calendar double-agent scheduling collision[0m
+      SPEC:  Test whether two agents interacting with the same calendar produce valid merged intent.
+
+      [33m> STATE: [IN_PROGRESS] implement test for concurrent scheduling of overlapping events[0m
+        SPEC:  Test how the calendar handles two agents attempting to book overlapping slots simultaneously.
+
+      [31m> STATE: [OPEN]         implement test for priority-based conflict resolution[0m
+        SPEC:  Test whether calendar correctly resolves conflicts based on event priority settings.
+
+      [31m> STATE: [OPEN]         implement test for reservation locking mechanics[0m
+        SPEC:  Test the calendar's ability to lock timeslots during the scheduling process.
+
+[31m> STATE: [OPEN]         expand reasoning tests for email agent[0m
+  GOAL:  Add more logic-driven test scenarios like the prior Italy example.
+  SPEC:  Focus on edge-cases around parsing natural language instructions and conditionals.
+[90m  [COP]  branch opened: t111-email-reasoning[0m
+
+    [31m> STATE: [OPEN]         test email with embedded conditional blocks[0m
+      SPEC:  Ensure GPT detects and adapts to `if`, `unless`, and negated phrasing in instruction emails.
+
+    [31m> STATE: [OPEN]         test email intent inference with minimal phrasing[0m
+      SPEC:  Reason from vague or shorthand phrasing like "Italy, Tue-Wed?" and derive correct block intent.
+
+[36m+==============================================================================+
 | TASK SECTOR 00 > BASE SYSTEM SETUP                                           |
-+==============================================================================+
++==============================================================================+[0m
 
-> STATE: [[36mMERGE[0m]]        set up the foundation for the project
-  SPEC:  Create the folders, entry point, and structure we?ll use going forward.
-  [COP]  branch opened: t000-base-setup
-  [COP]  branch t000-base-setup merged
-  [COP]  branch t000-base-setup deleted
-  [GPT]  This task ensures that everything has a home ? code, logs, and future features.
-  [COP]  Successfully built and organized the project skeleton.
+[36m> STATE: [MERGE]        set up the foundation for the project[0m
+  SPEC:  Create the folders, entry point, and structure we'll use going forward.
+[90m  [COP]  branch opened: t000-base-setup[0m
+[90m  [COP]  branch t000-base-setup merged[0m
+[90m  [COP]  branch t000-base-setup deleted[0m
+[90m  [GPT]  This task ensures that everything has a home – code, logs, and future features.[0m
+[90m  [COP]  Successfully built and organized the project skeleton.[0m
 
-> STATE: [[36mMERGE[0m]]        create the folder layout
+[36m> STATE: [MERGE]        create the folder layout[0m
   SPEC:  Make clear folders for code, notes, logs, and future automation.
-  [COP]  branch opened: t001-folders
-  [COP]  branch t001-folders merged
-  [COP]  branch t001-folders deleted
-  [GPT]  Folder layout should be obvious to new developers and mirror the agent model.
-  [COP]  Structure now includes: /agents, /interfaces, /logs, /tests, /releases
+[90m  [COP]  branch opened: t001-folders[0m
+[90m  [COP]  branch t001-folders merged[0m
+[90m  [COP]  branch t001-folders deleted[0m
+[90m  [GPT]  Folder layout should be obvious to new developers and mirror the agent model.[0m
+[90m  [COP]  Structure now includes: /agents, /interfaces, /logs, /tests, /releases[0m
 
-    > STATE: [[32mDONE[0m]]         make folders for agents and logs
+    [32m> STATE: [DONE]         make folders for agents and logs[0m
       SPEC:  Create folders where code and logs will live.
-      [COP]  issue: #str001
-      [COP]  committed [x], pushed [x]
-      [GPT]  This keeps runtime logic separate from system output.
+[90m      [COP]  issue: #str001[0m
+[90m      [COP]  committed [x], pushed [x][0m
+[90m      [GPT]  This keeps runtime logic separate from system output.[0m
 
-    > STATE: [[32mDONE[0m]]         add folders for testing and release notes
+    [32m> STATE: [DONE]         add folders for testing and release notes[0m
       SPEC:  Helps track quality and changes over time.
-      [COP]  issue: #str002
-      [COP]  committed [x], pushed [x]
-      [COP]  Folder structure fully matches what we use in the roadmap and protocol.
+[90m      [COP]  issue: #str002[0m
+[90m      [COP]  committed [x], pushed [x][0m
+[90m      [COP]  Folder structure fully matches what we use in the roadmap and protocol.[0m
 
-  [PENDING] checkpoint complete unless reviewed
-  [MERGE] confirmed by GPT
+[90m  [PENDING] checkpoint complete unless reviewed[0m
+[90m  [MERGE] confirmed by GPT[0m
 
-> STATE: [[36mMERGE[0m]]        create a way to run the system
+[36m> STATE: [MERGE]        create a way to run the system[0m
   SPEC:  Set up a file that can start the system from the command line.
-  [COP]  branch opened: t002-entrypoint
-  [COP]  branch t002-entrypoint merged
-  [COP]  branch t002-entrypoint deleted
-  [GPT]  This allows the system to run in tests or in live mode with one command.
+[90m  [COP]  branch opened: t002-entrypoint[0m
+[90m  [COP]  branch t002-entrypoint merged[0m
+[90m  [COP]  branch t002-entrypoint deleted[0m
+[90m  [GPT]  This allows the system to run in tests or in live mode with one command.[0m
 
-    > STATE: [[32mDONE[0m]]         add main file to launch system
+    [32m> STATE: [DONE]         add main file to launch system[0m
       SPEC:  This is the file the developer or agent runs first.
-      [COP]  issue: #cli001
-      [COP]  committed [x], pushed [x]
-      [COP]  main.py runs agents, logs events, and supports test mode.
+[90m      [COP]  issue: #cli001[0m
+[90m      [COP]  committed [x], pushed [x][0m
+[90m      [COP]  main.py runs agents, logs events, and supports test mode.[0m
 
-    > STATE: [[32mDONE[0m]]         support basic settings and text output
+    [32m> STATE: [DONE]         support basic settings and text output[0m
       SPEC:  Print out startup info and accept future options.
-      [COP]  issue: #cli002
-      [COP]  committed [x], pushed [x]
-      [GPT]  Prepares the system for environment flags and status feedback.
+[90m      [COP]  issue: #cli002[0m
+[90m      [COP]  committed [x], pushed [x][0m
+[90m      [GPT]  Prepares the system for environment flags and status feedback.[0m
 
-  [PENDING] checkpoint complete unless reviewed
-  [MERGE] confirmed by GPT
+[90m  [PENDING] checkpoint complete unless reviewed[0m
+[90m  [MERGE] confirmed by GPT[0m
 
-+==============================================================================+
+[36m+==============================================================================+
 | TASK SECTOR 02 > EMAIL & CALENDAR VERIFICATION                               |
-+==============================================================================+
++==============================================================================+[0m
 
-> STATE: [[33mIN_PROGRESS[0m]]  verify email and calendar agents
+[33m> STATE: [IN_PROGRESS]  verify email and calendar agents[0m
+  GOAL:  Confirm both email and calendar agents behave identically in mock and real modes to ensure accurate task execution.
   SPEC:  Ensure that core agents (email and calendar) are functionally stable and API-aligned.
 
-> STATE: [[36mPENDING[0m]]      test email agent
+[36m> STATE: [MERGE]        test email agent[0m
+  OBJECTIVE: Validate end-to-end consistency between real and mock email agents, including behavior under edge conditions.
   SPEC:  Validate email send/receive behavior, mock-vs-real agent consistency.
-  [COP]  branch opened: t102-emailtest
-  [PENDING] checkpoint complete unless reviewed
-  [MERGE] confirmed by GPT
+[90m  [COP]  branch opened: t102-emailtest[0m
+[90m  [PENDING] checkpoint complete unless reviewed[0m
+[90m  [MERGE] confirmed by GPT[0m
+[90m  [COP]  branch t102-emailtest merged[0m
+[90m  [COP]  branch t102-emailtest deleted[0m
 
-    > STATE: [[32mDONE[0m]]         compare email mock vs real
+    [32m> STATE: [DONE]         compare email mock vs real[0m
       SPEC:  Ensure method signatures and output formats match real-world agent.
-      [COP]  issue: #cmp001
-      [COP]  committed [x], pushed [x]
+[90m      [COP]  issue: #cmp001[0m
+[90m      [COP]  committed [x], pushed [x][0m
 
-    > STATE: [[32mDONE[0m]]         test email edge cases
+    [32m> STATE: [DONE]         test email edge cases[0m
       SPEC:  Validate handling of failures, retries, malformed inputs.
-      [COP]  issue: #edge002
-      [COP]  committed [x], pushed [x]
-      [COP]  Implemented retry mechanism with exponential backoff
-      [COP]  Added tests for network errors, rate limiting, and MIME parsing errors
+[90m      [COP]  issue: #edge002[0m
+[90m      [COP]  committed [x], pushed [x][0m
+[90m      [COP]  Implemented retry mechanism with exponential backoff[0m
+[90m      [COP]  Added tests for network errors, rate limiting, and MIME parsing errors[0m
 
-> STATE: [[31mOPEN[0m]]         test calendar agent
+[31m> STATE: [OPEN]         test calendar agent[0m
+  OBJECTIVE: Evaluate whether calendar conflict resolution and merging logic matches between the mock and real agents.
   SPEC:  Evaluate calendar block merging, conflict resolution.
-  [COP]  branch opened: t105-caltest
+[90m  [COP]  branch opened: t105-caltest[0m
 
-    > STATE: [[31mOPEN[0m]]         compare calendar mock vs real
+    [31m> STATE: [OPEN]         compare calendar mock vs real[0m
       SPEC:  Ensure behavior of mock calendar matches backend agent logic.
-      [COP]  issue: #cal003
-      [COP]  committed [ ], pushed [ ]
+[90m      [COP]  issue: #cal003[0m
+[90m      [COP]  committed [ ], pushed [ ][0m
 
-+==============================================================================+
+[36m+==============================================================================+
 | TASK SECTOR 03 > WHATSAPP INTEGRATION                                        |
-+==============================================================================+
++==============================================================================+[0m
 
-> STATE: [[31mOPEN[0m]]         integrate WhatsApp
+[31m> STATE: [OPEN]         integrate WhatsApp[0m
+  GOAL:  Enable basic message-sending agent via WhatsApp (using Twilio) for communicating with external services.
   SPEC:  Add Twilio-based WhatsApp message support.
 
-+==============================================================================+
+[36m+==============================================================================+
 | TASK SECTOR 04 > NEST INTEGRATION                                            |
-+==============================================================================+
++==============================================================================+[0m
 
-> STATE: [[31mOPEN[0m]]         integrate Nest
+[31m> STATE: [OPEN]         integrate Nest[0m
+  GOAL:  Let the scheduler interact with Nest thermostats to control home environment based on calendar events.
   SPEC:  Integrate Nest thermostat agent with calendar scheduling.
 
-+==============================================================================+
+[36m+==============================================================================+
 | TASK SECTOR 05 > LOCATION SERVICES                                           |
-+==============================================================================+
++==============================================================================+[0m
 
-> STATE: [[31mOPEN[0m]]         location services
+[31m> STATE: [OPEN]         location services[0m
+  GOAL:  Build location awareness so the system can adjust plans and suggestions based on user movement.
   SPEC:  Track and respond to user location changes.
