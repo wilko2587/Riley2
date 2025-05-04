@@ -6,6 +6,8 @@
   GOAL:  Ensure calendar agent handles non-obvious logic like overlapping multi-day merges or multi-agent conflicts.
   SPEC:  Add multi-case reasoning tests similar in design to the Italy test for the email agent.
 [90m  [COP]  branch opened: [38;5;164mt110-calendar-reasoning[0m
+[90m  [COP]  branch t110-calendar-reasoning merged[0m
+[90m  [COP]  branch t110-calendar-reasoning deleted[0m
 
     [32m> STATE: [DONE]         test calendar multi-block merge across boundary[0m
       SPEC:  Ensure the calendar agent can reason over and merge non-contiguous but related blocks.
