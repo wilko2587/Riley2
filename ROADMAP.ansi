@@ -13,8 +13,11 @@
 [90m      [COP]  committed [x], pushed [x][0m
 [90m      [GPT]  Implemented comprehensive tests for multi-day events and boundary merges[0m
 
-    [31m> STATE: [OPEN]         test calendar double-agent scheduling collision[0m
+    [32m> STATE: [DONE]         test calendar double-agent scheduling collision[0m
       SPEC:  Test whether two agents interacting with the same calendar produce valid merged intent.
+[90m      [COP]  PR: #cal-collision[0m
+[90m      [COP]  committed [x], pushed [x][0m
+[90m      [GPT]  Implemented test suite for multi-agent calendar interactions with conflict handling[0m
 
       [32m> STATE: [DONE]         implement test for concurrent scheduling of overlapping events[0m
         SPEC:  Test how the calendar handles two agents attempting to book overlapping slots simultaneously.
