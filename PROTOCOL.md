@@ -102,6 +102,12 @@ SECTION F2: LOW-LEVEL TASK EXECUTION
   • `copilot_status.md` — describe steps taken  
   • `ROADMAP.ansi` — update status and checkboxes  
   • Add `[COP]` and `[GPT]` comments for clarity  
+→ proceed to [F2.8.1]
+
+[F2.8.1] Request human confirmation of changes:  
+  • Pause and explicitly ask the human to review and accept all changes  
+  • Wait for explicit confirmation before proceeding  
+  • Ensure all file edits are properly accepted in the editor  
 → proceed to [F2.9]
 
 [F2.9] Commit and push the code change to the branch *** REQUIRED STEP ***  
@@ -129,17 +135,33 @@ SECTION F3: CHECKPOINT FINALIZATION
 → Add to roadmap: `[MERGE] auto-verified by GPT`  
 → proceed to [F3.2]
 
-[F3.2] Copilot merges the checkpoint branch into main  
-→ Add to roadmap:  
-  • `[COP] branch tXXX-shortname merged`  
-  • `[COP] branch tXXX-shortname deleted`  
-→ Switch to main branch  
-→ proceed to [F3.3]
-
-[F3.3] Write the release note  
+[F3.2] Write the release note  
 → File: `releases/TASK-XXX.md`  
 → Use format: `✓ tXXX-branchname → short summary`  
 → Reference copilot_log entry  
+→ proceed to [F3.3]
+
+[F3.3] Update the copilot_status.md file  
+→ Add relevant information about the completed work  
+→ Include specific changes and achievements  
+→ Add to the "Completed Tasks" section  
+→ Request human confirmation of changes  
+→ Commit and push these updates to the feature branch  
+→ proceed to [F3.4]
+
+[F3.4] Update ROADMAP.ansi with merge notation  
+→ Add to roadmap:  
+  • `[COP] branch tXXX-shortname merged`  
+  • `[COP] branch tXXX-shortname deleted`  
+→ Request human confirmation of changes  
+→ Commit and push these updates to the feature branch  
+→ proceed to [F3.5]
+
+[F3.5] Merge the checkpoint branch into main  
+→ Switch to the main branch  
+→ Perform the merge (--no-ff is recommended)  
+→ Resolve any conflicts that arise  
+→ Once merged, delete the feature branch  
 → proceed to [F0.1]
 
 ───────────────────────────────────────────────────────────────────────────────
@@ -164,17 +186,18 @@ AUTONOMY & LOGGING RULES
   [USER]: ...  
   [COP]: ...  
   [GPT]: ...  
-• Logs must be full sentence, non-jargon, human readable
+• Logs must be full sentence, non-jargon, human readable  
 • ALWAYS push after committing - a task is not complete until changes are pushed to remote
 
 ───────────────────────────────────────────────────────────────────────────────
 CRITICAL REMINDERS
 ───────────────────────────────────────────────────────────────────────────────
 
-1. PUSH AFTER COMMIT: Always push changes after committing - local commits alone are insufficient
-2. NEVER SKIP STEPS: All protocol steps must be followed in order
-3. RUN TESTS: Always run tests before marking a task as complete
-4. VERIFY CHANGES: Check that all changes properly address the task requirements
+1. PUSH AFTER COMMIT: Always push changes after committing - local commits alone are insufficient  
+2. NEVER SKIP STEPS: All protocol steps must be followed in order  
+3. RUN TESTS: Always run tests before marking a task as complete  
+4. VERIFY CHANGES: Check that all changes properly address the task requirements  
+5. REQUEST HUMAN CONFIRMATION: Always pause and request human confirmation before committing changes  
 
 ───────────────────────────────────────────────────────────────────────────────
 FILE NAMING CONVENTIONS

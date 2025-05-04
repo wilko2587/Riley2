@@ -242,3 +242,13 @@
 2025-05-04 11:38:50,744 - INFO - === Starting Test: test_calendar_scan_comparison[2025/05/01-2025/05/31-None] ===
 2025-05-04 11:38:50,744 - DEBUG - Test setup started at 2025-05-04 11:38:50
 2025-05-04 11:38:50,744 - DEBUG - Test marker: parametrize
+2025-05-04 22:20:21,377 - INFO - === Starting Test: test_concurrent_non_overlapping_events ===
+2025-05-04 22:20:21,377 - DEBUG - Test setup started at 2025-05-04 22:20:21
+2025-05-04 22:21:21,685 - INFO - === Starting Test: test_concurrent_non_overlapping_events ===
+2025-05-04 22:21:21,685 - DEBUG - Test setup started at 2025-05-04 22:21:21
+2025-05-04 23:10:30,724 - INFO - === Starting Test: test_priority_based_conflict_resolution ===
+2025-05-04 23:10:30,724 - DEBUG - Test setup started at 2025-05-04 23:10:30
+2025-05-04 23:20:21,369 - INFO - === Starting Test: test_basic_lock_acquisition ===
+2025-05-04 23:20:21,369 - DEBUG - Test setup started at 2025-05-04 23:20:21
+2025-05-04 23:24:05,134 - INFO - === Starting Test: test_basic_lock_acquisition ===
+2025-05-04 23:24:05,134 - DEBUG - Test setup started at 2025-05-04 23:24:05

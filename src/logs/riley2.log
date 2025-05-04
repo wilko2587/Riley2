@@ -9212,3 +9212,237 @@ Respond STRICTLY in JSON:
 2025-05-04 11:52:32,947 - DEBUG - Decision made: yes
 2025-05-04 11:52:32,947 - INFO - BACKENDM: [End Turn Condition Met]
 2025-05-04 11:52:32,947 - INFO - BACKENDM -> FRONTEND: [Final Response] Based on the last action [calendar_scan], here is what I found: No matching events found.
+2025-05-04 22:20:07,459 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 22:20:07,459 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-04 22:20:07,459 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\knowledge_base.json
+2025-05-04 22:20:07,459 - INFO - Test configurations loaded and validated successfully
+2025-05-04 22:20:21,373 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 22:20:21,373 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-04 22:20:21,373 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\knowledge_base.json
+2025-05-04 22:20:21,373 - INFO - Test configurations loaded and validated successfully
+2025-05-04 22:20:21,378 - INFO - [SYSTEM - TEST_SESSION] Starting test session at 2025-05-04 22:20:21 with enhanced colorful logging (MAXIMUM VERBOSITY)
+2025-05-04 22:20:21,378 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 22:20:21,379 - DEBUG - Initialized CalendarAgentMock with 6 events from config
+2025-05-04 22:20:21,379 - INFO - Initialized CalendarAgentMock for concurrent scheduling testing
+2025-05-04 22:20:21,379 - INFO - [TEST] Step: Testing concurrent scheduling of non-overlapping calendar events - 
+2025-05-04 22:20:21,380 - INFO - Agent agent1 attempting to schedule: Team Meeting
+2025-05-04 22:20:21,380 - INFO - Agent agent2 attempting to schedule: Client Call
+2025-05-04 22:20:21,480 - INFO - Event added to calendar: Team Meeting
+2025-05-04 22:20:21,482 - INFO - Event added to calendar: Client Call
+2025-05-04 22:20:21,482 - INFO - [TEST] Success: test_concurrent_non_overlapping_events - 
+2025-05-04 22:20:21,485 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 22:20:21,485 - DEBUG - Initialized CalendarAgentMock with 6 events from config
+2025-05-04 22:20:21,485 - INFO - Initialized CalendarAgentMock for concurrent scheduling testing
+2025-05-04 22:20:21,486 - INFO - [TEST] Step: Testing concurrent scheduling of overlapping calendar events - 
+2025-05-04 22:20:21,486 - INFO - Agent agent1 attempting to schedule: Team Meeting
+2025-05-04 22:20:21,486 - INFO - Agent agent2 attempting to schedule: Client Call
+2025-05-04 22:20:21,587 - INFO - Event added to calendar: Client Call
+2025-05-04 22:20:21,587 - WARNING - Conflict detected between events: Client Call and Team Meeting
+2025-05-04 22:20:21,638 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 22:20:21,638 - DEBUG - Initialized CalendarAgentMock with 6 events from config
+2025-05-04 22:20:21,638 - INFO - Initialized CalendarAgentMock for concurrent scheduling testing
+2025-05-04 22:20:21,638 - INFO - [TEST] Step: Testing concurrent scheduling of identical events - 
+2025-05-04 22:20:21,639 - INFO - Agent agent1 attempting to schedule: Team Standup
+2025-05-04 22:20:21,639 - INFO - Agent agent2 attempting to schedule: Team Standup
+2025-05-04 22:20:21,639 - INFO - Event added to calendar: Team Standup
+2025-05-04 22:20:21,639 - WARNING - Duplicate detected: Team Standup
+2025-05-04 22:20:21,639 - INFO - [TEST] Success: test_concurrent_same_event - 
+2025-05-04 22:20:21,640 - INFO - [SYSTEM - TEST_SESSION] Test session complete at 2025-05-04 22:20:21
+2025-05-04 22:21:11,642 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 22:21:11,642 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-04 22:21:11,642 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\knowledge_base.json
+2025-05-04 22:21:11,643 - INFO - Test configurations loaded and validated successfully
+2025-05-04 22:21:21,682 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 22:21:21,682 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-04 22:21:21,682 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\knowledge_base.json
+2025-05-04 22:21:21,682 - INFO - Test configurations loaded and validated successfully
+2025-05-04 22:21:21,686 - INFO - [SYSTEM - TEST_SESSION] Starting test session at 2025-05-04 22:21:21 with enhanced colorful logging (MAXIMUM VERBOSITY)
+2025-05-04 22:21:21,686 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 22:21:21,686 - DEBUG - Initialized CalendarAgentMock with 6 events from config
+2025-05-04 22:21:21,686 - INFO - Initialized CalendarAgentMock for concurrent scheduling testing
+2025-05-04 22:21:21,687 - INFO - [TEST] Step: Testing concurrent scheduling of non-overlapping calendar events - 
+2025-05-04 22:21:21,688 - INFO - Agent agent1 attempting to schedule: Team Meeting
+2025-05-04 22:21:21,688 - INFO - Agent agent2 attempting to schedule: Client Call
+2025-05-04 22:21:21,789 - INFO - Event added to calendar: Team Meeting
+2025-05-04 22:21:21,790 - INFO - Event added to calendar: Client Call
+2025-05-04 22:21:21,790 - INFO - [TEST] Success: test_concurrent_non_overlapping_events - 
+2025-05-04 22:21:21,792 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 22:21:21,792 - DEBUG - Initialized CalendarAgentMock with 6 events from config
+2025-05-04 22:21:21,792 - INFO - Initialized CalendarAgentMock for concurrent scheduling testing
+2025-05-04 22:21:21,793 - INFO - [TEST] Step: Testing concurrent scheduling of overlapping calendar events - 
+2025-05-04 22:21:21,793 - INFO - Agent agent1 attempting to schedule: Team Meeting
+2025-05-04 22:21:21,793 - INFO - Agent agent2 attempting to schedule: Client Call
+2025-05-04 22:21:21,894 - INFO - Event added to calendar: Team Meeting
+2025-05-04 22:21:21,894 - WARNING - Conflict detected between events: Team Meeting and Client Call
+2025-05-04 22:21:21,894 - INFO - Agent agent1 succeeded, Agent agent2 had a conflict
+2025-05-04 22:21:21,894 - INFO - [TEST] Success: test_concurrent_overlapping_events - 
+2025-05-04 22:21:21,898 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 22:21:21,898 - DEBUG - Initialized CalendarAgentMock with 6 events from config
+2025-05-04 22:21:21,898 - INFO - Initialized CalendarAgentMock for concurrent scheduling testing
+2025-05-04 22:21:21,898 - INFO - [TEST] Step: Testing concurrent scheduling of identical events - 
+2025-05-04 22:21:21,899 - INFO - Agent agent1 attempting to schedule: Team Standup
+2025-05-04 22:21:21,899 - INFO - Agent agent2 attempting to schedule: Team Standup
+2025-05-04 22:21:21,899 - INFO - Event added to calendar: Team Standup
+2025-05-04 22:21:21,899 - WARNING - Duplicate detected: Team Standup
+2025-05-04 22:21:21,899 - INFO - [TEST] Success: test_concurrent_same_event - 
+2025-05-04 22:21:21,900 - INFO - [SYSTEM - TEST_SESSION] Test session complete at 2025-05-04 22:21:21
+2025-05-04 23:02:45,544 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 23:02:45,550 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-04 23:02:45,556 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\knowledge_base.json
+2025-05-04 23:02:45,556 - INFO - Test configurations loaded and validated successfully
+2025-05-04 23:10:06,578 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 23:10:06,578 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-04 23:10:06,578 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\knowledge_base.json
+2025-05-04 23:10:06,578 - INFO - Test configurations loaded and validated successfully
+2025-05-04 23:10:30,720 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 23:10:30,720 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-04 23:10:30,720 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\knowledge_base.json
+2025-05-04 23:10:30,720 - INFO - Test configurations loaded and validated successfully
+2025-05-04 23:10:30,724 - INFO - [SYSTEM - TEST_SESSION] Starting test session at 2025-05-04 23:10:30 with enhanced colorful logging (MAXIMUM VERBOSITY)
+2025-05-04 23:10:30,725 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 23:10:30,725 - DEBUG - Initialized CalendarAgentMock with 6 events from config
+2025-05-04 23:10:30,725 - INFO - Initialized CalendarAgentMock for concurrent scheduling testing
+2025-05-04 23:10:30,725 - INFO - [TEST] Step: Testing priority-based conflict resolution for calendar events - 
+2025-05-04 23:10:30,726 - INFO - Agent manager attempting to schedule: Department Meeting (priority: medium)
+2025-05-04 23:10:30,827 - INFO - Event added to calendar: Department Meeting
+2025-05-04 23:10:30,827 - INFO - Agent ceo attempting to schedule: Executive Board Meeting (priority: high)
+2025-05-04 23:10:30,930 - INFO - Removing lower priority event: Department Meeting
+2025-05-04 23:10:30,930 - INFO - Higher priority event added: Executive Board Meeting
+2025-05-04 23:10:30,930 - INFO - Agent ceo attempting to schedule: Executive Board Meeting (priority: high)
+2025-05-04 23:10:31,031 - INFO - Event added to calendar: Executive Board Meeting
+2025-05-04 23:10:31,031 - INFO - Agent team_lead attempting to schedule: Optional Team Sync (priority: low)
+2025-05-04 23:10:31,132 - WARNING - Cannot schedule: Optional Team Sync (priority low) conflicts with Executive Board Meeting (priority high)
+2025-05-04 23:10:31,132 - INFO - Agent manager1 attempting to schedule: Department Meeting (priority: medium)
+2025-05-04 23:10:31,233 - INFO - Event added to calendar: Department Meeting
+2025-05-04 23:10:31,233 - INFO - Agent manager2 attempting to schedule: Alternate Department Meeting (priority: medium)
+2025-05-04 23:10:31,334 - WARNING - Cannot schedule: Alternate Department Meeting (priority medium) conflicts with Department Meeting (priority medium)
+2025-05-04 23:10:31,334 - INFO - [TEST] Success: test_priority_based_conflict_resolution - 
+2025-05-04 23:10:31,335 - INFO - [SYSTEM - TEST_SESSION] Test session complete at 2025-05-04 23:10:31
+2025-05-04 23:13:11,425 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 23:13:11,425 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-04 23:13:11,425 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\knowledge_base.json
+2025-05-04 23:13:11,425 - INFO - Test configurations loaded and validated successfully
+2025-05-04 23:20:01,741 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 23:20:01,741 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-04 23:20:01,742 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\knowledge_base.json
+2025-05-04 23:20:01,742 - INFO - Test configurations loaded and validated successfully
+2025-05-04 23:20:21,366 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 23:20:21,367 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-04 23:20:21,367 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\knowledge_base.json
+2025-05-04 23:20:21,367 - INFO - Test configurations loaded and validated successfully
+2025-05-04 23:20:21,370 - INFO - [SYSTEM - TEST_SESSION] Starting test session at 2025-05-04 23:20:21 with enhanced colorful logging (MAXIMUM VERBOSITY)
+2025-05-04 23:20:21,371 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 23:20:21,371 - DEBUG - Initialized CalendarAgentMock with 6 events from config
+2025-05-04 23:20:21,371 - INFO - Initialized CalendarAgentMock for reservation locking testing
+2025-05-04 23:20:21,372 - INFO - [TEST] Step: Testing basic lock acquisition for calendar slots - 
+2025-05-04 23:20:21,378 - INFO - Agent agent1 acquired lock lock_1 for slot 2025/05/25 10:00-11:00
+2025-05-04 23:20:21,380 - INFO - Agent agent2 acquired lock lock_2 for slot 2025/05/25 11:00-12:00
+2025-05-04 23:20:21,380 - INFO - Lock lock_1 released by agent agent1
+2025-05-04 23:20:21,381 - INFO - Lock lock_2 released by agent agent2
+2025-05-04 23:20:21,381 - INFO - [TEST] Success: test_basic_lock_acquisition - 
+2025-05-04 23:20:21,382 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 23:20:21,382 - DEBUG - Initialized CalendarAgentMock with 6 events from config
+2025-05-04 23:20:21,382 - INFO - Initialized CalendarAgentMock for reservation locking testing
+2025-05-04 23:20:21,383 - INFO - [TEST] Step: Testing concurrent lock acquisition for the same calendar slot - 
+2025-05-04 23:20:21,383 - INFO - Agent agent1 attempting to lock slot: 2025/05/27 09:00-10:00
+2025-05-04 23:20:21,384 - INFO - Agent agent2 attempting to lock slot: 2025/05/27 09:00-10:00
+2025-05-04 23:20:21,384 - INFO - Agent agent3 attempting to lock slot: 2025/05/27 09:00-10:00
+2025-05-04 23:20:21,485 - INFO - Agent agent2 acquired lock lock_1 for slot 2025/05/27 09:00-10:00
+2025-05-04 23:20:21,485 - INFO - Agent agent2 acquired lock lock_1
+2025-05-04 23:20:21,485 - WARNING - Agent agent3 failed to lock slot: overlaps with existing lock
+2025-05-04 23:20:21,485 - INFO - Agent agent3 failed to acquire lock: slot_locked
+2025-05-04 23:20:21,485 - WARNING - Agent agent1 failed to lock slot: overlaps with existing lock
+2025-05-04 23:20:21,485 - INFO - Agent agent1 failed to acquire lock: slot_locked
+2025-05-04 23:20:21,686 - INFO - Lock lock_1 released by agent agent2
+2025-05-04 23:20:21,686 - INFO - Agent agent2 released lock: True
+2025-05-04 23:20:21,686 - INFO - [TEST] Success: test_concurrent_lock_acquisition - 
+2025-05-04 23:20:21,688 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 23:20:21,688 - DEBUG - Initialized CalendarAgentMock with 6 events from config
+2025-05-04 23:20:21,688 - INFO - Initialized CalendarAgentMock for reservation locking testing
+2025-05-04 23:20:21,688 - INFO - [TEST] Step: Testing lock expiration after timeout - 
+2025-05-04 23:20:21,689 - INFO - Agent agent1 acquired lock lock_1 for slot 2025/05/28 15:00-16:00
+2025-05-04 23:20:21,689 - INFO - Waiting 0.75 seconds for lock to expire...
+2025-05-04 23:20:22,199 - INFO - Lock lock_1 expired for agent agent1
+2025-05-04 23:20:22,440 - INFO - Agent agent2 acquired lock lock_2 for slot 2025/05/28 15:00-16:00
+2025-05-04 23:20:22,440 - INFO - Lock lock_2 released by agent agent2
+2025-05-04 23:20:22,440 - INFO - [TEST] Success: test_lock_expiration - 
+2025-05-04 23:20:22,442 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 23:20:22,442 - DEBUG - Initialized CalendarAgentMock with 6 events from config
+2025-05-04 23:20:22,442 - INFO - Initialized CalendarAgentMock for reservation locking testing
+2025-05-04 23:20:22,443 - INFO - [TEST] Step: Testing lock prevention for overlapping calendar slots - 
+2025-05-04 23:20:22,443 - INFO - Agent agent1 acquired lock lock_1 for slot 2025/05/26 14:00-15:00
+2025-05-04 23:20:22,443 - WARNING - Agent agent2 failed to lock slot: overlaps with existing lock
+2025-05-04 23:20:22,497 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 23:20:22,497 - DEBUG - Initialized CalendarAgentMock with 6 events from config
+2025-05-04 23:20:22,497 - INFO - Initialized CalendarAgentMock for reservation locking testing
+2025-05-04 23:20:22,497 - INFO - [TEST] Step: Testing complete reservation flow with finalization - 
+2025-05-04 23:20:22,497 - INFO - Agent agent1 acquired lock lock_1 for slot 2025/05/29 13:00-14:00
+2025-05-04 23:20:22,699 - INFO - Lock lock_1 released by agent agent1
+2025-05-04 23:20:22,699 - INFO - [TEST] Success: test_reservation_with_finalization - 
+2025-05-04 23:20:22,700 - INFO - [SYSTEM - TEST_SESSION] Test session complete at 2025-05-04 23:20:22
+2025-05-04 23:23:44,887 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 23:23:44,888 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-04 23:23:44,888 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\knowledge_base.json
+2025-05-04 23:23:44,888 - INFO - Test configurations loaded and validated successfully
+2025-05-04 23:24:05,130 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 23:24:05,130 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-04 23:24:05,130 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\knowledge_base.json
+2025-05-04 23:24:05,130 - INFO - Test configurations loaded and validated successfully
+2025-05-04 23:24:05,134 - INFO - [SYSTEM - TEST_SESSION] Starting test session at 2025-05-04 23:24:05 with enhanced colorful logging (MAXIMUM VERBOSITY)
+2025-05-04 23:24:05,135 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 23:24:05,135 - DEBUG - Initialized CalendarAgentMock with 6 events from config
+2025-05-04 23:24:05,135 - INFO - Initialized CalendarAgentMock for reservation locking testing
+2025-05-04 23:24:05,136 - INFO - [TEST] Step: Testing basic lock acquisition for calendar slots - 
+2025-05-04 23:24:05,136 - INFO - Agent agent1 acquired lock lock_1 for slot 2025/05/25 10:00-11:00
+2025-05-04 23:24:05,138 - INFO - Agent agent2 acquired lock lock_2 for slot 2025/05/25 11:00-12:00
+2025-05-04 23:24:05,138 - INFO - Lock lock_1 released by agent agent1
+2025-05-04 23:24:05,138 - INFO - Lock lock_2 released by agent agent2
+2025-05-04 23:24:05,138 - INFO - [TEST] Success: test_basic_lock_acquisition - 
+2025-05-04 23:24:05,141 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 23:24:05,141 - DEBUG - Initialized CalendarAgentMock with 6 events from config
+2025-05-04 23:24:05,141 - INFO - Initialized CalendarAgentMock for reservation locking testing
+2025-05-04 23:24:05,141 - INFO - [TEST] Step: Testing concurrent lock acquisition for the same calendar slot - 
+2025-05-04 23:24:05,141 - INFO - Agent agent1 attempting to lock slot: 2025/05/27 09:00-10:00
+2025-05-04 23:24:05,141 - INFO - Agent agent2 attempting to lock slot: 2025/05/27 09:00-10:00
+2025-05-04 23:24:05,141 - INFO - Agent agent3 attempting to lock slot: 2025/05/27 09:00-10:00
+2025-05-04 23:24:05,242 - INFO - Agent agent1 acquired lock lock_1 for slot 2025/05/27 09:00-10:00
+2025-05-04 23:24:05,242 - INFO - Agent agent1 acquired lock lock_1
+2025-05-04 23:24:05,242 - WARNING - Agent agent2 failed to lock slot: overlaps with existing lock
+2025-05-04 23:24:05,242 - INFO - Agent agent2 failed to acquire lock: slot_locked
+2025-05-04 23:24:05,242 - WARNING - Agent agent3 failed to lock slot: overlaps with existing lock
+2025-05-04 23:24:05,242 - INFO - Agent agent3 failed to acquire lock: slot_locked
+2025-05-04 23:24:05,444 - INFO - Lock lock_1 released by agent agent1
+2025-05-04 23:24:05,444 - INFO - Agent agent1 released lock: True
+2025-05-04 23:24:05,444 - INFO - [TEST] Success: test_concurrent_lock_acquisition - 
+2025-05-04 23:24:05,446 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 23:24:05,446 - DEBUG - Initialized CalendarAgentMock with 6 events from config
+2025-05-04 23:24:05,446 - INFO - Initialized CalendarAgentMock for reservation locking testing
+2025-05-04 23:24:05,447 - INFO - [TEST] Step: Testing lock expiration after timeout - 
+2025-05-04 23:24:05,447 - INFO - Agent agent1 acquired lock lock_1 for slot 2025/05/28 15:00-16:00
+2025-05-04 23:24:05,447 - INFO - Waiting 0.75 seconds for lock to expire...
+2025-05-04 23:24:05,959 - INFO - Lock lock_1 expired for agent agent1
+2025-05-04 23:24:06,198 - INFO - Agent agent2 acquired lock lock_2 for slot 2025/05/28 15:00-16:00
+2025-05-04 23:24:06,198 - INFO - Lock lock_2 released by agent agent2
+2025-05-04 23:24:06,198 - INFO - [TEST] Success: test_lock_expiration - 
+2025-05-04 23:24:06,200 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 23:24:06,200 - DEBUG - Initialized CalendarAgentMock with 6 events from config
+2025-05-04 23:24:06,200 - INFO - Initialized CalendarAgentMock for reservation locking testing
+2025-05-04 23:24:06,201 - INFO - [TEST] Step: Testing lock prevention for overlapping calendar slots - 
+2025-05-04 23:24:06,201 - INFO - Agent agent1 acquired lock lock_1 for slot 2025/05/26 14:00-15:00
+2025-05-04 23:24:06,201 - WARNING - Agent agent2 failed to lock slot: overlaps with existing lock
+2025-05-04 23:24:06,201 - INFO - Lock lock_1 released by agent agent1
+2025-05-04 23:24:06,202 - INFO - Agent agent2 acquired lock lock_3 for slot 2025/05/26 14:30-15:30
+2025-05-04 23:24:06,202 - INFO - Lock lock_3 released by agent agent2
+2025-05-04 23:24:06,202 - INFO - [TEST] Success: test_overlapping_slot_locking - 
+2025-05-04 23:24:06,204 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 23:24:06,204 - DEBUG - Initialized CalendarAgentMock with 6 events from config
+2025-05-04 23:24:06,204 - INFO - Initialized CalendarAgentMock for reservation locking testing
+2025-05-04 23:24:06,204 - INFO - [TEST] Step: Testing complete reservation flow with finalization - 
+2025-05-04 23:24:06,205 - INFO - Agent agent1 acquired lock lock_1 for slot 2025/05/29 13:00-14:00
+2025-05-04 23:24:06,405 - INFO - Lock lock_1 released by agent agent1
+2025-05-04 23:24:06,405 - INFO - [TEST] Success: test_reservation_with_finalization - 
+2025-05-04 23:24:06,406 - INFO - [SYSTEM - TEST_SESSION] Test session complete at 2025-05-04 23:24:06
+2025-05-04 23:27:27,395 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-04 23:27:27,396 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-04 23:27:27,396 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\knowledge_base.json
+2025-05-04 23:27:27,396 - INFO - Test configurations loaded and validated successfully
