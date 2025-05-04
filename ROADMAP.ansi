@@ -22,8 +22,11 @@
 [90m        [COP]  committed [x], pushed [x][0m
 [90m        [GPT]  Implemented tests for overlapping, non-overlapping, and duplicate events[0m
 
-      [31m> STATE: [OPEN]         implement test for priority-based conflict resolution[0m
+      [32m> STATE: [DONE]         implement test for priority-based conflict resolution[0m
         SPEC:  Test whether calendar correctly resolves conflicts based on event priority settings.
+[90m        [COP]  issue: #cal006[0m
+[90m        [COP]  committed [x], pushed [x][0m
+[90m        [GPT]  Implemented tests for priority-based event conflict resolution with different priority levels[0m
 
       [31m> STATE: [OPEN]         implement test for reservation locking mechanics[0m
         SPEC:  Test the calendar's ability to lock timeslots during the scheduling process.

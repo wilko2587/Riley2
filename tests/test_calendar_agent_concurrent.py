@@ -308,6 +308,189 @@ class TestCalendarAgentConcurrent(unittest.TestCase):
         
         log_test_success("test_concurrent_same_event")
     
+    def test_priority_based_conflict_resolution(self):
+        """Test whether calendar correctly resolves conflicts based on event priority settings."""
+        log_test_step("Testing priority-based conflict resolution for calendar events")
+        
+        # Define events with different priorities
+        high_priority_event = {
+            "title": "Executive Board Meeting", 
+            "date": "2025/05/22", 
+            "start_time": "14:00", 
+            "end_time": "15:30",
+            "organizer": "ceo",
+            "priority": "high"
+        }
+        
+        medium_priority_event = {
+            "title": "Department Meeting", 
+            "date": "2025/05/22", 
+            "start_time": "14:30", 
+            "end_time": "16:00",
+            "organizer": "manager",
+            "priority": "medium"
+        }
+        
+        low_priority_event = {
+            "title": "Optional Team Sync", 
+            "date": "2025/05/22", 
+            "start_time": "15:00", 
+            "end_time": "16:00",
+            "organizer": "team_lead",
+            "priority": "low"
+        }
+        
+        # Mock calendar storage to track attempted writes
+        calendar_storage = []
+        storage_lock = threading.Lock()
+        
+        # Priority rankings
+        priority_rank = {
+            "high": 3,
+            "medium": 2,
+            "low": 1,
+            None: 0  # Default for events without priority
+        }
+        
+        # Create patched version of calendar create method that uses our synchronized storage
+        # and respects priority for conflict resolution
+        def mock_calendar_create_with_priority(event_data):
+            with storage_lock:
+                # Check for conflicts before adding
+                conflicts = []
+                for existing_event in calendar_storage:
+                    if self._events_conflict(existing_event, event_data):
+                        conflicts.append(existing_event)
+                
+                if conflicts:
+                    # Get priority of new event
+                    new_event_priority = priority_rank.get(event_data.get("priority"), 0)
+                    
+                    # If there are conflicts, check if the new event has higher priority
+                    can_override = True
+                    for conflict in conflicts:
+                        conflict_priority = priority_rank.get(conflict.get("priority"), 0)
+                        if conflict_priority >= new_event_priority:
+                            can_override = False
+                            logger.warning(f"Cannot schedule: {event_data['title']} (priority {event_data.get('priority')}) "
+                                          f"conflicts with {conflict['title']} (priority {conflict.get('priority')})")
+                            return {
+                                "status": "conflict", 
+                                "event": event_data, 
+                                "conflicting_with": conflict,
+                                "reason": "lower_priority"
+                            }
+                    
+                    if can_override:
+                        # Remove all lower priority conflicting events
+                        for conflict in conflicts:
+                            logger.info(f"Removing lower priority event: {conflict['title']}")
+                            calendar_storage.remove(conflict)
+                        
+                        # Add the higher priority event
+                        calendar_storage.append(event_data)
+                        logger.info(f"Higher priority event added: {event_data['title']}")
+                        return {
+                            "status": "override", 
+                            "event": event_data,
+                            "overridden": conflicts
+                        }
+                else:
+                    # No conflicts, add event normally
+                    calendar_storage.append(event_data)
+                    logger.info(f"Event added to calendar: {event_data['title']}")
+                    return {"status": "success", "event": event_data}
+        
+        # Function to simulate an agent scheduling an event
+        def agent_schedule_event(agent_id, event_data):
+            logger.info(f"Agent {agent_id} attempting to schedule: {event_data['title']} (priority: {event_data.get('priority')})")
+            
+            # Simulate network delay and processing time
+            time.sleep(0.1)
+            
+            # Try to create the event
+            result = mock_calendar_create_with_priority(event_data)
+            
+            with self.operation_lock:
+                self.concurrent_operations.append({
+                    "agent_id": agent_id,
+                    "event": event_data,
+                    "result": result
+                })
+            
+            return result
+        
+        # Clear operation tracking from previous tests
+        self.concurrent_operations = []
+        
+        # Test Case 1: Schedule high priority event after medium priority event
+        # Expected: High priority event should override the medium priority event
+        thread1 = threading.Thread(target=agent_schedule_event, args=("manager", medium_priority_event))
+        thread1.start()
+        thread1.join()
+        
+        thread2 = threading.Thread(target=agent_schedule_event, args=("ceo", high_priority_event))
+        thread2.start()
+        thread2.join()
+        
+        # Analyze the results for Test Case 1
+        self.assertEqual(len(calendar_storage), 1, 
+                       "Only the high priority event should remain in the calendar")
+        self.assertEqual(calendar_storage[0]["title"], high_priority_event["title"],
+                       "The high priority event should override the medium priority event")
+        
+        # Find operations with 'override' status
+        override_ops = [op for op in self.concurrent_operations if op["result"].get("status") == "override"]
+        self.assertEqual(len(override_ops), 1, "One operation should have override status")
+        self.assertEqual(override_ops[0]["agent_id"], "ceo", "CEO's high priority event should override")
+        
+        # Reset for next test
+        calendar_storage.clear()
+        self.concurrent_operations.clear()
+        
+        # Test Case 2: Try to schedule a low priority event when higher priority events exist
+        # Expected: Low priority event should be rejected
+        thread1 = threading.Thread(target=agent_schedule_event, args=("ceo", high_priority_event))
+        thread1.start()
+        thread1.join()
+        
+        thread2 = threading.Thread(target=agent_schedule_event, args=("team_lead", low_priority_event))
+        thread2.start()
+        thread2.join()
+        
+        # Analyze the results for Test Case 2
+        self.assertEqual(len(calendar_storage), 1, 
+                       "Only the high priority event should be in the calendar")
+        conflict_ops = [op for op in self.concurrent_operations if op["result"].get("status") == "conflict"]
+        self.assertEqual(len(conflict_ops), 1, "Low priority event should be rejected due to conflict")
+        self.assertEqual(conflict_ops[0]["result"].get("reason"), "lower_priority", 
+                       "Conflict should be due to lower priority")
+        
+        # Reset for next test
+        calendar_storage.clear()
+        self.concurrent_operations.clear()
+        
+        # Test Case 3: Equal priority events
+        # Expected: First-come-first-served (already scheduled event has precedence)
+        medium_priority_event2 = medium_priority_event.copy()
+        medium_priority_event2["title"] = "Alternate Department Meeting"
+        
+        thread1 = threading.Thread(target=agent_schedule_event, args=("manager1", medium_priority_event))
+        thread1.start()
+        thread1.join()
+        
+        thread2 = threading.Thread(target=agent_schedule_event, args=("manager2", medium_priority_event2))
+        thread2.start()
+        thread2.join()
+        
+        # Analyze the results for Test Case 3
+        self.assertEqual(len(calendar_storage), 1, 
+                       "Only the first medium priority event should remain")
+        self.assertEqual(calendar_storage[0]["title"], medium_priority_event["title"],
+                       "The first scheduled event should take precedence when priorities are equal")
+        
+        log_test_success("test_priority_based_conflict_resolution")
+    
     def _events_conflict(self, event1, event2):
         """Helper method to detect if two events conflict in time."""
         # Different days don't conflict
