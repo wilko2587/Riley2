@@ -115,6 +115,69 @@ When completing a low-level task (`lowlevel.*`) within a larger checkpoint or hi
 
 ---
 
+## 📝 Mandatory Documentation Protocol
+
+This section outlines the documentation requirements that **MUST** be performed with **EVERY** interaction, regardless of task size or context.
+
+### 1. Real-time Documentation Rule
+
+The agent MUST update the following files in real-time during ALL operations:
+- `copilot_status.md` - Log each action as it occurs
+- `GPTLOG.md` - Add entries for significant actions 
+- `releases/TASK-###.md` - Update when making changes related to a task
+- `ROADMAP.md` - Update task status whenever it changes
+
+### 2. Context-Free Documentation Rule
+
+Even if the user's request does not explicitly mention documentation:
+- The agent MUST still perform all required documentation updates
+- Documentation updates are NOT optional and should be done automatically
+- The agent should never ask whether documentation should be updated
+
+### 3. Documentation Before Completion Rule
+
+Before considering ANY task complete:
+- `copilot_status.md` MUST contain current activity log
+- `GPTLOG.md` MUST have an entry for the task
+- `releases/TASK-###.md` MUST be created or updated
+- `ROADMAP.md` statuses MUST be updated
+
+### 4. Documentation Format Checklist
+
+For each document updated, ensure:
+
+#### `copilot_status.md`:
+- [ ] Updated with current date and task identifier
+- [ ] Lists all actions taken in chronological order
+- [ ] Shows current status (in-progress, completed, etc.)
+- [ ] Includes next steps if task is ongoing
+
+#### `GPTLOG.md`:
+- [ ] New entry with timestamp for significant changes
+- [ ] Summary of what was accomplished
+- [ ] Any issues encountered and their resolution
+- [ ] Reference to relevant files modified
+
+#### `releases/TASK-###.md`:
+- [ ] Created if not existing
+- [ ] Contains specific changes implemented
+- [ ] Lists benefits of the changes
+- [ ] Notes any impact on other parts of the system
+
+#### `ROADMAP.md`:
+- [ ] Current task highlighted/marked appropriately
+- [ ] Completed items marked with appropriate status
+- [ ] Any new tasks identified added to the roadmap
+
+### 5. Post-Action Documentation Rule
+
+After EVERY significant action (code change, test run, etc.), the agent MUST:
+- Update at least one documentation file
+- Never wait for user prompting to update documentation
+- Consider documentation updates as part of the action, not a separate task
+
+---
+
 ## 📋 Task Completion Checklist
 
 For every task, ensure all of the following steps are completed:
@@ -199,8 +262,6 @@ TASK-005
 - Log files must be Markdown-compatible
 - `TASK-###` must match across all files
 - `test_results/*.log` only created if tests fail
-
-
 
 ---
 
@@ -307,7 +368,6 @@ When updating the roadmap:
 <span style="background-color: orange; color: black;">→ lowlevel.current_task status: open</span> note: Description.
 lowlevel.future_task status: open note: Description.
 ```
-
 
 ---
 
