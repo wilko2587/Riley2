@@ -166,3 +166,21 @@ Before any commits are made, the agent must:
 6. Reference this log in the release note
 
 > This ensures full transparency and traceability across all task executions.
+
+───────────────────────────────────────────────────────────────────────────────
+LOGGING LANGUAGE CLARITY
+───────────────────────────────────────────────────────────────────────────────
+
+All entries written to `copilot_log/` must use plain, human-friendly language.
+
+- Avoid acronyms, shorthand, or implementation jargon.
+- Use full sentences to describe what happened, why, and what was affected.
+- Each log should be understandable by both a human and GPT reviewing the task.
+
+Example (GOOD):
+  [COP]: Created folders for code, logs, tests, and releases so other modules have clear places to live.
+
+Example (BAD):
+  [COP]: bootstrapped FS /logs /t /a  ✔️
+
+This is especially important when explaining why tests passed, failed, or why a design was chosen.

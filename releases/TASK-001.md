@@ -1,7 +1,4 @@
-# TASK-001: Initial DevOps Setup
+# TASK-001: create the folder layout
 
-✅ Grouped ROADMAP.md by task state  
-✅ Assigned TASK-### IDs to each task  
-✅ Created copilot_status.md  
-✅ Created releases/ and test_results/ folders  
-✅ Generated first GPTLOG.md entry
+✓ t001-create-folder-layout → created folders: agents, interfaces, logs, tests, releases
+↳ log: copilot_log/t001-create-folder-layout.md

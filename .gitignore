@@ -72,3 +72,6 @@ venv.bak/
 # OS specific
 .DS_Store
 Thumbs.db
+# Explicitly include tracked logs and releases
+!copilot_log/*.md
+!.releases/*.md
