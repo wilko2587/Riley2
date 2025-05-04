@@ -19,7 +19,7 @@ SECTION F0: STARTUP
 → Use VS Code’s built-in Test Explorer if available  
 → If complete:  
   • Set status to [DONE]  
-  • Commit and push update to main branch  
+  • Commit and push update to main branch (REQUIRED - no task is complete until pushed)  
   • END  
 → If not complete:  
   • Add one or more checkpoint-level subtasks  
@@ -40,12 +40,9 @@ SECTION F1: CHECKPOINT TASK LOOP
 → Run relevant tests and inspect code directly  
 → Use VS Code Test Explorer if available  
 → If task is complete:  
-  • Add note: `[PENDING] checkpoint complete unless reviewed` to the checkpoint  
-  • Commit and push  
-  • Notify user in chat:  
-   [COP]: The checkpoint `X` appears complete and has been marked [PENDING]. Should I proceed to merge?  
-  • WAIT for `[USER]: Yes`  
-  → On confirmation, proceed to [F3.1]  
+  • Add note: `[AUTO-COMPLETE] checkpoint verified` to the checkpoint  
+  • Commit and push (REQUIRED - changes must be pushed, not just committed)  
+  • Proceed to [F3.1]  
 → If not complete:  
   • Add one or more `lowlevel.*` roadmap items  
   • proceed to [F2.1]
@@ -59,7 +56,8 @@ SECTION F2: LOW-LEVEL TASK EXECUTION
 
 [F2.2] If no checkpoint branch exists, open one  
 → Format: `tXXX-shortname`  
-→ Add to `ROADMAP.ansi`: `[COP] branch opened: tXXX-shortname`  
+→ Add to `ROADMAP.ansi`: `[90m[COP] branch opened: [38;5;164mtXXX-shortname[0m`  
+  (only the branch name should be in deep magenta color)  
 → proceed to [F2.3]
 
 [F2.3] Visually highlight the active `lowlevel.*` task line  
@@ -106,9 +104,10 @@ SECTION F2: LOW-LEVEL TASK EXECUTION
   • Add `[COP]` and `[GPT]` comments for clarity  
 → proceed to [F2.9]
 
-[F2.9] Commit and push the code change to the branch  
+[F2.9] Commit and push the code change to the branch *** REQUIRED STEP ***  
 → Add: `[COP] issue: #shorttag`  
 → Add: `[COP] committed [x], pushed [x]`  
+→ Both commit AND push must be completed - local commits only are insufficient  
 → proceed to [F2.10]
 
 [F2.10] Remove the amber highlight from the task line  
@@ -118,19 +117,16 @@ SECTION F2: LOW-LEVEL TASK EXECUTION
 
 [F2.11] Are there more `lowlevel.*` subtasks for this checkpoint?  
 → If YES → proceed to [F2.1]  
-→ If NO  → Add: `[PENDING] checkpoint complete unless reviewed` to the checkpoint  
-  • Commit and push  
-  • Notify user in chat:  
-   [COP]: The checkpoint `X` appears complete and has been marked [PENDING]. Should I proceed to merge?  
-  • WAIT for `[USER]: Yes`  
-  → On confirmation, proceed to [F3.1]
+→ If NO  → Add: `[AUTO-COMPLETE] checkpoint verified` to the checkpoint  
+  • Commit and push (REQUIRED - never skip pushing after committing)  
+  • Proceed to [F3.1]
 
 ───────────────────────────────────────────────────────────────────────────────
 SECTION F3: CHECKPOINT FINALIZATION
 ───────────────────────────────────────────────────────────────────────────────
 
-[F3.1] Confirmed: checkpoint is marked `[PENDING]` and user has said yes  
-→ Add to roadmap: `[MERGE] confirmed by GPT`  
+[F3.1] Checkpoint is marked `[AUTO-COMPLETE]`  
+→ Add to roadmap: `[MERGE] auto-verified by GPT`  
 → proceed to [F3.2]
 
 [F3.2] Copilot merges the checkpoint branch into main  
@@ -161,14 +157,24 @@ ROADMAP VISUAL FORMATTING RULES
 AUTONOMY & LOGGING RULES
 ───────────────────────────────────────────────────────────────────────────────
 
-• Copilot may execute all steps up to `[PENDING]` without user approval  
-• After marking `[PENDING]`, Copilot must pause and ask for confirmation  
-• If `[USER]: yes`, continue to `[MERGE]` and post-merge steps  
+• Copilot may execute all steps including checkpoint completion without user approval  
+• Copilot should proceed to the next logical task after completing the current one  
+• After completing a high-level task, Copilot should select the next [OPEN] high-level task  
 • All logs must use:
   [USER]: ...  
   [COP]: ...  
   [GPT]: ...  
 • Logs must be full sentence, non-jargon, human readable
+• ALWAYS push after committing - a task is not complete until changes are pushed to remote
+
+───────────────────────────────────────────────────────────────────────────────
+CRITICAL REMINDERS
+───────────────────────────────────────────────────────────────────────────────
+
+1. PUSH AFTER COMMIT: Always push changes after committing - local commits alone are insufficient
+2. NEVER SKIP STEPS: All protocol steps must be followed in order
+3. RUN TESTS: Always run tests before marking a task as complete
+4. VERIFY CHANGES: Check that all changes properly address the task requirements
 
 ───────────────────────────────────────────────────────────────────────────────
 FILE NAMING CONVENTIONS
@@ -184,5 +190,5 @@ TRIGGERS
 ───────────────────────────────────────────────────────────────────────────────
 
 • `go`         → Begin execution loop  
-• `[PENDING]`  → Copilot signals checkpoint complete  
-• `[MERGE]`    → GPT (or user) approves merge  
+• `[AUTO-COMPLETE]`  → Copilot signals checkpoint verified  
+• `[MERGE]`    → GPT auto-verifies merge

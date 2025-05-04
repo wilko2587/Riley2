@@ -5,7 +5,7 @@
 [33m> STATE: [IN_PROGRESS]  expand reasoning tests for calendar agent[0m
   GOAL:  Ensure calendar agent handles non-obvious logic like overlapping multi-day merges or multi-agent conflicts.
   SPEC:  Add multi-case reasoning tests similar in design to the Italy test for the email agent.
-[90m  [COP]  branch opened: t110-calendar-reasoning[0m
+[90m  [COP]  branch opened: [38;5;164mt110-calendar-reasoning[0m
 
     [32m> STATE: [DONE]         test calendar multi-block merge across boundary[0m
       SPEC:  Ensure the calendar agent can reason over and merge non-contiguous but related blocks.
@@ -13,22 +13,36 @@
 [90m      [COP]  committed [x], pushed [x][0m
 [90m      [GPT]  Implemented comprehensive tests for multi-day events and boundary merges[0m
 
-    [31m> STATE: [OPEN]         test calendar double-agent scheduling collision[0m
+    [32m> STATE: [DONE]         test calendar double-agent scheduling collision[0m
       SPEC:  Test whether two agents interacting with the same calendar produce valid merged intent.
+[90m      [COP]  PR: #cal-collision[0m
+[90m      [COP]  committed [x], pushed [x][0m
+[90m      [GPT]  Implemented test suite for multi-agent calendar interactions with conflict handling[0m
+[90m      [AUTO-COMPLETE] checkpoint verified[0m
+[90m      [MERGE] auto-verified by GPT[0m
 
-      [33m> STATE: [IN_PROGRESS] implement test for concurrent scheduling of overlapping events[0m
+      [32m> STATE: [DONE]         implement test for concurrent scheduling of overlapping events[0m
         SPEC:  Test how the calendar handles two agents attempting to book overlapping slots simultaneously.
+[90m        [COP]  issue: #cal005[0m
+[90m        [COP]  committed [x], pushed [x][0m
+[90m        [GPT]  Implemented tests for overlapping, non-overlapping, and duplicate events[0m
 
-      [31m> STATE: [OPEN]         implement test for priority-based conflict resolution[0m
+      [32m> STATE: [DONE]         implement test for priority-based conflict resolution[0m
         SPEC:  Test whether calendar correctly resolves conflicts based on event priority settings.
+[90m        [COP]  issue: #cal006[0m
+[90m        [COP]  committed [x], pushed [x][0m
+[90m        [GPT]  Implemented tests for priority-based event conflict resolution with different priority levels[0m
 
-      [31m> STATE: [OPEN]         implement test for reservation locking mechanics[0m
+      [32m> STATE: [DONE]         implement test for reservation locking mechanics[0m
         SPEC:  Test the calendar's ability to lock timeslots during the scheduling process.
+[90m        [COP]  issue: #cal007[0m
+[90m        [COP]  committed [x], pushed [x][0m
+[90m        [GPT]  Implemented comprehensive tests for calendar slot locking, concurrency, and expiration[0m
 
 [31m> STATE: [OPEN]         expand reasoning tests for email agent[0m
   GOAL:  Add more logic-driven test scenarios like the prior Italy example.
   SPEC:  Focus on edge-cases around parsing natural language instructions and conditionals.
-[90m  [COP]  branch opened: t111-email-reasoning[0m
+[90m  [COP]  branch opened: [38;5;164mt111-email-reasoning[0m
 
     [31m> STATE: [OPEN]         test email with embedded conditional blocks[0m
       SPEC:  Ensure GPT detects and adapts to `if`, `unless`, and negated phrasing in instruction emails.
@@ -36,13 +50,14 @@
     [31m> STATE: [OPEN]         test email intent inference with minimal phrasing[0m
       SPEC:  Reason from vague or shorthand phrasing like "Italy, Tue-Wed?" and derive correct block intent.
 
+
 [36m+==============================================================================+
 | TASK SECTOR 00 > BASE SYSTEM SETUP                                           |
 +==============================================================================+[0m
 
 [36m> STATE: [MERGE]        set up the foundation for the project[0m
   SPEC:  Create the folders, entry point, and structure we'll use going forward.
-[90m  [COP]  branch opened: t000-base-setup[0m
+[90m  [COP]  branch opened: [38;5;164mt000-base-setup[0m
 [90m  [COP]  branch t000-base-setup merged[0m
 [90m  [COP]  branch t000-base-setup deleted[0m
 [90m  [GPT]  This task ensures that everything has a home – code, logs, and future features.[0m
@@ -50,7 +65,7 @@
 
 [36m> STATE: [MERGE]        create the folder layout[0m
   SPEC:  Make clear folders for code, notes, logs, and future automation.
-[90m  [COP]  branch opened: t001-folders[0m
+[90m  [COP]  branch opened: [38;5;164mt001-folders[0m
 [90m  [COP]  branch t001-folders merged[0m
 [90m  [COP]  branch t001-folders deleted[0m
 [90m  [GPT]  Folder layout should be obvious to new developers and mirror the agent model.[0m
@@ -73,7 +88,7 @@
 
 [36m> STATE: [MERGE]        create a way to run the system[0m
   SPEC:  Set up a file that can start the system from the command line.
-[90m  [COP]  branch opened: t002-entrypoint[0m
+[90m  [COP]  branch opened: [38;5;164mt002-entrypoint[0m
 [90m  [COP]  branch t002-entrypoint merged[0m
 [90m  [COP]  branch t002-entrypoint deleted[0m
 [90m  [GPT]  This allows the system to run in tests or in live mode with one command.[0m
@@ -104,7 +119,7 @@
 [36m> STATE: [MERGE]        test email agent[0m
   OBJECTIVE: Validate end-to-end consistency between real and mock email agents, including behavior under edge conditions.
   SPEC:  Validate email send/receive behavior, mock-vs-real agent consistency.
-[90m  [COP]  branch opened: t102-emailtest[0m
+[90m  [COP]  branch opened: [38;5;164mt102-emailtest[0m
 [90m  [PENDING] checkpoint complete unless reviewed[0m
 [90m  [MERGE] confirmed by GPT[0m
 [90m  [COP]  branch t102-emailtest merged[0m
@@ -125,7 +140,7 @@
 [31m> STATE: [OPEN]         test calendar agent[0m
   OBJECTIVE: Evaluate whether calendar conflict resolution and merging logic matches between the mock and real agents.
   SPEC:  Evaluate calendar block merging, conflict resolution.
-[90m  [COP]  branch opened: t105-caltest[0m
+[90m  [COP]  branch opened: [38;5;164mt105-caltest[0m
 
     [31m> STATE: [OPEN]         compare calendar mock vs real[0m
       SPEC:  Ensure behavior of mock calendar matches backend agent logic.
