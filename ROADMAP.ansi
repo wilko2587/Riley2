@@ -62,9 +62,11 @@
 > STATE: [[33mIN_PROGRESS[0m]]  verify email and calendar agents
   SPEC:  Ensure that core agents (email and calendar) are functionally stable and API-aligned.
 
-> STATE: [[31mOPEN[0m]]         test email agent
+> STATE: [[36mPENDING[0m]]      test email agent
   SPEC:  Validate email send/receive behavior, mock-vs-real agent consistency.
   [COP]  branch opened: t102-emailtest
+  [PENDING] checkpoint complete unless reviewed
+  [MERGE] confirmed by GPT
 
     > STATE: [[32mDONE[0m]]         compare email mock vs real
       SPEC:  Ensure method signatures and output formats match real-world agent.
