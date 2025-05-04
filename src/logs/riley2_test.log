@@ -1,0 +1,244 @@
+2025-05-03 20:22:07,620 - INFO - === Starting Test: test_email_download_chunk_signature ===
+2025-05-03 20:22:07,620 - DEBUG - Test setup started at 2025-05-03 20:22:07
+2025-05-03 22:04:02,026 - INFO - === Starting Test: test_calendar_scan_comparison[2025/05/01-2025/05/31-None] ===
+2025-05-03 22:04:02,026 - DEBUG - Test setup started at 2025-05-03 22:04:02
+2025-05-03 22:04:02,026 - DEBUG - Test marker: parametrize
+2025-05-03 22:43:21,397 - INFO - === Starting Test: test_calendar_scan_comparison[2025/05/01-2025/05/31-None] ===
+2025-05-03 22:43:21,398 - DEBUG - Test setup started at 2025-05-03 22:43:21
+2025-05-03 22:43:21,398 - DEBUG - Test marker: parametrize
+2025-05-03 22:46:56,354 - INFO - === Starting Test: test_calendar_scan_comparison[2025/05/01-2025/05/31-None] ===
+2025-05-03 22:46:56,355 - DEBUG - Test setup started at 2025-05-03 22:46:56
+2025-05-03 22:46:56,355 - DEBUG - Test marker: parametrize
+2025-05-03 22:56:46,894 - INFO - === Starting Test: test_authentication_error_handling ===
+2025-05-03 22:56:46,895 - DEBUG - Test setup started at 2025-05-03 22:56:46
+2025-05-03 23:01:05,793 - INFO - === Starting Test: test_frontend_dummy ===
+2025-05-03 23:01:05,793 - DEBUG - Test setup started at 2025-05-03 23:01:05
+2025-05-03 23:01:05,801 - INFO - === Starting Test: test_calendar_scan_comparison[2025/05/01-2025/05/31-None] ===
+2025-05-03 23:01:05,802 - DEBUG - Test setup started at 2025-05-03 23:01:05
+2025-05-03 23:01:05,802 - DEBUG - Test marker: parametrize
+2025-05-03 23:01:05,808 - INFO - === Starting Test: test_email_reasoning[What emails did I get from my boss?-team meeting tomorrow] ===
+2025-05-03 23:01:05,809 - DEBUG - Test setup started at 2025-05-03 23:01:05
+2025-05-03 23:01:05,809 - DEBUG - Test marker: parametrize
+2025-05-03 23:01:05,809 - INFO - === Starting Test: test_reasoning_queries[When am I going to Italy?-15052025] ===
+2025-05-03 23:01:05,810 - DEBUG - Test setup started at 2025-05-03 23:01:05
+2025-05-03 23:01:05,810 - DEBUG - Test marker: parametrize
+2025-05-03 23:01:06,185 - INFO - === Starting Test: test_backend_planner_llm ===
+2025-05-03 23:01:06,186 - DEBUG - Test setup started at 2025-05-03 23:01:06
+2025-05-03 23:01:06,186 - INFO - === Starting Test: test_choose_next_action_email ===
+2025-05-03 23:01:06,186 - DEBUG - Test setup started at 2025-05-03 23:01:06
+2025-05-03 23:01:06,410 - INFO - === Starting Test: test_email_download_chunk_signature ===
+2025-05-03 23:01:06,410 - DEBUG - Test setup started at 2025-05-03 23:01:06
+2025-05-03 23:01:07,224 - INFO - === Starting Test: test_calendar_scan_comparison[2025/05/01-2025/05/31-None] ===
+2025-05-03 23:01:07,225 - DEBUG - Test setup started at 2025-05-03 23:01:07
+2025-05-03 23:01:07,225 - DEBUG - Test marker: parametrize
+2025-05-03 23:02:02,032 - INFO - === Starting Test: test_frontend_dummy ===
+2025-05-03 23:02:02,033 - DEBUG - Test setup started at 2025-05-03 23:02:02
+2025-05-03 23:02:02,035 - INFO - === Starting Test: test_calendar_scan_comparison[2025/05/01-2025/05/31-None] ===
+2025-05-03 23:02:02,036 - DEBUG - Test setup started at 2025-05-03 23:02:02
+2025-05-03 23:02:02,036 - DEBUG - Test marker: parametrize
+2025-05-03 23:02:02,040 - INFO - === Starting Test: test_email_reasoning[What emails did I get from my boss?-team meeting tomorrow] ===
+2025-05-03 23:02:02,041 - DEBUG - Test setup started at 2025-05-03 23:02:02
+2025-05-03 23:02:02,041 - DEBUG - Test marker: parametrize
+2025-05-03 23:02:02,047 - INFO - === Starting Test: test_reasoning_queries[When am I going to Italy?-15052025] ===
+2025-05-03 23:02:02,047 - DEBUG - Test setup started at 2025-05-03 23:02:02
+2025-05-03 23:02:02,047 - DEBUG - Test marker: parametrize
+2025-05-03 23:02:02,437 - INFO - === Starting Test: test_backend_planner_llm ===
+2025-05-03 23:02:02,437 - DEBUG - Test setup started at 2025-05-03 23:02:02
+2025-05-03 23:02:02,447 - INFO - === Starting Test: test_choose_next_action_email ===
+2025-05-03 23:02:02,447 - DEBUG - Test setup started at 2025-05-03 23:02:02
+2025-05-03 23:02:02,647 - INFO - === Starting Test: test_authentication_error_handling ===
+2025-05-03 23:02:02,648 - DEBUG - Test setup started at 2025-05-03 23:02:02
+2025-05-03 23:02:02,663 - INFO - === Starting Test: test_email_download_chunk_signature ===
+2025-05-03 23:02:02,663 - DEBUG - Test setup started at 2025-05-03 23:02:02
+2025-05-03 23:05:53,471 - INFO - === Starting Test: test_authentication_error_handling ===
+2025-05-03 23:05:53,471 - DEBUG - Test setup started at 2025-05-03 23:05:53
+2025-05-03 23:06:43,470 - INFO - === Starting Test: test_authentication_error_handling ===
+2025-05-03 23:06:43,471 - DEBUG - Test setup started at 2025-05-03 23:06:43
+2025-05-03 23:10:22,314 - INFO - === Starting Test: test_authentication_error_handling ===
+2025-05-03 23:10:22,314 - DEBUG - Test setup started at 2025-05-03 23:10:22
+2025-05-03 23:18:37,887 - INFO - === Starting Test: test_authentication_error_handling ===
+2025-05-03 23:18:37,888 - DEBUG - Test setup started at 2025-05-03 23:18:37
+2025-05-03 23:19:02,919 - INFO - === Starting Test: test_calendar_scan_comparison[2025/05/01-2025/05/31-None] ===
+2025-05-03 23:19:02,919 - DEBUG - Test setup started at 2025-05-03 23:19:02
+2025-05-03 23:19:02,919 - DEBUG - Test marker: parametrize
+2025-05-03 23:19:02,925 - INFO - === Starting Test: test_email_reasoning[What emails did I get from my boss?-team meeting tomorrow] ===
+2025-05-03 23:19:02,925 - DEBUG - Test setup started at 2025-05-03 23:19:02
+2025-05-03 23:19:02,925 - DEBUG - Test marker: parametrize
+2025-05-03 23:19:02,938 - INFO - === Starting Test: test_frontend_dummy ===
+2025-05-03 23:19:02,938 - DEBUG - Test setup started at 2025-05-03 23:19:02
+2025-05-03 23:19:02,948 - INFO - === Starting Test: test_reasoning_queries[When am I going to Italy?-15052025] ===
+2025-05-03 23:19:02,949 - DEBUG - Test setup started at 2025-05-03 23:19:02
+2025-05-03 23:19:02,949 - DEBUG - Test marker: parametrize
+2025-05-03 23:19:03,323 - INFO - === Starting Test: test_backend_planner_llm ===
+2025-05-03 23:19:03,324 - DEBUG - Test setup started at 2025-05-03 23:19:03
+2025-05-03 23:19:03,333 - INFO - === Starting Test: test_choose_next_action_email ===
+2025-05-03 23:19:03,333 - DEBUG - Test setup started at 2025-05-03 23:19:03
+2025-05-03 23:19:03,549 - INFO - === Starting Test: test_authentication_error_handling ===
+2025-05-03 23:19:03,549 - DEBUG - Test setup started at 2025-05-03 23:19:03
+2025-05-03 23:19:03,549 - INFO - === Starting Test: test_email_download_chunk_signature ===
+2025-05-03 23:19:03,550 - DEBUG - Test setup started at 2025-05-03 23:19:03
+2025-05-03 23:19:04,394 - INFO - === Starting Test: test_calendar_scan_comparison[2025/05/01-2025/05/31-None] ===
+2025-05-03 23:19:04,394 - DEBUG - Test setup started at 2025-05-03 23:19:04
+2025-05-03 23:19:04,394 - DEBUG - Test marker: parametrize
+2025-05-03 23:19:54,216 - INFO - === Starting Test: test_calendar_scan_comparison[2025/05/01-2025/05/31-None] ===
+2025-05-03 23:19:54,216 - DEBUG - Test setup started at 2025-05-03 23:19:54
+2025-05-03 23:19:54,216 - DEBUG - Test marker: parametrize
+2025-05-03 23:35:22,706 - INFO - === Starting Test: test_calendar_scan_comparison[2025/05/01-2025/05/31-None] ===
+2025-05-03 23:35:22,707 - DEBUG - Test setup started at 2025-05-03 23:35:22
+2025-05-03 23:35:22,707 - DEBUG - Test marker: parametrize
+2025-05-03 23:35:22,713 - INFO - === Starting Test: test_email_reasoning[What emails did I get from my boss?-team meeting tomorrow] ===
+2025-05-03 23:35:22,713 - DEBUG - Test setup started at 2025-05-03 23:35:22
+2025-05-03 23:35:22,713 - DEBUG - Test marker: parametrize
+2025-05-03 23:35:22,727 - INFO - === Starting Test: test_frontend_dummy ===
+2025-05-03 23:35:22,728 - DEBUG - Test setup started at 2025-05-03 23:35:22
+2025-05-03 23:35:22,729 - INFO - === Starting Test: test_reasoning_queries[When am I going to Italy?-15052025] ===
+2025-05-03 23:35:22,729 - DEBUG - Test setup started at 2025-05-03 23:35:22
+2025-05-03 23:35:22,729 - DEBUG - Test marker: parametrize
+2025-05-03 23:35:23,136 - INFO - === Starting Test: test_backend_planner_llm ===
+2025-05-03 23:35:23,136 - DEBUG - Test setup started at 2025-05-03 23:35:23
+2025-05-03 23:35:23,138 - INFO - === Starting Test: test_choose_next_action_email ===
+2025-05-03 23:35:23,138 - DEBUG - Test setup started at 2025-05-03 23:35:23
+2025-05-03 23:35:23,354 - INFO - === Starting Test: test_email_download_chunk_signature ===
+2025-05-03 23:35:23,354 - DEBUG - Test setup started at 2025-05-03 23:35:23
+2025-05-03 23:35:23,368 - INFO - === Starting Test: test_authentication_error_handling ===
+2025-05-03 23:35:23,368 - DEBUG - Test setup started at 2025-05-03 23:35:23
+2025-05-03 23:35:24,260 - INFO - === Starting Test: test_calendar_scan_comparison[2025/05/01-2025/05/31-None] ===
+2025-05-03 23:35:24,260 - DEBUG - Test setup started at 2025-05-03 23:35:24
+2025-05-03 23:35:24,260 - DEBUG - Test marker: parametrize
+2025-05-03 23:37:23,618 - INFO - === Starting Test: test_calendar_scan_comparison[2025/05/01-2025/05/31-None] ===
+2025-05-03 23:37:23,618 - DEBUG - Test setup started at 2025-05-03 23:37:23
+2025-05-03 23:37:23,619 - DEBUG - Test marker: parametrize
+2025-05-03 23:37:23,623 - INFO - === Starting Test: test_frontend_dummy ===
+2025-05-03 23:37:23,623 - DEBUG - Test setup started at 2025-05-03 23:37:23
+2025-05-03 23:37:23,643 - INFO - === Starting Test: test_reasoning_queries[When am I going to Italy?-15052025] ===
+2025-05-03 23:37:23,643 - DEBUG - Test setup started at 2025-05-03 23:37:23
+2025-05-03 23:37:23,643 - DEBUG - Test marker: parametrize
+2025-05-03 23:37:23,645 - INFO - === Starting Test: test_email_reasoning[What emails did I get from my boss?-team meeting tomorrow] ===
+2025-05-03 23:37:23,645 - DEBUG - Test setup started at 2025-05-03 23:37:23
+2025-05-03 23:37:23,645 - DEBUG - Test marker: parametrize
+2025-05-03 23:37:24,056 - INFO - === Starting Test: test_backend_planner_llm ===
+2025-05-03 23:37:24,056 - DEBUG - Test setup started at 2025-05-03 23:37:24
+2025-05-03 23:37:24,059 - INFO - === Starting Test: test_choose_next_action_email ===
+2025-05-03 23:37:24,060 - DEBUG - Test setup started at 2025-05-03 23:37:24
+2025-05-03 23:37:24,266 - INFO - === Starting Test: test_email_download_chunk_signature ===
+2025-05-03 23:37:24,266 - DEBUG - Test setup started at 2025-05-03 23:37:24
+2025-05-03 23:37:24,285 - INFO - === Starting Test: test_authentication_error_handling ===
+2025-05-03 23:37:24,286 - DEBUG - Test setup started at 2025-05-03 23:37:24
+2025-05-03 23:37:25,166 - INFO - === Starting Test: test_calendar_scan_comparison[2025/05/01-2025/05/31-None] ===
+2025-05-03 23:37:25,167 - DEBUG - Test setup started at 2025-05-03 23:37:25
+2025-05-03 23:37:25,167 - DEBUG - Test marker: parametrize
+2025-05-03 23:38:43,777 - INFO - === Starting Test: test_calendar_scan_comparison[2025/05/01-2025/05/31-None] ===
+2025-05-03 23:38:43,777 - DEBUG - Test setup started at 2025-05-03 23:38:43
+2025-05-03 23:38:43,777 - DEBUG - Test marker: parametrize
+2025-05-03 23:38:43,783 - INFO - === Starting Test: test_email_reasoning[What emails did I get from my boss?-team meeting tomorrow] ===
+2025-05-03 23:38:43,783 - DEBUG - Test setup started at 2025-05-03 23:38:43
+2025-05-03 23:38:43,783 - DEBUG - Test marker: parametrize
+2025-05-03 23:38:43,806 - INFO - === Starting Test: test_frontend_dummy ===
+2025-05-03 23:38:43,806 - DEBUG - Test setup started at 2025-05-03 23:38:43
+2025-05-03 23:38:43,810 - INFO - === Starting Test: test_reasoning_queries[When am I going to Italy?-15052025] ===
+2025-05-03 23:38:43,811 - DEBUG - Test setup started at 2025-05-03 23:38:43
+2025-05-03 23:38:43,811 - DEBUG - Test marker: parametrize
+2025-05-03 23:38:44,189 - INFO - === Starting Test: test_choose_next_action_email ===
+2025-05-03 23:38:44,189 - DEBUG - Test setup started at 2025-05-03 23:38:44
+2025-05-03 23:38:44,190 - INFO - === Starting Test: test_backend_planner_llm ===
+2025-05-03 23:38:44,190 - DEBUG - Test setup started at 2025-05-03 23:38:44
+2025-05-03 23:38:44,404 - INFO - === Starting Test: test_email_download_chunk_signature ===
+2025-05-03 23:38:44,404 - DEBUG - Test setup started at 2025-05-03 23:38:44
+2025-05-03 23:38:44,404 - INFO - === Starting Test: test_authentication_error_handling ===
+2025-05-03 23:38:44,405 - DEBUG - Test setup started at 2025-05-03 23:38:44
+2025-05-03 23:38:45,335 - INFO - === Starting Test: test_calendar_scan_comparison[2025/05/01-2025/05/31-None] ===
+2025-05-03 23:38:45,335 - DEBUG - Test setup started at 2025-05-03 23:38:45
+2025-05-03 23:38:45,335 - DEBUG - Test marker: parametrize
+2025-05-04 11:12:37,232 - INFO - === Starting Test: test_email_reasoning[What emails did I get from my boss?-team meeting tomorrow] ===
+2025-05-04 11:12:37,234 - DEBUG - Test setup started at 2025-05-04 11:12:37
+2025-05-04 11:12:37,234 - DEBUG - Test marker: parametrize
+2025-05-04 11:12:37,237 - INFO - === Starting Test: test_frontend_dummy ===
+2025-05-04 11:12:37,238 - DEBUG - Test setup started at 2025-05-04 11:12:37
+2025-05-04 11:12:37,239 - INFO - === Starting Test: test_calendar_scan_comparison[2025/05/01-2025/05/31-None] ===
+2025-05-04 11:12:37,239 - DEBUG - Test setup started at 2025-05-04 11:12:37
+2025-05-04 11:12:37,239 - DEBUG - Test marker: parametrize
+2025-05-04 11:12:37,239 - INFO - === Starting Test: test_reasoning_queries[When am I going to Italy?-15052025] ===
+2025-05-04 11:12:37,239 - DEBUG - Test setup started at 2025-05-04 11:12:37
+2025-05-04 11:12:37,239 - DEBUG - Test marker: parametrize
+2025-05-04 11:12:37,677 - INFO - === Starting Test: test_backend_planner_llm ===
+2025-05-04 11:12:37,677 - DEBUG - Test setup started at 2025-05-04 11:12:37
+2025-05-04 11:12:37,677 - INFO - === Starting Test: test_choose_next_action_email ===
+2025-05-04 11:12:37,677 - DEBUG - Test setup started at 2025-05-04 11:12:37
+2025-05-04 11:12:37,902 - INFO - === Starting Test: test_email_download_chunk_signature ===
+2025-05-04 11:12:37,902 - DEBUG - Test setup started at 2025-05-04 11:12:37
+2025-05-04 11:12:37,904 - INFO - === Starting Test: test_authentication_error_handling ===
+2025-05-04 11:12:37,905 - DEBUG - Test setup started at 2025-05-04 11:12:37
+2025-05-04 11:12:39,763 - INFO - === Starting Test: test_calendar_scan_comparison[2025/05/01-2025/05/31-None] ===
+2025-05-04 11:12:39,763 - DEBUG - Test setup started at 2025-05-04 11:12:39
+2025-05-04 11:12:39,763 - DEBUG - Test marker: parametrize
+2025-05-04 11:15:09,729 - INFO - === Starting Test: test_calendar_scan_comparison[2025/05/01-2025/05/31-None] ===
+2025-05-04 11:15:09,729 - DEBUG - Test setup started at 2025-05-04 11:15:09
+2025-05-04 11:15:09,731 - DEBUG - Test marker: parametrize
+2025-05-04 11:15:09,743 - INFO - === Starting Test: test_frontend_dummy ===
+2025-05-04 11:15:09,744 - DEBUG - Test setup started at 2025-05-04 11:15:09
+2025-05-04 11:15:09,753 - INFO - === Starting Test: test_reasoning_queries[When am I going to Italy?-15052025] ===
+2025-05-04 11:15:09,753 - DEBUG - Test setup started at 2025-05-04 11:15:09
+2025-05-04 11:15:09,753 - DEBUG - Test marker: parametrize
+2025-05-04 11:15:09,755 - INFO - === Starting Test: test_email_reasoning[What emails did I get from my boss?-team meeting tomorrow] ===
+2025-05-04 11:15:09,755 - DEBUG - Test setup started at 2025-05-04 11:15:09
+2025-05-04 11:15:09,755 - DEBUG - Test marker: parametrize
+2025-05-04 11:15:10,155 - INFO - === Starting Test: test_choose_next_action_email ===
+2025-05-04 11:15:10,155 - DEBUG - Test setup started at 2025-05-04 11:15:10
+2025-05-04 11:15:10,156 - INFO - === Starting Test: test_backend_planner_llm ===
+2025-05-04 11:15:10,156 - DEBUG - Test setup started at 2025-05-04 11:15:10
+2025-05-04 11:15:10,382 - INFO - === Starting Test: test_authentication_error_handling ===
+2025-05-04 11:15:10,382 - DEBUG - Test setup started at 2025-05-04 11:15:10
+2025-05-04 11:15:10,389 - INFO - === Starting Test: test_email_download_chunk_signature ===
+2025-05-04 11:15:10,389 - DEBUG - Test setup started at 2025-05-04 11:15:10
+2025-05-04 11:15:11,340 - INFO - === Starting Test: test_calendar_scan_comparison[2025/05/01-2025/05/31-None] ===
+2025-05-04 11:15:11,340 - DEBUG - Test setup started at 2025-05-04 11:15:11
+2025-05-04 11:15:11,341 - DEBUG - Test marker: parametrize
+2025-05-04 11:16:02,126 - INFO - === Starting Test: test_calendar_scan_comparison[2025/05/01-2025/05/31-None] ===
+2025-05-04 11:16:02,126 - DEBUG - Test setup started at 2025-05-04 11:16:02
+2025-05-04 11:16:02,126 - DEBUG - Test marker: parametrize
+2025-05-04 11:30:43,467 - INFO - === Starting Test: test_email_download_chunk_signature ===
+2025-05-04 11:30:43,467 - DEBUG - Test setup started at 2025-05-04 11:30:43
+2025-05-04 11:30:52,292 - INFO - === Starting Test: test_email_download_chunk_signature ===
+2025-05-04 11:30:52,293 - DEBUG - Test setup started at 2025-05-04 11:30:52
+2025-05-04 11:34:22,791 - INFO - === Starting Test: test_email_reasoning[Any updates on my Italy trip?-trip to Italy on May 15] ===
+2025-05-04 11:34:22,791 - INFO - === Starting Test: test_email_reasoning[What emails did I get from my boss?-team meeting tomorrow] ===
+2025-05-04 11:34:22,791 - DEBUG - Test setup started at 2025-05-04 11:34:22
+2025-05-04 11:34:22,791 - DEBUG - Test marker: parametrize
+2025-05-04 11:34:22,791 - DEBUG - Test setup started at 2025-05-04 11:34:22
+2025-05-04 11:34:22,791 - DEBUG - Test marker: parametrize
+2025-05-04 11:34:23,480 - INFO - === Starting Test: test_email_reasoning[What emails did I get from my boss?-team meeting tomorrow] ===
+2025-05-04 11:34:23,480 - DEBUG - Test setup started at 2025-05-04 11:34:23
+2025-05-04 11:34:23,480 - DEBUG - Test marker: parametrize
+2025-05-04 11:35:53,163 - INFO - === Starting Test: test_email_reasoning[Any updates on my Italy trip?-trip to Italy on May 15] ===
+2025-05-04 11:35:53,163 - DEBUG - Test setup started at 2025-05-04 11:35:53
+2025-05-04 11:35:53,163 - DEBUG - Test marker: parametrize
+2025-05-04 11:35:53,163 - INFO - === Starting Test: test_email_reasoning[What emails did I get from my boss?-team meeting tomorrow] ===
+2025-05-04 11:35:53,163 - DEBUG - Test setup started at 2025-05-04 11:35:53
+2025-05-04 11:35:53,163 - DEBUG - Test marker: parametrize
+2025-05-04 11:35:53,879 - INFO - === Starting Test: test_email_reasoning[What emails did I get from my boss?-team meeting tomorrow] ===
+2025-05-04 11:35:53,879 - DEBUG - Test setup started at 2025-05-04 11:35:53
+2025-05-04 11:35:53,879 - DEBUG - Test marker: parametrize
+2025-05-04 11:38:49,114 - INFO - === Starting Test: test_calendar_scan_comparison[2025/05/01-2025/05/31-None] ===
+2025-05-04 11:38:49,114 - DEBUG - Test setup started at 2025-05-04 11:38:49
+2025-05-04 11:38:49,114 - DEBUG - Test marker: parametrize
+2025-05-04 11:38:49,124 - INFO - === Starting Test: test_all_day_events ===
+2025-05-04 11:38:49,124 - DEBUG - Test setup started at 2025-05-04 11:38:49
+2025-05-04 11:38:49,142 - INFO - === Starting Test: test_reasoning_queries[When am I going to Italy?-15052025] ===
+2025-05-04 11:38:49,142 - DEBUG - Test setup started at 2025-05-04 11:38:49
+2025-05-04 11:38:49,142 - DEBUG - Test marker: parametrize
+2025-05-04 11:38:49,148 - INFO - === Starting Test: test_frontend_dummy ===
+2025-05-04 11:38:49,148 - DEBUG - Test setup started at 2025-05-04 11:38:49
+2025-05-04 11:38:49,152 - INFO - === Starting Test: test_email_reasoning[What emails did I get from my boss?-team meeting tomorrow] ===
+2025-05-04 11:38:49,152 - DEBUG - Test setup started at 2025-05-04 11:38:49
+2025-05-04 11:38:49,152 - DEBUG - Test marker: parametrize
+2025-05-04 11:38:49,552 - INFO - === Starting Test: test_choose_next_action_email ===
+2025-05-04 11:38:49,552 - DEBUG - Test setup started at 2025-05-04 11:38:49
+2025-05-04 11:38:49,563 - INFO - === Starting Test: test_backend_planner_llm ===
+2025-05-04 11:38:49,563 - DEBUG - Test setup started at 2025-05-04 11:38:49
+2025-05-04 11:38:49,799 - INFO - === Starting Test: test_email_download_chunk_signature ===
+2025-05-04 11:38:49,800 - DEBUG - Test setup started at 2025-05-04 11:38:49
+2025-05-04 11:38:49,803 - INFO - === Starting Test: test_authentication_error_handling ===
+2025-05-04 11:38:49,803 - DEBUG - Test setup started at 2025-05-04 11:38:49
+2025-05-04 11:38:50,744 - INFO - === Starting Test: test_calendar_scan_comparison[2025/05/01-2025/05/31-None] ===
+2025-05-04 11:38:50,744 - DEBUG - Test setup started at 2025-05-04 11:38:50
+2025-05-04 11:38:50,744 - DEBUG - Test marker: parametrize

@@ -1,0 +1,108 @@
+
++==============================================================================+
+| TASK SECTOR 00 > BASE SYSTEM SETUP                                           |
++==============================================================================+
+
+> STATE: [[36mMERGE[0m]]        set up the foundation for the project
+  SPEC:  Create the folders, entry point, and structure we?ll use going forward.
+  [COP]  branch opened: t000-base-setup
+  [COP]  branch t000-base-setup merged
+  [COP]  branch t000-base-setup deleted
+  [GPT]  This task ensures that everything has a home ? code, logs, and future features.
+  [COP]  Successfully built and organized the project skeleton.
+
+> STATE: [[36mMERGE[0m]]        create the folder layout
+  SPEC:  Make clear folders for code, notes, logs, and future automation.
+  [COP]  branch opened: t001-folders
+  [COP]  branch t001-folders merged
+  [COP]  branch t001-folders deleted
+  [GPT]  Folder layout should be obvious to new developers and mirror the agent model.
+  [COP]  Structure now includes: /agents, /interfaces, /logs, /tests, /releases
+
+    > STATE: [[32mDONE[0m]]         make folders for agents and logs
+      SPEC:  Create folders where code and logs will live.
+      [COP]  issue: #str001
+      [COP]  committed [x], pushed [x]
+      [GPT]  This keeps runtime logic separate from system output.
+
+    > STATE: [[32mDONE[0m]]         add folders for testing and release notes
+      SPEC:  Helps track quality and changes over time.
+      [COP]  issue: #str002
+      [COP]  committed [x], pushed [x]
+      [COP]  Folder structure fully matches what we use in the roadmap and protocol.
+
+  [PENDING] checkpoint complete unless reviewed
+  [MERGE] confirmed by GPT
+
+> STATE: [[36mMERGE[0m]]        create a way to run the system
+  SPEC:  Set up a file that can start the system from the command line.
+  [COP]  branch opened: t002-entrypoint
+  [COP]  branch t002-entrypoint merged
+  [COP]  branch t002-entrypoint deleted
+  [GPT]  This allows the system to run in tests or in live mode with one command.
+
+    > STATE: [[32mDONE[0m]]         add main file to launch system
+      SPEC:  This is the file the developer or agent runs first.
+      [COP]  issue: #cli001
+      [COP]  committed [x], pushed [x]
+      [COP]  main.py runs agents, logs events, and supports test mode.
+
+    > STATE: [[32mDONE[0m]]         support basic settings and text output
+      SPEC:  Print out startup info and accept future options.
+      [COP]  issue: #cli002
+      [COP]  committed [x], pushed [x]
+      [GPT]  Prepares the system for environment flags and status feedback.
+
+  [PENDING] checkpoint complete unless reviewed
+  [MERGE] confirmed by GPT
+
++==============================================================================+
+| TASK SECTOR 02 > EMAIL & CALENDAR VERIFICATION                               |
++==============================================================================+
+
+> STATE: [[33mIN_PROGRESS[0m]]  verify email and calendar agents
+  SPEC:  Ensure that core agents (email and calendar) are functionally stable and API-aligned.
+
+> STATE: [[31mOPEN[0m]]         test email agent
+  SPEC:  Validate email send/receive behavior, mock-vs-real agent consistency.
+  [COP]  branch opened: t102-emailtest
+
+    > STATE: [[32mDONE[0m]]         compare email mock vs real
+      SPEC:  Ensure method signatures and output formats match real-world agent.
+      [COP]  issue: #cmp001
+      [COP]  committed [x], pushed [x]
+
+    > STATE: [[31mOPEN[0m]]         test email edge cases
+      SPEC:  Validate handling of failures, retries, malformed inputs.
+      [COP]  issue: #edge002
+      [COP]  committed [ ], pushed [ ]
+
+> STATE: [[31mOPEN[0m]]         test calendar agent
+  SPEC:  Evaluate calendar block merging, conflict resolution.
+  [COP]  branch opened: t105-caltest
+
+    > STATE: [[31mOPEN[0m]]         compare calendar mock vs real
+      SPEC:  Ensure behavior of mock calendar matches backend agent logic.
+      [COP]  issue: #cal003
+      [COP]  committed [ ], pushed [ ]
+
++==============================================================================+
+| TASK SECTOR 03 > WHATSAPP INTEGRATION                                        |
++==============================================================================+
+
+> STATE: [[31mOPEN[0m]]         integrate WhatsApp
+  SPEC:  Add Twilio-based WhatsApp message support.
+
++==============================================================================+
+| TASK SECTOR 04 > NEST INTEGRATION                                            |
++==============================================================================+
+
+> STATE: [[31mOPEN[0m]]         integrate Nest
+  SPEC:  Integrate Nest thermostat agent with calendar scheduling.
+
++==============================================================================+
+| TASK SECTOR 05 > LOCATION SERVICES                                           |
++==============================================================================+
+
+> STATE: [[31mOPEN[0m]]         location services
+  SPEC:  Track and respond to user location changes.

@@ -1,86 +1,61 @@
-# 🚀 Riley2 Assistant - Version 2.4
 
-![Version](https://img.shields.io/badge/version-2.4-blue)
-![Status](https://img.shields.io/badge/build-passing-brightgreen)
-![Deployment](https://img.shields.io/badge/deploy-logging_enabled-success)
+# Riley2
 
----
-
-## 📈 Overview
-
-**Riley2** is a modular, high-traceability AI agent framework designed for:
-
-- ✅ Multi-step reasoning with full state visibility
-- ✅ Calendar, email, and knowledge integrations
-- ✅ Full logging (`copilot_status.md`, `GPTLOG.md`, `test_log.log`)
-- ✅ Human + Copilot co-editing via `ROADMAP.md`
-- ✅ Release notes for every task in `releases/`
+**Riley2** is an intelligent scheduling engine built to manage time, tasks, and constraints with agent support.  
+It merges calendar blocks, resolves conflicts, and adapts to custom scheduling rules.
 
 ---
 
-## 🧠 Agent Workflow (Copilot)
+## ✨ Features
 
-1. Read `ROADMAP.md` to identify active or pending `TASK-###`
-2. Execute the change
-3. Track substeps live in `copilot_status.md`
-4. Run tests (in VSCode UI or pytest)
-5. If passing:
-    - Update `ROADMAP.md` and `GPTLOG.md`
-    - Commit and auto-generate `releases/TASK-###.md`
-6. If failing:
-    - Roll back
-    - Log failure + notes in GPTLOG
-    - Mark `ROADMAP.md` as `[!]`
+- Constraint-based time block merging
+- Email, calendar, and location integration
+- Rule-driven scheduling and resolution
+- Extensible agent hooks
 
 ---
 
-## 📁 Directory Structure
+## 🚀 Getting Started
 
-```plaintext
-Riley2/
-├── src/                  # All core logic lives here
-├── tests/                # All test cases
-├── scripts/              # Deployment + launcher scripts
-├── logs/                 # Runtime logs
-├── secrets/              # Env keys (gitignored)
-├── releases/             # One markdown file per task
-├── dashboard.md          # High-level cockpit summary
-├── copilot_status.md     # Live substep log from agent
-├── ROADMAP.md            # Current task goals and states
-├── GPTLOG.md             # Task execution history
-├── README.md             # This file
-```
+### Prerequisites
 
----
+- Python 3.10+
+- `pip`, `venv`, and `pytest`
 
-## 🛠 Deployment
+### Install & Run
 
-From root:
 ```bash
-scripts/deploy_and_test_launcher.bat
+git clone https://github.com/wilko2587/Riley2.git
+cd Riley2
+python -m venv venv
+source venv/bin/activate  # or .\venv\Scripts\activate on Windows
+pip install -r requirements.txt
+python main.py
 ```
 
-Manually:
+### Run Tests
+
 ```bash
-python scripts/main_launcher.py
+pytest
 ```
 
 ---
 
-## ✅ Tests
+## 📁 Structure
 
-Run manually:
-```bash
-pytest -vvv -s
 ```
-
-> Output logs go to `test_log.log` and/or VSCode test panel.
+agents/           # Core automation agents (calendar, email, etc.)
+interfaces/       # External APIs and services
+logs/             # Runtime output
+tests/            # Unit and integration tests
+releases/         # Release notes (one per checkpoint)
+copilot_log/      # Task-specific chat logs
+ROADMAP.ansi      # Visual project roadmap
+```
 
 ---
 
-## 🧪 Copilot Instructions Summary
+## 🧠 Philosophy
 
-- Track task state in `ROADMAP.md`
-- Log all reasoning in `GPTLOG.md`
-- Live-update `copilot_status.md`
-- Create release notes in `releases/TASK-###.md`
+Riley2 aims to be understandable, extensible, and auditable.  
+All changes are tracked clearly with logs and rationale in natural language.
