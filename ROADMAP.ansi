@@ -2,6 +2,29 @@
 | TASK SECTOR 01 > AGENT REASONING TESTS                                       |
 +==============================================================================+[0m
 
+[31m> STATE: [OPEN]         expand reasoning tests for email agent[0m
+  GOAL:  Add more logic-driven test scenarios like the prior Italy example.
+  SPEC:  Focus on edge-cases around parsing natural language instructions and conditionals.
+[90m  [COP]  branch opened: [38;5;164mt111-email-reasoning[0m
+
+    [31m> STATE: [OPEN]         test email with embedded conditional blocks[0m
+      SPEC:  Ensure GPT detects and adapts to `if`, `unless`, and negated phrasing in instruction emails.
+
+      [32m> STATE: [DONE]         implement test for if/then conditional instructions[0m
+        SPEC:  Test email reasoning with conditional instructions like "if X happens, then do Y".
+[90m        [COP]  issue: #cond001[0m
+[90m        [COP]  committed [x], pushed [x][0m
+[90m        [GPT]  Implemented test cases for emails with if/then conditional logic[0m
+
+      [31m> STATE: [OPEN]         implement test for unless/except conditionals[0m
+        SPEC:  Test email reasoning with negative conditionals like "unless X happens" or "except when Y".
+
+      [31m> STATE: [OPEN]         implement test for negated instructions[0m
+        SPEC:  Test handling of negated instructions like "don't schedule if..." or "avoid X when Y".
+
+    [31m> STATE: [OPEN]         test email intent inference with minimal phrasing[0m
+      SPEC:  Reason from vague or shorthand phrasing like "Italy, Tue-Wed?" and derive correct block intent.
+
 [33m> STATE: [IN_PROGRESS]  expand reasoning tests for calendar agent[0m
   GOAL:  Ensure calendar agent handles non-obvious logic like overlapping multi-day merges or multi-agent conflicts.
   SPEC:  Add multi-case reasoning tests similar in design to the Italy test for the email agent.
@@ -40,18 +63,6 @@
 [90m        [COP]  issue: #cal007[0m
 [90m        [COP]  committed [x], pushed [x][0m
 [90m        [GPT]  Implemented comprehensive tests for calendar slot locking, concurrency, and expiration[0m
-
-[31m> STATE: [OPEN]         expand reasoning tests for email agent[0m
-  GOAL:  Add more logic-driven test scenarios like the prior Italy example.
-  SPEC:  Focus on edge-cases around parsing natural language instructions and conditionals.
-[90m  [COP]  branch opened: [38;5;164mt111-email-reasoning[0m
-
-    [31m> STATE: [OPEN]         test email with embedded conditional blocks[0m
-      SPEC:  Ensure GPT detects and adapts to `if`, `unless`, and negated phrasing in instruction emails.
-
-    [31m> STATE: [OPEN]         test email intent inference with minimal phrasing[0m
-      SPEC:  Reason from vague or shorthand phrasing like "Italy, Tue-Wed?" and derive correct block intent.
-
 
 [36m+==============================================================================+
 | TASK SECTOR 00 > BASE SYSTEM SETUP                                           |

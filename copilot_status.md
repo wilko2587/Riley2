@@ -3,6 +3,10 @@
 ## Current Tasks
 
 ### May 5, 2025
+- Implementing email reasoning tests for embedded conditional blocks
+- Added functionality to detect and process if/then conditional instructions in emails
+- Created test cases for conditional email reasoning scenarios
+- Fixed bug in condition detection logic to properly recognize various phrasings
 - Merged completed calendar reservation locking mechanics tests into the main branch
 - Created comprehensive test suite for calendar agent's locking mechanisms
 - Resolved merge conflicts during integration with main branch

@@ -9446,3 +9446,198 @@ Respond STRICTLY in JSON:
 2025-05-04 23:27:27,396 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
 2025-05-04 23:27:27,396 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\knowledge_base.json
 2025-05-04 23:27:27,396 - INFO - Test configurations loaded and validated successfully
+2025-05-05 00:26:35,595 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-05 00:26:35,595 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:26:35,596 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\knowledge_base.json
+2025-05-05 00:26:35,596 - INFO - Test configurations loaded and validated successfully
+2025-05-05 00:26:37,163 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-05 00:26:37,163 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:26:37,164 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\knowledge_base.json
+2025-05-05 00:26:37,164 - INFO - Test configurations loaded and validated successfully
+2025-05-05 00:27:20,129 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-05 00:27:20,129 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:27:20,130 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\knowledge_base.json
+2025-05-05 00:27:20,130 - INFO - Test configurations loaded and validated successfully
+2025-05-05 00:27:21,017 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-05 00:27:21,017 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:27:21,017 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\knowledge_base.json
+2025-05-05 00:27:21,017 - INFO - Test configurations loaded and validated successfully
+2025-05-05 00:27:23,424 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-05 00:27:23,425 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:27:23,425 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\knowledge_base.json
+2025-05-05 00:27:23,425 - INFO - Test configurations loaded and validated successfully
+2025-05-05 00:27:24,307 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-05 00:27:24,307 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:27:24,307 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\knowledge_base.json
+2025-05-05 00:27:24,307 - INFO - Test configurations loaded and validated successfully
+2025-05-05 00:27:56,847 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-05 00:27:56,847 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:27:56,847 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\knowledge_base.json
+2025-05-05 00:27:56,847 - INFO - Test configurations loaded and validated successfully
+2025-05-05 00:27:57,701 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-05 00:27:57,702 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:27:57,702 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\knowledge_base.json
+2025-05-05 00:27:57,702 - INFO - Test configurations loaded and validated successfully
+2025-05-05 00:28:43,936 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-05 00:28:43,936 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:28:43,936 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\knowledge_base.json
+2025-05-05 00:28:43,936 - INFO - Test configurations loaded and validated successfully
+2025-05-05 00:28:43,940 - INFO - [SYSTEM - TEST_SESSION] Starting test session at 2025-05-05 00:28:43 with enhanced colorful logging (MAXIMUM VERBOSITY)
+2025-05-05 00:28:43,941 - INFO - [TEST] Step: Testing email reasoning with query: 'What emails did I get from my boss?' - 
+2025-05-05 00:28:43,941 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:28:43,941 - DEBUG - Initialized EmailAgentMock with emails from config for 3 dates
+2025-05-05 00:28:43,941 - INFO - [AGENT - Test] InputQuery: What emails did I get from my boss?
+2025-05-05 00:28:43,941 - INFO - [AGENT - EmailReasoner] Processing: Query: 'What emails did I get from my boss?'
+2025-05-05 00:28:43,941 - INFO - [AGENT - EmailReasoner] EmailSearch: Searching for emails from boss
+2025-05-05 00:28:43,941 - DEBUG - Mock: Downloading emails from 2025/05/04 to 2025/05/05.
+2025-05-05 00:28:43,942 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:28:43,943 - INFO - Mock: Retrieved 0 emails.
+2025-05-05 00:28:43,943 - INFO - [AGENT - EmailAgent] DownloadResult: Downloaded 1 emails
+2025-05-05 00:28:43,943 - DEBUG - Mock: Filtering emails by sender: boss@company.com
+2025-05-05 00:28:43,943 - INFO - Mock: Found 0 emails from boss@company.com.
+2025-05-05 00:28:43,943 - INFO - [AGENT - EmailAgent] FilterResult: Filtered 1 emails
+2025-05-05 00:28:43,943 - INFO - [AGENT - EmailReasoner] Decision: Using mock data for boss emails
+2025-05-05 00:28:43,943 - DEBUG - Mock: Summarizing email batch of size: 126 characters.
+2025-05-05 00:28:43,943 - DEBUG - Mock: Email summary: Several emails from your boss, including a message about a team meeting tomorrow at 9am.
+2025-05-05 00:28:43,943 - INFO - [AGENT - Test] OutputResponse: Several emails from your boss, including a message about a team meeting tomorrow at 9am.
+2025-05-05 00:28:43,944 - INFO - [TEST] Success: test_email_reasoning[What emails did I get from my boss?] - 
+2025-05-05 00:28:43,945 - INFO - [TEST] Step: Testing email reasoning with query: 'Tell me about any recent emails' - 
+2025-05-05 00:28:43,945 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:28:43,945 - DEBUG - Initialized EmailAgentMock with emails from config for 3 dates
+2025-05-05 00:28:43,945 - INFO - [AGENT - Test] InputQuery: Tell me about any recent emails
+2025-05-05 00:28:43,945 - INFO - [AGENT - EmailReasoner] Processing: Query: 'Tell me about any recent emails'
+2025-05-05 00:28:43,946 - INFO - [AGENT - EmailReasoner] EmailSearch: Searching for recent emails
+2025-05-05 00:28:43,946 - DEBUG - Mock: Downloading emails from 2025/05/05 to 2025/05/05.
+2025-05-05 00:28:43,946 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:28:43,946 - INFO - Mock: Retrieved 0 emails.
+2025-05-05 00:28:43,946 - DEBUG - Mock: Summarizing email batch of size: 126 characters.
+2025-05-05 00:28:43,946 - DEBUG - Mock: Email summary: Several emails from your boss, including a message about a team meeting tomorrow at 9am.
+2025-05-05 00:28:43,946 - INFO - [AGENT - EmailAgent] SummaryResult: Several emails from your boss, including a message about a team meeting tomorrow at 9am.
+2025-05-05 00:28:43,946 - INFO - [AGENT - Test] OutputResponse: Several emails from your boss, including a message about a team meeting tomorrow at 9am.
+2025-05-05 00:28:43,946 - INFO - [TEST] Success: test_email_reasoning[Tell me about any recent emails] - 
+2025-05-05 00:28:43,948 - INFO - [TEST] Step: Testing email reasoning with query: 'Any updates on my Italy trip?' - 
+2025-05-05 00:28:43,948 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:28:43,948 - DEBUG - Initialized EmailAgentMock with emails from config for 3 dates
+2025-05-05 00:28:43,948 - INFO - [AGENT - Test] InputQuery: Any updates on my Italy trip?
+2025-05-05 00:28:43,948 - INFO - [AGENT - EmailReasoner] Processing: Query: 'Any updates on my Italy trip?'
+2025-05-05 00:28:43,948 - INFO - [AGENT - EmailReasoner] EmailSearch: Searching for Italy trip emails
+2025-05-05 00:28:43,948 - DEBUG - Mock: Downloading emails from 2025/05/02 to 2025/05/05.
+2025-05-05 00:28:43,948 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:28:43,948 - INFO - Mock: Retrieved 2 emails.
+2025-05-05 00:28:43,948 - INFO - [AGENT - EmailReasoner] Decision: Using mock data for Italy emails
+2025-05-05 00:28:43,948 - DEBUG - Mock: Summarizing email batch of size: 137 characters.
+2025-05-05 00:28:43,948 - DEBUG - Mock: Email summary: Your trip to Italy on May 15 has been confirmed.
+2025-05-05 00:28:43,948 - INFO - [AGENT - Test] OutputResponse: Your trip to Italy on May 15 has been confirmed.
+2025-05-05 00:28:43,948 - INFO - [TEST] Success: test_email_reasoning[Any updates on my Italy trip?] - 
+2025-05-05 00:28:43,951 - INFO - [TEST] Step: Testing conditional instructions with condition_met=True - 
+2025-05-05 00:28:43,951 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:28:43,951 - DEBUG - Initialized EmailAgentMock with emails from config for 3 dates
+2025-05-05 00:28:43,951 - INFO - [AGENT - Test] InputQuery: What about that meeting reschedule? The client has confirmed.
+2025-05-05 00:28:43,951 - INFO - [AGENT - EmailReasoner] Processing: Query: 'What about that meeting reschedule? The client has confirmed.'
+2025-05-05 00:28:43,951 - INFO - [AGENT - EmailReasoner] EmailSearch: Searching for conditional emails
+2025-05-05 00:28:43,951 - DEBUG - Mock: Downloading emails from 2025/05/04 to 2025/05/05.
+2025-05-05 00:28:43,951 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:28:43,952 - INFO - Mock: Retrieved 0 emails.
+2025-05-05 00:28:43,952 - INFO - [AGENT - EmailReasoner] Decision: Using mock data for conditional emails
+2025-05-05 00:28:43,952 - INFO - [AGENT - EmailReasoner] ConditionEvaluation: Condition 'client confirms' is not met
+2025-05-05 00:28:43,952 - INFO - [AGENT - Test] OutputResponse: Since the client has not confirmed, keep the internal sync at the original time as instructed.
+2025-05-05 00:28:44,001 - INFO - [TEST] Step: Testing conditional instructions with condition_met=False - 
+2025-05-05 00:28:44,001 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:28:44,001 - DEBUG - Initialized EmailAgentMock with emails from config for 3 dates
+2025-05-05 00:28:44,001 - INFO - [AGENT - Test] InputQuery: What about that meeting reschedule? The client hasn't confirmed yet.
+2025-05-05 00:28:44,001 - INFO - [AGENT - EmailReasoner] Processing: Query: 'What about that meeting reschedule? The client hasn't confirmed yet.'
+2025-05-05 00:28:44,001 - INFO - [AGENT - EmailReasoner] EmailSearch: Searching for conditional emails
+2025-05-05 00:28:44,001 - DEBUG - Mock: Downloading emails from 2025/05/04 to 2025/05/05.
+2025-05-05 00:28:44,001 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:28:44,001 - INFO - Mock: Retrieved 0 emails.
+2025-05-05 00:28:44,001 - INFO - [AGENT - EmailReasoner] Decision: Using mock data for conditional emails
+2025-05-05 00:28:44,001 - INFO - [AGENT - EmailReasoner] ConditionEvaluation: Condition 'client confirms' is not met
+2025-05-05 00:28:44,001 - INFO - [AGENT - Test] OutputResponse: Since the client has not confirmed, keep the internal sync at the original time as instructed.
+2025-05-05 00:28:44,002 - INFO - [TEST] Success: test_conditional_instructions[condition_met=False] - 
+2025-05-05 00:28:44,002 - INFO - [SYSTEM - TEST_SESSION] Test session complete at 2025-05-05 00:28:44
+2025-05-05 00:29:36,768 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-05 00:29:36,768 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:29:36,769 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\knowledge_base.json
+2025-05-05 00:29:36,769 - INFO - Test configurations loaded and validated successfully
+2025-05-05 00:29:37,639 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-05 00:29:37,639 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:29:37,639 - DEBUG - Loaded test configuration from c:\dev\Riley2\tests\config\mocks\knowledge_base.json
+2025-05-05 00:29:37,640 - INFO - Test configurations loaded and validated successfully
+2025-05-05 00:30:06,394 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\calendar_events.json
+2025-05-05 00:30:06,395 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:30:06,395 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\knowledge_base.json
+2025-05-05 00:30:06,395 - INFO - Test configurations loaded and validated successfully
+2025-05-05 00:30:06,398 - INFO - [SYSTEM - TEST_SESSION] Starting test session at 2025-05-05 00:30:06 with enhanced colorful logging (MAXIMUM VERBOSITY)
+2025-05-05 00:30:06,399 - INFO - [TEST] Step: Testing email reasoning with query: 'What emails did I get from my boss?' - 
+2025-05-05 00:30:06,399 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:30:06,399 - DEBUG - Initialized EmailAgentMock with emails from config for 3 dates
+2025-05-05 00:30:06,399 - INFO - [AGENT - Test] InputQuery: What emails did I get from my boss?
+2025-05-05 00:30:06,400 - INFO - [AGENT - EmailReasoner] Processing: Query: 'What emails did I get from my boss?'
+2025-05-05 00:30:06,400 - INFO - [AGENT - EmailReasoner] EmailSearch: Searching for emails from boss
+2025-05-05 00:30:06,400 - DEBUG - Mock: Downloading emails from 2025/05/04 to 2025/05/05.
+2025-05-05 00:30:06,400 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:30:06,401 - INFO - Mock: Retrieved 0 emails.
+2025-05-05 00:30:06,401 - INFO - [AGENT - EmailAgent] DownloadResult: Downloaded 1 emails
+2025-05-05 00:30:06,402 - DEBUG - Mock: Filtering emails by sender: boss@company.com
+2025-05-05 00:30:06,402 - INFO - Mock: Found 0 emails from boss@company.com.
+2025-05-05 00:30:06,402 - INFO - [AGENT - EmailAgent] FilterResult: Filtered 1 emails
+2025-05-05 00:30:06,402 - INFO - [AGENT - EmailReasoner] Decision: Using mock data for boss emails
+2025-05-05 00:30:06,402 - DEBUG - Mock: Summarizing email batch of size: 126 characters.
+2025-05-05 00:30:06,402 - DEBUG - Mock: Email summary: Several emails from your boss, including a message about a team meeting tomorrow at 9am.
+2025-05-05 00:30:06,402 - INFO - [AGENT - Test] OutputResponse: Several emails from your boss, including a message about a team meeting tomorrow at 9am.
+2025-05-05 00:30:06,402 - INFO - [TEST] Success: test_email_reasoning[What emails did I get from my boss?] - 
+2025-05-05 00:30:06,404 - INFO - [TEST] Step: Testing email reasoning with query: 'Tell me about any recent emails' - 
+2025-05-05 00:30:06,404 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:30:06,404 - DEBUG - Initialized EmailAgentMock with emails from config for 3 dates
+2025-05-05 00:30:06,404 - INFO - [AGENT - Test] InputQuery: Tell me about any recent emails
+2025-05-05 00:30:06,404 - INFO - [AGENT - EmailReasoner] Processing: Query: 'Tell me about any recent emails'
+2025-05-05 00:30:06,404 - INFO - [AGENT - EmailReasoner] EmailSearch: Searching for recent emails
+2025-05-05 00:30:06,404 - DEBUG - Mock: Downloading emails from 2025/05/05 to 2025/05/05.
+2025-05-05 00:30:06,404 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:30:06,404 - INFO - Mock: Retrieved 0 emails.
+2025-05-05 00:30:06,405 - DEBUG - Mock: Summarizing email batch of size: 126 characters.
+2025-05-05 00:30:06,405 - DEBUG - Mock: Email summary: Several emails from your boss, including a message about a team meeting tomorrow at 9am.
+2025-05-05 00:30:06,405 - INFO - [AGENT - EmailAgent] SummaryResult: Several emails from your boss, including a message about a team meeting tomorrow at 9am.
+2025-05-05 00:30:06,405 - INFO - [AGENT - Test] OutputResponse: Several emails from your boss, including a message about a team meeting tomorrow at 9am.
+2025-05-05 00:30:06,405 - INFO - [TEST] Success: test_email_reasoning[Tell me about any recent emails] - 
+2025-05-05 00:30:06,407 - INFO - [TEST] Step: Testing email reasoning with query: 'Any updates on my Italy trip?' - 
+2025-05-05 00:30:06,407 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:30:06,407 - DEBUG - Initialized EmailAgentMock with emails from config for 3 dates
+2025-05-05 00:30:06,407 - INFO - [AGENT - Test] InputQuery: Any updates on my Italy trip?
+2025-05-05 00:30:06,407 - INFO - [AGENT - EmailReasoner] Processing: Query: 'Any updates on my Italy trip?'
+2025-05-05 00:30:06,407 - INFO - [AGENT - EmailReasoner] EmailSearch: Searching for Italy trip emails
+2025-05-05 00:30:06,407 - DEBUG - Mock: Downloading emails from 2025/05/02 to 2025/05/05.
+2025-05-05 00:30:06,407 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:30:06,407 - INFO - Mock: Retrieved 2 emails.
+2025-05-05 00:30:06,408 - INFO - [AGENT - EmailReasoner] Decision: Using mock data for Italy emails
+2025-05-05 00:30:06,408 - DEBUG - Mock: Summarizing email batch of size: 137 characters.
+2025-05-05 00:30:06,408 - DEBUG - Mock: Email summary: Your trip to Italy on May 15 has been confirmed.
+2025-05-05 00:30:06,408 - INFO - [AGENT - Test] OutputResponse: Your trip to Italy on May 15 has been confirmed.
+2025-05-05 00:30:06,408 - INFO - [TEST] Success: test_email_reasoning[Any updates on my Italy trip?] - 
+2025-05-05 00:30:06,409 - INFO - [TEST] Step: Testing conditional instructions with condition_met=True - 
+2025-05-05 00:30:06,410 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:30:06,410 - DEBUG - Initialized EmailAgentMock with emails from config for 3 dates
+2025-05-05 00:30:06,410 - INFO - [AGENT - Test] InputQuery: What about that meeting reschedule? The client has confirmed.
+2025-05-05 00:30:06,410 - INFO - [AGENT - EmailReasoner] Processing: Query: 'What about that meeting reschedule? The client has confirmed.'
+2025-05-05 00:30:06,410 - INFO - [AGENT - EmailReasoner] EmailSearch: Searching for conditional emails
+2025-05-05 00:30:06,410 - DEBUG - Mock: Downloading emails from 2025/05/04 to 2025/05/05.
+2025-05-05 00:30:06,410 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:30:06,410 - INFO - Mock: Retrieved 0 emails.
+2025-05-05 00:30:06,410 - INFO - [AGENT - EmailReasoner] Decision: Using mock data for conditional emails
+2025-05-05 00:30:06,410 - INFO - [AGENT - EmailReasoner] ConditionEvaluation: Condition 'client confirms' is met
+2025-05-05 00:30:06,410 - INFO - [AGENT - Test] OutputResponse: Based on the email instructions and the client's confirmation, you should schedule the meeting for 2pm.
+2025-05-05 00:30:06,410 - INFO - [TEST] Success: test_conditional_instructions[condition_met=True] - 
+2025-05-05 00:30:06,412 - INFO - [TEST] Step: Testing conditional instructions with condition_met=False - 
+2025-05-05 00:30:06,412 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:30:06,413 - DEBUG - Initialized EmailAgentMock with emails from config for 3 dates
+2025-05-05 00:30:06,413 - INFO - [AGENT - Test] InputQuery: What about that meeting reschedule? The client hasn't confirmed yet.
+2025-05-05 00:30:06,413 - INFO - [AGENT - EmailReasoner] Processing: Query: 'What about that meeting reschedule? The client hasn't confirmed yet.'
+2025-05-05 00:30:06,413 - INFO - [AGENT - EmailReasoner] EmailSearch: Searching for conditional emails
+2025-05-05 00:30:06,413 - DEBUG - Mock: Downloading emails from 2025/05/04 to 2025/05/05.
+2025-05-05 00:30:06,413 - DEBUG - Loaded test configuration from C:\dev\Riley2\tests\config\mocks\email_data.json
+2025-05-05 00:30:06,413 - INFO - Mock: Retrieved 0 emails.
+2025-05-05 00:30:06,413 - INFO - [AGENT - EmailReasoner] Decision: Using mock data for conditional emails
+2025-05-05 00:30:06,413 - INFO - [AGENT - EmailReasoner] ConditionEvaluation: Condition 'client confirms' is not met
+2025-05-05 00:30:06,413 - INFO - [AGENT - Test] OutputResponse: Since the client has not confirmed, keep the internal sync at the original time as instructed.
+2025-05-05 00:30:06,413 - INFO - [TEST] Success: test_conditional_instructions[condition_met=False] - 
+2025-05-05 00:30:06,414 - INFO - [SYSTEM - TEST_SESSION] Test session complete at 2025-05-05 00:30:06
