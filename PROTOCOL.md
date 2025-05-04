@@ -56,7 +56,7 @@ SECTION F2: LOW-LEVEL TASK EXECUTION
 
 [F2.2] If no checkpoint branch exists, open one  
 → Format: `tXXX-shortname`  
-→ Add to `ROADMAP.ansi`: `[COP] branch opened: tXXX-shortname`  
+→ Add to `ROADMAP.ansi`: `[COP] branch opened: tXXX-shortname` using deep magenta formatting ([38;5;164m])  
 → proceed to [F2.3]
 
 [F2.3] Visually highlight the active `lowlevel.*` task line  
