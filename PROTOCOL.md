@@ -1,186 +1,188 @@
-
-# COPILOT AGENT PROTOCOL (FLOWCHART FORMAT, PLAIN LANGUAGE)
-
-───────────────────────────────────────────────────────────────────────────────
-FULL EXECUTION FLOW
-───────────────────────────────────────────────────────────────────────────────
-
-┌────────────────────────────────────────────────────────────────────────────┐
-│ "go" received — begin execution                                            │
-└────────────────────────────────────────────────────────────────────────────┘
-               ↓
-┌────────────────────────────────────────────────────────────────────────────┐
-│ Look for a top-level task with status [OPEN] or [IN_PROGRESS]             │
-└────────────────────────────────────────────────────────────────────────────┘
-               ↓
-       ┌───────────────────────────────┐
-       │ Are there any subtasks yet?   │
-       └───────────────────────────────┘
-            ↓ Yes                ↓ No
-   ┌──────────────────┐   ┌────────────────────────────────────────────────┐
-   │ Proceed to loop  │   │ Try to test if the task is already complete    │
-   └──────────────────┘   │ - Use VS Code's Test Explorer if available     │
-                          │ - If yes:                                      │
-                          │     • Update status to [DONE]                  │
-                          │     • Push update to main branch               │
-                          │     • Stop here                                │
-                          │ - If no:                                       │
-                          │     • Add one or more subtasks                 │
-                          └────────────────────────────────────────────────┘
-
-──────────── TASK LOOP ─────────────
-               ↓
-┌────────────────────────────────────────────────────────────────────────────┐
-│ Pick the next subtask not marked [DONE]                                   │
-└────────────────────────────────────────────────────────────────────────────┘
-               ↓
-┌────────────────────────────────────────────────────────────────────────────┐
-│ If a branch hasn’t been opened yet, do it now                             │
-│ Format: t###-shortname                                                    │
-│ Add to roadmap: [COP] branch opened: t###-shortname                      │
-└────────────────────────────────────────────────────────────────────────────┘
-               ↓
-┌────────────────────────────────────────────────────────────────────────────┐
-│ Highlight the subtask in the roadmap using an amber background            │
-│ STATE: [\033[48;5;214;30m IN_PROGRESS \033[0m]                          │
-└────────────────────────────────────────────────────────────────────────────┘
-               ↓
-┌────────────────────────────────────────────────────────────────────────────┐
-│ Make the actual change or fix in the code                                 │
-│ → Copilot does this without needing approval                              │
-└────────────────────────────────────────────────────────────────────────────┘
-               ↓
-┌────────────────────────────────────────────────────────────────────────────┐
-│ Run all tests — all must pass                                             │
-│ → Write a test if needed                                                  │
-│ → Use Test Explorer if possible                                           │
-│ → Copilot proceeds automatically unless a failure happens                 │
-└────────────────────────────────────────────────────────────────────────────┘
-               ↓
-┌────────────────────────────────────────────────────────────────────────────┐
-│ Update logs and roadmap                                                   │
-│ - GPTLOG.md: explain why the change matters                               │
-│ - copilot_status.md: track what is being done                             │
-│ - ROADMAP.md: update the current subtask’s status                         │
-│ - Add [GPT] and [COP] natural language notes if needed                    │
-└────────────────────────────────────────────────────────────────────────────┘
-               ↓
-┌────────────────────────────────────────────────────────────────────────────┐
-│ Commit and push the code                                                  │
-│ - Include: [COP] issue: #xyz123                                           │
-│ - Then:   [COP] committed [x], pushed [x]                                 │
-│ → No confirmation needed to commit/push                                   │
-└────────────────────────────────────────────────────────────────────────────┘
-               ↓
-┌────────────────────────────────────────────────────────────────────────────┐
-│ Mark the subtask as [DONE] and remove highlight                           │
-└────────────────────────────────────────────────────────────────────────────┘
-               ↓
-┌────────────────────────────────────────────────────────────────────────────┐
-│ Are there any other subtasks?                                             │
-└────────────────────────────────────────────────────────────────────────────┘
-             ↓Yes               ↓No
-┌─────────────────────────────┐   ┌────────────────────────────────────────┐
-│ Pick the next unfinished     │   │ Task may be complete — mark [PENDING] │
-└─────────────────────────────┘   │ Remain on branch until reviewed        │
-                                 └────────────────────────────────────────┘
-                                               ↓
-                         ┌──────────────────────────────────────────────┐
-                         │ GPT checks task marked [PENDING]             │
-                         │ If okay:                                     │
-                         │ - add [MERGE] confirmed by GPT               │
-                         │ - Copilot merges and deletes the branch      │
-                         └──────────────────────────────────────────────┘
-                                               ↓
-                         ┌──────────────────────────────────────────────┐
-                         │ Write a release note:                        │
-                         │ ✓ t###-short → what changed and why          │
-                         └──────────────────────────────────────────────┘
+# COPILOT AGENT PROTOCOL (STEP-BY-STEP FLOW FORMAT)
 
 ───────────────────────────────────────────────────────────────────────────────
-NAMING RULES & CLARITY
+SECTION F0: STARTUP
 ───────────────────────────────────────────────────────────────────────────────
 
-- Tasks should use plain English
-  e.g. “test email sending” not “init.smtp.mock.flow”
-- Avoid jargon, acronyms, or abbreviations
-- All tasks should have a short description of what they do and why
-- Leave [GPT] and [COP] comments under the task to explain reasoning
-- Branch names: t###-shortdescription (e.g. t105-logging-cleanup)
+[F0.1] Wait for the command: `go`  
+→ proceed to [F0.2]
+
+[F0.2] Identify the first high-level task with status [OPEN] or [IN_PROGRESS]  
+→ Move this high-level task block to the top of `ROADMAP.ansi`  
+→ proceed to [F0.3]
+
+[F0.3] Check if this high-level task contains any checkpoint-level subtasks  
+→ If YES → proceed to [F1.1]  
+→ If NO  → proceed to [F0.4]
+
+[F0.4] Test whether the high-level task is already completed  
+→ Use VS Code’s built-in Test Explorer if available  
+→ If complete:  
+  • Set status to [DONE]  
+  • Commit and push update to main branch  
+  • END  
+→ If not complete:  
+  • Add one or more checkpoint-level subtasks  
+  • proceed to [F1.1]
 
 ───────────────────────────────────────────────────────────────────────────────
-STATUS FORMATTING
+SECTION F1: CHECKPOINT TASK LOOP
 ───────────────────────────────────────────────────────────────────────────────
 
-- [OPEN]:       Task not started
-- [IN_PROGRESS]: Task being worked on
-- [DONE]:       Task completed and verified
-- [PENDING]:    All subtasks done — needs GPT check
-- [MERGE]:      GPT has approved, agent may merge
-- Highlight only active subtasks:
-  → [\033[48;5;214;30m IN_PROGRESS \033[0m]
+[F1.1] Select the next `checkpoint.*` task that is [OPEN] or [IN_PROGRESS]  
+→ proceed to [F1.2]
+
+[F1.2] Does this checkpoint contain any `lowlevel.*` subtasks?  
+→ If YES → proceed to [F2.1]  
+→ If NO  → proceed to [F1.3]
+
+[F1.3] Analyze whether this checkpoint is already completed  
+→ Run relevant tests and inspect code directly  
+→ Use VS Code Test Explorer if available  
+→ If task is complete:  
+  • Add note: `[PENDING] checkpoint complete unless reviewed` to the checkpoint  
+  • Commit and push  
+  • Notify user in chat:  
+   [COP]: The checkpoint `X` appears complete and has been marked [PENDING]. Should I proceed to merge?  
+  • WAIT for `[USER]: Yes`  
+  → On confirmation, proceed to [F3.1]  
+→ If not complete:  
+  • Add one or more `lowlevel.*` roadmap items  
+  • proceed to [F2.1]
 
 ───────────────────────────────────────────────────────────────────────────────
-AGENT AUTONOMY
+SECTION F2: LOW-LEVEL TASK EXECUTION
 ───────────────────────────────────────────────────────────────────────────────
 
-Copilot does not need approval unless:
-- A task is marked [PENDING]
-- There’s a test failure or uncertainty
-- A required file is missing
+[F2.1] Pick the first `lowlevel.*` subtask with status [OPEN] or [IN_PROGRESS]  
+→ proceed to [F2.2]
 
-Otherwise:
-- Pick a task
-- Do the work
-- Log progress
-- Push changes
+[F2.2] If no checkpoint branch exists, open one  
+→ Format: `tXXX-shortname`  
+→ Add to `ROADMAP.ansi`: `[COP] branch opened: tXXX-shortname`  
+→ proceed to [F2.3]
+
+[F2.3] Visually highlight the active `lowlevel.*` task line  
+→ In `ROADMAP.ansi`, apply amber background to the **entire line** beginning with:
+
+  `> STATE: [IN_PROGRESS] ...`
+
+→ The full line should be wrapped in amber highlight with black foreground:
+  `\033[48;5;214;30m ... \033[0m`
+
+→ Move the full parent `highlevel.*` block (including checkpoint + subtasks) to
+  the **top of the file**
+
+→ Only one `lowlevel.*` task may be highlighted at a time
+
+→ proceed to [F2.4]
+
+[F2.4] Create `copilot_log/tXXX-shortname.md`  
+→ Include full log from the beginning:  
+  [USER]: go  
+  [COP]: ...  
+  [GPT]: ...  
+→ Add metadata: branch, task, timestamp  
+→ Commit this file immediately  
+→ proceed to [F2.5]
+
+[F2.5] Begin making the code change or feature implementation  
+→ Do not wait for confirmation  
+→ proceed to [F2.6]
+
+[F2.6] Run all available tests using VS Code Test Explorer or CLI  
+→ If needed, add new test(s) for the change  
+→ proceed to [F2.7]
+
+[F2.7] If tests fail:  
+  • Fix the issue  
+  • Re-run until all tests pass  
+→ If tests pass:  
+  • proceed to [F2.8]
+
+[F2.8] Update documentation files:  
+  • `copilot_status.md` — describe steps taken  
+  • `ROADMAP.ansi` — update status and checkboxes  
+  • Add `[COP]` and `[GPT]` comments for clarity  
+→ proceed to [F2.9]
+
+[F2.9] Commit and push the code change to the branch  
+→ Add: `[COP] issue: #shorttag`  
+→ Add: `[COP] committed [x], pushed [x]`  
+→ proceed to [F2.10]
+
+[F2.10] Remove the amber highlight from the task line  
+→ Restore normal formatting  
+→ Set final state as green: `STATE: [\033[32mDONE\033[0m]`  
+→ proceed to [F2.11]
+
+[F2.11] Are there more `lowlevel.*` subtasks for this checkpoint?  
+→ If YES → proceed to [F2.1]  
+→ If NO  → Add: `[PENDING] checkpoint complete unless reviewed` to the checkpoint  
+  • Commit and push  
+  • Notify user in chat:  
+   [COP]: The checkpoint `X` appears complete and has been marked [PENDING]. Should I proceed to merge?  
+  • WAIT for `[USER]: Yes`  
+  → On confirmation, proceed to [F3.1]
+
+───────────────────────────────────────────────────────────────────────────────
+SECTION F3: CHECKPOINT FINALIZATION
+───────────────────────────────────────────────────────────────────────────────
+
+[F3.1] Confirmed: checkpoint is marked `[PENDING]` and user has said yes  
+→ Add to roadmap: `[MERGE] confirmed by GPT`  
+→ proceed to [F3.2]
+
+[F3.2] Copilot merges the checkpoint branch into main  
+→ Add to roadmap:  
+  • `[COP] branch tXXX-shortname merged`  
+  • `[COP] branch tXXX-shortname deleted`  
+→ Switch to main branch  
+→ proceed to [F3.3]
+
+[F3.3] Write the release note  
+→ File: `releases/TASK-XXX.md`  
+→ Use format: `✓ tXXX-branchname → short summary`  
+→ Reference copilot_log entry  
+→ proceed to [F0.1]
+
+───────────────────────────────────────────────────────────────────────────────
+ROADMAP VISUAL FORMATTING RULES
+───────────────────────────────────────────────────────────────────────────────
+
+• Only one `lowlevel.*` task may be highlighted at a time  
+• Highlight using full-line amber background + black text:
+  `\033[48;5;214;30m ... \033[0m`  
+• Do NOT highlight `checkpoint.*` or `highlevel.*` items  
+• Replace highlight with green when task is `[DONE]`  
+• Always move the active high-level block to the top of the roadmap
+
+───────────────────────────────────────────────────────────────────────────────
+AUTONOMY & LOGGING RULES
+───────────────────────────────────────────────────────────────────────────────
+
+• Copilot may execute all steps up to `[PENDING]` without user approval  
+• After marking `[PENDING]`, Copilot must pause and ask for confirmation  
+• If `[USER]: yes`, continue to `[MERGE]` and post-merge steps  
+• All logs must use:
+  [USER]: ...  
+  [COP]: ...  
+  [GPT]: ...  
+• Logs must be full sentence, non-jargon, human readable
+
+───────────────────────────────────────────────────────────────────────────────
+FILE NAMING CONVENTIONS
+───────────────────────────────────────────────────────────────────────────────
+
+• Branches:       `tXXX-shortname`  
+• Log files:      `copilot_log/tXXX-shortname.md`  
+• Release notes:  `releases/TASK-XXX.md`  
+• Tasks:          Plain English — avoid jargon or acronyms
 
 ───────────────────────────────────────────────────────────────────────────────
 TRIGGERS
 ───────────────────────────────────────────────────────────────────────────────
 
-- `go`: start the task loop
-- [PENDING]: mark task ready for GPT review
-- [MERGE]: confirmed by GPT, Copilot may merge
-
-───────────────────────────────────────────────────────────────────────────────
-COPILOT CHAT LOGGING
-───────────────────────────────────────────────────────────────────────────────
-
-Every task branch must begin with a log file in `copilot_log/`.
-
-Before any commits are made, the agent must:
-1. Create `copilot_log/t###-shortname.md`
-2. Include metadata:
-   - Branch name
-   - Task name
-   - Timestamp
-3. Begin logging:
-   - Every interaction must be saved in full:  
-     [USER]: ...  
-     [COP]: ...  
-     [GPT]: ...
-
-4. Append logs as the task proceeds (e.g., task picked, test run, roadmap edit)
-5. Commit the log file before the first push
-6. Reference this log in the release note
-
-> This ensures full transparency and traceability across all task executions.
-
-───────────────────────────────────────────────────────────────────────────────
-LOGGING LANGUAGE CLARITY
-───────────────────────────────────────────────────────────────────────────────
-
-All entries written to `copilot_log/` must use plain, human-friendly language.
-
-- Avoid acronyms, shorthand, or implementation jargon.
-- Use full sentences to describe what happened, why, and what was affected.
-- Each log should be understandable by both a human and GPT reviewing the task.
-
-Example (GOOD):
-  [COP]: Created folders for code, logs, tests, and releases so other modules have clear places to live.
-
-Example (BAD):
-  [COP]: bootstrapped FS /logs /t /a  ✔️
-
-This is especially important when explaining why tests passed, failed, or why a design was chosen.
+• `go`         → Begin execution loop  
+• `[PENDING]`  → Copilot signals checkpoint complete  
+• `[MERGE]`    → GPT (or user) approves merge  
