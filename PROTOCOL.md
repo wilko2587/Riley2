@@ -19,7 +19,7 @@ SECTION F0: STARTUP
 → Use VS Code’s built-in Test Explorer if available  
 → If complete:  
   • Set status to [DONE]  
-  • Commit and push update to main branch  
+  • Commit and push update to main branch (REQUIRED - no task is complete until pushed)  
   • END  
 → If not complete:  
   • Add one or more checkpoint-level subtasks  
@@ -41,7 +41,7 @@ SECTION F1: CHECKPOINT TASK LOOP
 → Use VS Code Test Explorer if available  
 → If task is complete:  
   • Add note: `[AUTO-COMPLETE] checkpoint verified` to the checkpoint  
-  • Commit and push  
+  • Commit and push (REQUIRED - changes must be pushed, not just committed)  
   • Proceed to [F3.1]  
 → If not complete:  
   • Add one or more `lowlevel.*` roadmap items  
@@ -103,9 +103,10 @@ SECTION F2: LOW-LEVEL TASK EXECUTION
   • Add `[COP]` and `[GPT]` comments for clarity  
 → proceed to [F2.9]
 
-[F2.9] Commit and push the code change to the branch  
+[F2.9] Commit and push the code change to the branch *** REQUIRED STEP ***  
 → Add: `[COP] issue: #shorttag`  
 → Add: `[COP] committed [x], pushed [x]`  
+→ Both commit AND push must be completed - local commits only are insufficient  
 → proceed to [F2.10]
 
 [F2.10] Remove the amber highlight from the task line  
@@ -116,7 +117,7 @@ SECTION F2: LOW-LEVEL TASK EXECUTION
 [F2.11] Are there more `lowlevel.*` subtasks for this checkpoint?  
 → If YES → proceed to [F2.1]  
 → If NO  → Add: `[AUTO-COMPLETE] checkpoint verified` to the checkpoint  
-  • Commit and push  
+  • Commit and push (REQUIRED - never skip pushing after committing)  
   • Proceed to [F3.1]
 
 ───────────────────────────────────────────────────────────────────────────────
@@ -163,6 +164,16 @@ AUTONOMY & LOGGING RULES
   [COP]: ...  
   [GPT]: ...  
 • Logs must be full sentence, non-jargon, human readable
+• ALWAYS push after committing - a task is not complete until changes are pushed to remote
+
+───────────────────────────────────────────────────────────────────────────────
+CRITICAL REMINDERS
+───────────────────────────────────────────────────────────────────────────────
+
+1. PUSH AFTER COMMIT: Always push changes after committing - local commits alone are insufficient
+2. NEVER SKIP STEPS: All protocol steps must be followed in order
+3. RUN TESTS: Always run tests before marking a task as complete
+4. VERIFY CHANGES: Check that all changes properly address the task requirements
 
 ───────────────────────────────────────────────────────────────────────────────
 FILE NAMING CONVENTIONS
