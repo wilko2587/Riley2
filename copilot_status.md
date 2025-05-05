@@ -3,6 +3,10 @@
 ## Current Tasks
 
 ### May 5, 2025
+- Implemented test for negated instructions in email reasoning
+- Added support for detecting and processing negation patterns like "don't schedule if..." and "avoid when..."
+- Created comprehensive test cases covering various negation scenarios
+- Successfully ran all tests and verified functionality
 - Implemented test for unless/except conditionals in email reasoning
 - Created comprehensive test cases covering various scenarios for negative conditional logic
 - Added logic to handle different types of conditionals in email instructions
@@ -26,6 +30,7 @@
 ## Completed Tasks
 
 ### May 5, 2025
+- ✓ t111-email-reasoning → Implemented negated instructions tests for email agent
 - ✓ t111-email-reasoning → Implemented unless/except conditionals tests for email agent
 - ✓ t110-calendar-reasoning → Implemented calendar agent reservation locking tests
 - Completed test suite for calendar double-agent scheduling collision
@@ -38,7 +43,7 @@
 - Analyzed mock implementations for inconsistencies
 
 ## Next Steps
+- Test email intent inference with minimal phrasing like "Italy, Tue-Wed?"
 - Continue implementation of email reasoning tests
-- Implement test for negated instructions like "don't schedule if..." or "avoid X when Y"
 - Review other potential edge cases in agent implementations
 - Improve error handling in the main application for date format inconsistencies

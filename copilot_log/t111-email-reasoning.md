@@ -20,3 +20,14 @@
 [COP]: Moving to the next task: implement test for unless/except conditionals
 [COP]: Updated ROADMAP.ansi to highlight the current task
 [GPT]: Need to implement tests for negative conditional instructions like "unless X happens" or "except when Y"
+[USER]: go
+[COP]: Moving to the next task: implement test for negated instructions
+[GPT]: Working on implementing tests for negated instructions like "don't schedule if..." and "avoid when..." in emails
+[COP]: Added new mock email with negated instructions to the EmailReasonerMock class
+[COP]: Implemented logic to handle negated instructions in the handle_email_query method
+[COP]: Created parametrized test cases for different negation scenarios
+[COP]: Successfully ran the tests and verified all test cases are passing
+[COP]: Scenarios covered:
+[COP]: - Don't schedule if... (Room A during maintenance)
+[COP]: - Avoid when... (executive suite when board members are visiting)
+[COP]: - Combined negated instructions with different conditions

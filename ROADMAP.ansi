@@ -22,8 +22,11 @@
 [90m        [COP]  committed [x], pushed [x][0m
 [90m        [GPT]  Implemented comprehensive test cases for unless/except conditional logic in emails[0m
 
-      [31m> STATE: [OPEN]         implement test for negated instructions[0m
+      [32m> STATE: [DONE]         implement test for negated instructions[0m
         SPEC:  Test handling of negated instructions like "don't schedule if..." or "avoid X when Y".
+[90m        [COP]  issue: #cond003[0m
+[90m        [COP]  committed [x], pushed [x][0m
+[90m        [GPT]  Implemented comprehensive test cases for negated instructions in emails[0m
 
     [31m> STATE: [OPEN]         test email intent inference with minimal phrasing[0m
       SPEC:  Reason from vague or shorthand phrasing like "Italy, Tue-Wed?" and derive correct block intent.

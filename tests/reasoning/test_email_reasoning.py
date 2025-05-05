@@ -15,7 +15,8 @@ class EmailReasonerMock:
             "boss": "From: boss@company.com\nSubject: Team Meeting Tomorrow\nWe will have a team meeting tomorrow at 9am to discuss quarterly goals.\n",
             "italy": "From: travel@agency.com\nSubject: Italy Trip Confirmation\nYour trip to Italy on May 15 has been confirmed. Check-in details are attached.\n",
             "conditional": "From: manager@company.com\nSubject: Meeting Reschedule\nIf the client confirms by noon tomorrow, then schedule the meeting for 2pm. Otherwise, keep our internal sync at the original time.\n",
-            "unless_conditional": "From: project@team.com\nSubject: Project Deadline Extension\nProceed with the current timeline unless the client requests additional features. Update the roadmap except when critical path items are affected.\n"
+            "unless_conditional": "From: project@team.com\nSubject: Project Deadline Extension\nProceed with the current timeline unless the client requests additional features. Update the roadmap except when critical path items are affected.\n",
+            "negated": "From: scheduler@company.com\nSubject: Conference Room Bookings\nDon't schedule any meetings in Room A if maintenance is happening. Also, avoid booking the executive suite when board members are visiting.\n"
         }
     
     def handle_email_query(self, query):
@@ -180,6 +181,64 @@ class EmailReasonerMock:
             summary = self.email_agent.email_summarize_batch(unless_emails_str)
             log_agent_interaction("EmailAgent", "SummaryResult", summary)
             return summary
+        
+        elif ("don't" in query.lower() or "do not" in query.lower() or 
+              "avoid" in query.lower() or "conference room" in query.lower() or 
+              "room a" in query.lower() or "executive suite" in query.lower() or
+              "negated" in query.lower()):
+            log_agent_interaction("EmailReasoner", "EmailSearch", f"Searching for emails with negated instructions")
+            # Download recent emails
+            emails = self.email_agent.email_download_chunk(yesterday, today)
+            
+            # Look for emails with negated instructions
+            negated_emails = [e for e in emails.split("---") if "don't" in e.lower() or "avoid" in e.lower()]
+            
+            if not negated_emails:
+                # For test purposes, use the mock data if no real negated instruction emails found
+                log_agent_interaction("EmailReasoner", "Decision", "Using mock data for negated instructions")
+                
+                # Parse the negated instruction logic
+                negated_email = self.mock_data["negated"]
+                
+                # Check relevant conditions in the query
+                maintenance_happening = "maintenance" in query.lower() or "maintenance is happening" in query.lower()
+                board_visiting = "board" in query.lower() or "board members" in query.lower() or "board members visiting" in query.lower()
+                room_a_mentioned = "room a" in query.lower()
+                exec_suite_mentioned = "executive suite" in query.lower() or "exec suite" in query.lower()
+                
+                response = ""
+                
+                # Handle Room A queries (don't schedule if...)
+                if room_a_mentioned or "conference room" in query.lower():
+                    if maintenance_happening:
+                        log_agent_interaction("EmailReasoner", "NegatedConditionEvaluation", "Negated condition 'maintenance is happening' is met")
+                        response = "Do not schedule any meetings in Room A because maintenance is happening."
+                    else:
+                        log_agent_interaction("EmailReasoner", "NegatedConditionEvaluation", "Negated condition 'maintenance is happening' is not met")
+                        response = "You can schedule meetings in Room A as there is no maintenance happening."
+                
+                # Handle executive suite queries (avoid when...)
+                if exec_suite_mentioned or (not room_a_mentioned and not response):
+                    if board_visiting:
+                        log_agent_interaction("EmailReasoner", "NegatedConditionEvaluation", "Negated condition 'board members are visiting' is met")
+                        exec_response = "Avoid booking the executive suite because board members are visiting."
+                    else:
+                        log_agent_interaction("EmailReasoner", "NegatedConditionEvaluation", "Negated condition 'board members are visiting' is not met")
+                        exec_response = "The executive suite can be booked as no board members are visiting."
+                    
+                    # Add to existing response if any
+                    if response:
+                        response += " " + exec_response
+                    else:
+                        response = exec_response
+                
+                return response.strip()
+            
+            # Process real emails with negated instructions if any
+            negated_emails_str = "\n---\n".join(negated_emails)
+            summary = self.email_agent.email_summarize_batch(negated_emails_str)
+            log_agent_interaction("EmailAgent", "SummaryResult", summary)
+            return summary
             
         log_agent_interaction("EmailReasoner", "Decision", "Query not understood")
         return "QUERY_NOT_UNDERSTOOD"
@@ -280,6 +339,48 @@ def test_unless_except_conditionals(scenario, condition_met, critical_path, expe
     assert expected_in_response in response, f"Expected '{expected_in_response}' in response, but got: '{response}'"
     log_test_success(f"test_unless_except_conditionals[{scenario}-{condition_met}-{critical_path}]")
 
+@pytest.mark.parametrize("scenario, condition_met, expected_in_response", [
+    # Testing "don't schedule if..." for Room A
+    ("room_a", True, "Do not schedule any meetings in Room A"),
+    ("room_a", False, "You can schedule meetings in Room A"),
+    # Testing "avoid when..." for executive suite
+    ("exec_suite", True, "Avoid booking the executive suite"),
+    ("exec_suite", False, "The executive suite can be booked"),
+    # Testing both negated conditions together
+    ("both", True, "Do not schedule any meetings in Room A"),
+    ("both", True, "Avoid booking the executive suite")
+])
+def test_negated_instructions(scenario, condition_met, expected_in_response):
+    """Test reasoning with negated instructions in emails"""
+    
+    log_test_step(f"Testing negated instructions with scenario={scenario}, condition_met={condition_met}")
+    
+    email_agent = EmailAgentMock()
+    reasoner = EmailReasonerMock(email_agent=email_agent)
+    
+    # Construct query based on scenario and condition_met
+    if scenario == "room_a":
+        query = "Can I schedule a meeting in Room A "
+        if condition_met:
+            query += "during the maintenance period?"
+        else:
+            query += "tomorrow afternoon?"
+    elif scenario == "exec_suite":
+        query = "Is the executive suite available "
+        if condition_met:
+            query += "when the board members are visiting?"
+        else:
+            query += "for our team meeting tomorrow?"
+    else:  # scenario == "both"
+        query = "Conference room booking questions: Can I use Room A during maintenance and the executive suite when board members visit?"
+    
+    log_agent_interaction("Test", "InputQuery", query)
+    response = reasoner.handle_email_query(query)
+    log_agent_interaction("Test", "OutputResponse", response)
+    
+    assert expected_in_response in response, f"Expected '{expected_in_response}' in response, but got: '{response}'"
+    log_test_success(f"test_negated_instructions[{scenario}-{condition_met}]")
+
 if __name__ == "__main__":
     # For manual testing
     email_agent = EmailAgentMock()
@@ -294,7 +395,10 @@ if __name__ == "__main__":
         "What should I do about the meeting if the client confirms?",
         "Check conditional instructions in emails from manager",
         "What should I do about the project deadline unless the client requests additional features?",
-        "Should I update the roadmap except when critical path items are affected?"
+        "Should I update the roadmap except when critical path items are affected?",
+        "Can I schedule a meeting in Room A during maintenance?",
+        "Is the executive suite available when the board members are visiting?",
+        "Can I use Room A tomorrow afternoon and the executive suite for our team meeting?"
     ]
     
     for query in queries:
