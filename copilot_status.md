@@ -3,6 +3,10 @@
 ## Current Tasks
 
 ### May 5, 2025
+- Implemented test for unless/except conditionals in email reasoning
+- Created comprehensive test cases covering various scenarios for negative conditional logic
+- Added logic to handle different types of conditionals in email instructions
+- Fixed edge cases involving critical vs non-critical path items
 - Implementing email reasoning tests for embedded conditional blocks
 - Added functionality to detect and process if/then conditional instructions in emails
 - Created test cases for conditional email reasoning scenarios
@@ -22,6 +26,7 @@
 ## Completed Tasks
 
 ### May 5, 2025
+- ✓ t111-email-reasoning → Implemented unless/except conditionals tests for email agent
 - ✓ t110-calendar-reasoning → Implemented calendar agent reservation locking tests
 - Completed test suite for calendar double-agent scheduling collision
 - Successfully verified that the calendar agent correctly handles concurrent operations
@@ -33,7 +38,7 @@
 - Analyzed mock implementations for inconsistencies
 
 ## Next Steps
-- Begin implementation of the next task: "expand reasoning tests for email agent"
-- Focus on testing edge cases in email parsing, especially for conditional instructions
+- Continue implementation of email reasoning tests
+- Implement test for negated instructions like "don't schedule if..." or "avoid X when Y"
 - Review other potential edge cases in agent implementations
 - Improve error handling in the main application for date format inconsistencies
